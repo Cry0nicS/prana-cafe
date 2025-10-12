@@ -1,0 +1,48 @@
+{
+    "name": "prana-cafe",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "clean": "npx nuxi cleanup && rm -rf node_modules/ && rm -rf .nuxt/ && rm package-lock.json",
+        "dev": "nuxt dev",
+        "format": "prettier --write **/*.{js,json,jsx,css,ts,tsx,vue}",
+        "format-check": "prettier --check \"**/*.{html,js,json,jsx,css,ts,tsx,vue,scss}\"",
+        "generate": "nuxt generate",
+        "lint": "eslint .",
+        "postinstall": "nuxt prepare",
+        "prepare": "simple-git-hooks",
+        "preview": "nuxt preview",
+        "type-check": "nuxt typecheck"
+    },
+    "dependencies": {
+        "@nuxt/eslint": "^1.9.0",
+        "@nuxt/image": "^1.11.0",
+        "@nuxt/ui": "^4.0.1",
+        "eslint": "^9.37.0",
+        "nuxt": "^4.1.3",
+        "rollbar": "^2.26.4",
+        "typescript": "^5.9.3",
+        "vue": "^3.5.22",
+        "vue-router": "^4.5.1",
+        "zod": "^4.1.12"
+    },
+    "devDependencies": {
+        "@antfu/eslint-config": "^5.4.1",
+        "@commitlint/cli": "^20.1.0",
+        "@commitlint/config-conventional": "^20.0.0",
+        "lint-staged": "^16.2.4",
+        "prettier": "^3.6.2",
+        "prettier-plugin-tailwindcss": "^0.6.14",
+        "simple-git-hooks": "^2.13.1",
+        "vue-tsc": "^3.1.1"
+    },
+    "simple-git-hooks": {
+        "commit-msg": "npx commitlint --edit \"$1\"",
+        "pre-commit": "npx lint-staged"
+    },
+    "lint-staged": {
+        "*.{html,js,json,css,ts,vue}": "prettier --check",
+        "*.{js,ts,vue}": "eslint"
+    }
+}
