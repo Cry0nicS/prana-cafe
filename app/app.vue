@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import * as locales from "@nuxt/ui/locale";
+
 const {themedFavicon} = useUtils();
+const {locale} = useI18n();
+
+const lang = computed(() => locales[locale.value].code);
 
 // TODO: Translate all static text.
 useSeoMeta({
@@ -12,12 +17,15 @@ useSeoMeta({
 });
 
 useHead({
-    link: [{rel: "icon", href: themedFavicon.value}]
+    link: [{rel: "icon", href: themedFavicon.value}],
+    htmlAttrs: {
+        lang: lang.value
+    }
 });
 </script>
 
 <template>
-    <UApp>
+    <UApp :locale="locales[locale]">
         <NuxtRouteAnnouncer />
         <NuxtLoadingIndicator />
         <NuxtLayout>

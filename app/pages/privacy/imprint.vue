@@ -1,1 +1,3 @@
-<template><div>Hello from imprint</div></template>
+<template>
+    <div>{{ $t("pages.contact") }}</div>
+</template>

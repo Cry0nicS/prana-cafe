@@ -1,5 +1,5 @@
 import {defineNuxtPlugin, useRuntimeConfig} from "#app";
-import {createLogger} from "~/shared/create-logger";
+import {createLogger} from "#shared/create-logger";
 
 /**
  * Initializes the logger for error tracking in the client-side.

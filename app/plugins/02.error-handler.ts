@@ -18,15 +18,10 @@ export default defineNuxtPlugin((nuxtApp) => {
     };
 
     // Hook into Vue's error handler
-    nuxtApp.hook("vue:error", (error, instance, info) => {
+    nuxtApp.hook("vue:error", (error) => {
         const route = routeInfo();
 
-        clientLogger.error(error as Error, {
-            route,
-            context: route.path,
-            component: instance?.$?.type?.name ?? "anonymous",
-            info
-        });
+        clientLogger.error(error as Error, {route});
     });
 
     // Hook into Nuxt's app error handler

@@ -1,4 +1,4 @@
-import type {Logger} from "~/shared/utils/types";
+import type {Logger} from "#shared/utils/types";
 import {useNuxtApp} from "#app";
 
 /**

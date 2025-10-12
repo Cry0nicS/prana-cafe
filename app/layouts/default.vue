@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import type {NavigationMenuItem} from "@nuxt/ui";
 const {themedFavicon} = useUtils();
+const localePath = useLocalePath();
+const {t} = useI18n();
 
 const navItems: NavigationMenuItem[] = [
     {
-        label: "Contact",
-        to: {name: "privacy-contact"},
+        label: t("pages.contact"),
+        to: localePath("/privacy/contact"),
         icon: "mdi:email-outline"
     },
     {
-        label: "Imprint",
-        to: {name: "privacy-imprint"},
+        label: t("pages.imprint"),
+        to: localePath("/privacy/imprint"),
         icon: "mdi:information-outline"
     },
     {
-        label: "Privacy",
-        to: {name: "privacy"},
+        label: t("pages.privacy"),
+        to: localePath("/privacy"),
         icon: "mdi:shield-account-outline"
     }
 ];
@@ -53,6 +55,7 @@ const navItems: NavigationMenuItem[] = [
                                 <span>Dark mode</span>
                             </template>
                         </GenericThemeToggle>
+                        <GenericLanguageSelector />
                     </template>
                 </GenericFooter>
             </div>

@@ -14,6 +14,7 @@
         </template>
         <template #right>
             <GenericThemeToggle />
+            <GenericLanguageSelector />
         </template>
     </UHeader>
 </template>

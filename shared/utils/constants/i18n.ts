@@ -1,0 +1,24 @@
+import type {NuxtI18nOptions} from "@nuxtjs/i18n";
+import type {Locale} from "../types";
+
+/**
+ * Mapping of route names (not file paths) to their localized paths.
+ * E.g. pages/privacy/imprint.vue -> route name: 'privacy-imprint'
+ */
+export const i18nPages = {
+    "privacy/index": {
+        en: "/privacy",
+        de: "/datenschutz"
+    },
+    "privacy/imprint": {
+        en: "/privacy/imprint",
+        de: "/privacy/impressum"
+    },
+    "privacy/contact": {
+        en: "/privacy/contact",
+        de: "/privacy/kontakt"
+    }
+} as const satisfies NuxtI18nOptions["pages"];
+
+export const LOCALES = ["en", "de"] as const;
+export const DEFAULT_LOCALE: Locale = "en";
