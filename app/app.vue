@@ -17,9 +17,9 @@ useSeoMeta({
 });
 
 useHead({
-    link: [{rel: "icon", href: themedFavicon.value}],
+    link: [{rel: "icon", href: themedFavicon}],
     htmlAttrs: {
-        lang: lang.value
+        lang
     }
 });
 </script>
