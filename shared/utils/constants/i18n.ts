@@ -1,5 +1,5 @@
 import type {NuxtI18nOptions} from "@nuxtjs/i18n";
-import type {Locale} from "../types";
+import type {LocaleCodes} from "../types";
 
 /**
  * Mapping of route names (not file paths) to their localized paths.
@@ -20,5 +20,18 @@ export const i18nPages = {
     }
 } as const satisfies NuxtI18nOptions["pages"];
 
-export const LOCALES = ["en", "de"] as const;
-export const DEFAULT_LOCALE: Locale = "en";
+export const LOCALE_CODES = ["en", "de"] as const;
+export const DEFAULT_LOCALE: LocaleCodes = "en";
+
+export const LOCALE_META = {
+    en: {
+        name: "English",
+        code: "en",
+        iso: "en-US"
+    },
+    de: {
+        name: "Deutsch",
+        code: "de",
+        iso: "de-DE"
+    }
+} as const;

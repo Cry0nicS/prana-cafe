@@ -1,3 +1,4 @@
-import type {LOCALES} from "../constants";
+import type {LOCALE_CODES, LOCALE_META} from "../constants";
 
-export type Locale = (typeof LOCALES)[number];
+export type LocaleCodes = (typeof LOCALE_CODES)[number];
+export type LocaleMeta = (typeof LOCALE_META)[keyof typeof LOCALE_META];

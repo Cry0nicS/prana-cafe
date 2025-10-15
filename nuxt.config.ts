@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {i18nPages} from "./shared/utils/constants";
+import {DEFAULT_LOCALE, i18nPages} from "./shared/utils/constants";
 
 export default defineNuxtConfig({
     compatibilityDate: "2025-07-15",
@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     i18n: {
         // Disable custom route with page components.
         customRoutes: "config",
-        defaultLocale: "en",
+        defaultLocale: DEFAULT_LOCALE,
         detectBrowserLanguage: {
             cookieKey: "i18n_redirected",
             redirectOn: "root",
@@ -21,8 +21,8 @@ export default defineNuxtConfig({
         },
         langDir: "locales/",
         locales: [
-            {code: "en", file: "en.ts", name: "English"},
-            {code: "de", file: "de.ts", name: "Deutsch"}
+            {code: "en", file: "en.ts", iso: "en-US", name: "English"},
+            {code: "de", file: "de.ts", iso: "de-DE", name: "Deutsch"}
         ],
         pages: i18nPages,
         strategy: "prefix_except_default"

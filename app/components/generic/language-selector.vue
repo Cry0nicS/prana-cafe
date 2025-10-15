@@ -1,18 +1,19 @@
 <script setup lang="ts">
-import type {Locale} from "#shared/utils/types";
+import {LOCALE_META} from "#shared/utils/constants";
+import {extractLocaleCode} from "#shared/utils/helpers";
 
-const {setLocale} = useI18n();
+const {setLocale, t} = useI18n();
 
 const items = [
     {
-        label: $t("language.en"),
-        value: "en" as Locale,
-        onClick: () => setLocale("en")
+        label: t("language.en"),
+        value: LOCALE_META.en,
+        onClick: () => setLocale(extractLocaleCode(LOCALE_META.en))
     },
     {
-        label: $t("language.de"),
-        value: "de" as Locale,
-        onClick: () => setLocale("de")
+        label: t("language.de"),
+        value: LOCALE_META.de,
+        onClick: () => setLocale(extractLocaleCode(LOCALE_META.de))
     }
 ];
 </script>
@@ -23,7 +24,7 @@ const items = [
             icon="mdi:translate"
             color="neutral"
             variant="ghost">
-            {{ $t("language.label") }}
+            {{ t("language.label") }}
         </UButton>
     </UDropdownMenu>
 </template>
