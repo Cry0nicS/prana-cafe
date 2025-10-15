@@ -24,7 +24,7 @@ const items = [
             icon="mdi:translate"
             color="neutral"
             variant="ghost">
-            {{ t("language.label") }}
+            <span class="hidden lg:inline">{{ t("language.label") }}</span>
         </UButton>
     </UDropdownMenu>
 </template>
