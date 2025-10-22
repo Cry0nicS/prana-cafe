@@ -1,2 +1,129 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+/*
+ * Custom design tokens for Prana Café.
+ *
+ * Nuxt UI uses CSS variables as design tokens for flexible, consistent
+ * theming with built‑in light and dark mode support【546603088508681†L57-L100】.
+ * We define a warm, inviting beige palette for the light theme and a rich
+ * espresso palette for the dark theme. Each palette contains shades from 50
+ * through 950 to match Tailwind’s color scale【820349740699962†L106-L134】.
+ */
+
+@theme static {
+    /* Beige palette — warm tones for the light theme */
+    --color-beige-50: #faf6f2;
+    --color-beige-100: #f4ede8;
+    --color-beige-200: #e8dcd0;
+    --color-beige-300: #ddccb9;
+    --color-beige-400: #d1bba1;
+    --color-beige-500: #c5ab8a;
+    --color-beige-600: #b89772;
+    --color-beige-700: #a07a5e;
+    --color-beige-800: #806048;
+    --color-beige-900: #594434;
+    --color-beige-950: #3e2f24;
+
+    /* Espresso palette — deeper browns for the dark theme */
+    --color-espresso-50: #f0e9e7;
+    --color-espresso-100: #d8cfc9;
+    --color-espresso-200: #c1b5ab;
+    --color-espresso-300: #aa9b8d;
+    --color-espresso-400: #93806f;
+    --color-espresso-500: #7c6652;
+    --color-espresso-600: #64513f;
+    --color-espresso-700: #4c3c2d;
+    --color-espresso-800: #33261c;
+    --color-espresso-900: #1b110c;
+    --color-espresso-950: #120804;
+}
+
+/*
+ * Root variables for the light theme.
+ *
+ * Here we override Nuxt UI’s semantic colors using our custom palettes. The
+ * `--ui-primary` variable controls primary button colors and other call‑to‑action
+ * elements【546603088508681†L79-L99】. Background and text variables are also
+ * customized to give the site a cohesive warm feel【546603088508681†L186-L220】.
+ */
+:root {
+    /* Use mid‑tone beige for primary accents and slightly darker beige for secondary */
+    --ui-primary: var(--color-beige-600);
+    --ui-secondary: var(--color-beige-500);
+
+    /* Warm neutrals for success, info, warning and error messages */
+    --ui-success: var(--color-beige-700);
+    --ui-info: var(--color-beige-600);
+    --ui-warning: var(--color-beige-400);
+    --ui-error: var(--color-beige-700);
+
+    /* Background colours — progressively darker for elevated surfaces */
+    --ui-bg: var(--color-beige-50);
+    --ui-bg-muted: var(--color-beige-100);
+    --ui-bg-elevated: var(--color-beige-200);
+    --ui-bg-accented: var(--color-beige-300);
+    --ui-bg-inverted: var(--color-beige-900);
+
+    /* Border colours for light mode */
+    --ui-border: var(--color-beige-200);
+    /* Muted borders use a lighter beige shade */
+    --ui-border-muted: var(--color-beige-100);
+    --ui-border-accented: var(--color-beige-300);
+    --ui-border-inverted: var(--color-beige-900);
+
+    /* Text colours — darkest beige tones for high contrast text */
+    --ui-text-dimmed: var(--color-beige-500);
+    --ui-text-muted: var(--color-beige-600);
+    --ui-text-toned: var(--color-beige-700);
+    --ui-text: var(--color-beige-800);
+    --ui-text-highlighted: var(--color-beige-900);
+    --ui-text-inverted: var(--color-beige-50);
+
+    /* Rounded corners for a softer look */
+    --ui-radius: 0.5rem;
+}
+
+/*
+ * Dark mode variables.
+ *
+ * In dark mode we invert the palette: primary colours are slightly lighter
+ * espresso tones, backgrounds are dark espresso shades and text is light for
+ * maximum contrast【546603088508681†L90-L100】. The `.dark` class is automatically
+ * applied by Nuxt UI when the user enables dark mode.
+ */
+.dark {
+    /* Primary and secondary colours in dark mode */
+    --ui-primary: var(--color-espresso-400);
+    --ui-secondary: var(--color-espresso-600);
+
+    /* Success, info, warning and error — vary the espresso palette for nuance */
+    --ui-success: var(--color-espresso-500);
+    --ui-info: var(--color-espresso-400);
+    --ui-warning: var(--color-espresso-300);
+    --ui-error: var(--color-espresso-600);
+
+    /* Backgrounds for dark mode: deep espresso hues with lighter accents */
+    --ui-bg: var(--color-espresso-900);
+    --ui-bg-muted: var(--color-espresso-800);
+    --ui-bg-elevated: var(--color-espresso-700);
+    --ui-bg-accented: var(--color-espresso-600);
+    --ui-bg-inverted: var(--color-espresso-50);
+
+    /* Border colours for dark mode */
+    --ui-border: var(--color-espresso-800);
+    --ui-border-muted: var(--color-espresso-700);
+    --ui-border-accented: var(--color-espresso-600);
+    --ui-border-inverted: var(--color-espresso-50);
+
+    /* Text colours for dark mode — light beige on dark backgrounds */
+    --ui-text-dimmed: var(--color-espresso-300);
+    --ui-text-muted: var(--color-espresso-200);
+    --ui-text-toned: var(--color-espresso-100);
+    --ui-text: var(--color-espresso-50);
+    --ui-text-highlighted: var(--color-beige-100);
+    --ui-text-inverted: var(--color-espresso-900);
+
+    /* Maintain the same radius in dark mode */
+    --ui-radius: 0.5rem;
+}
