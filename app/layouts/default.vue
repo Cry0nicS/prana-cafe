@@ -28,42 +28,38 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 });
 </script>
 <template>
-    <div class="flex min-h-screen flex-col">
-        <div class="flex grow justify-center">
-            <div class="flex min-h-full w-full flex-col">
-                <GenericHeader />
+    <div class="flex min-h-svh flex-col">
+        <GenericHeader />
 
-                <UMain class="grow">
-                    <UContainer>
-                        <slot />
-                    </UContainer>
-                </UMain>
+        <UMain class="grow">
+            <UContainer>
+                <slot />
+            </UContainer>
+        </UMain>
 
-                <ClientOnly>
-                    <USeparator
-                        orientation="horizontal"
-                        :avatar="{
-                            src: themedFavicon
-                        }" />
-                </ClientOnly>
+        <ClientOnly>
+            <USeparator
+                orientation="horizontal"
+                :avatar="{
+                    src: themedFavicon
+                }" />
+        </ClientOnly>
 
-                <GenericFooter>
-                    <template #navigation>
-                        <UNavigationMenu :items="navItems" />
+        <GenericFooter>
+            <template #navigation>
+                <UNavigationMenu :items="navItems" />
+            </template>
+            <template #social>
+                <GenericThemeToggle>
+                    <template #dark-mode>
+                        <span>Light mode</span>
                     </template>
-                    <template #social>
-                        <GenericThemeToggle>
-                            <template #dark-mode>
-                                <span>Light mode</span>
-                            </template>
-                            <template #light-mode>
-                                <span>Dark mode</span>
-                            </template>
-                        </GenericThemeToggle>
-                        <GenericLanguageSelector />
+                    <template #light-mode>
+                        <span>Dark mode</span>
                     </template>
-                </GenericFooter>
-            </div>
-        </div>
+                </GenericThemeToggle>
+                <GenericLanguageSelector />
+            </template>
+        </GenericFooter>
     </div>
 </template>
