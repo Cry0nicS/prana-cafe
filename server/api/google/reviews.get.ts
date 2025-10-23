@@ -1,5 +1,6 @@
 import type {GoogleReview} from "#shared/utils/types";
 import {PlacesClient} from "@googlemaps/places";
+import {logger} from "~~/server/utils/logger";
 
 let cachedReviews: GoogleReview[] | null = null;
 let lastFetched = 0;
@@ -13,6 +14,7 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
 
     // Return cached version if still valid.
     if (cachedReviews && now - lastFetched < CACHE_DURATION) {
+        logger.info("Returning cached Google reviews.");
         return cachedReviews;
     }
 
@@ -25,6 +27,8 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
             },
             {otherArgs: {headers: {"X-Goog-FieldMask": "reviews"}}}
         );
+
+        logger.info("Fetched new Google reviews from API.");
 
         const rawReviews = response[0]?.reviews;
 

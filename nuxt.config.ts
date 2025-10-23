@@ -48,7 +48,7 @@ export default defineNuxtConfig({
         public: {
             nodeEnv: process.env.NUXT_PUBLIC_NODE_ENV || "development",
             rollbarClientToken: process.env.NUXT_PUBLIC_ROLLBAR_CLIENT_TOKEN || "",
-            rollbarEnabled: false
+            rollbarEnabled: process.env.NUXT_PUBLIC_ROLLBAR_ENABLED?.trim().toLowerCase() === "true"
         },
         rollbarServerToken: process.env.NUXT_ROLLBAR_SERVER_TOKEN || ""
     },
