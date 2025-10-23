@@ -6,8 +6,7 @@ let cachedReviews: GoogleReview[] | null = null;
 let lastFetched = 0;
 
 export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
-    // TODO: Use the Google API key in production.
-    const {_googleApiKey, pranaPlaceId} = useRuntimeConfig(event);
+    const {googleApiKey, pranaPlaceId} = useRuntimeConfig(event);
 
     const CACHE_DURATION = 24 * 60 * 60 * 1000; // 24 hours
     const now = Date.now();
@@ -18,13 +17,13 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
         return cachedReviews;
     }
 
-    const placesClient = new PlacesClient();
+    const placesClient = new PlacesClient({
+        apiKey: googleApiKey
+    });
 
     try {
         const response = await placesClient.getPlace(
-            {
-                name: `places/${pranaPlaceId}`
-            },
+            {name: `places/${pranaPlaceId}`},
             {otherArgs: {headers: {"X-Goog-FieldMask": "reviews"}}}
         );
 
@@ -61,6 +60,9 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
 
         return reviews;
     } catch (error) {
+        // eslint-disable-next-line ts/no-explicit-any
+        logger.error("Failed to fetch reviews from Google API", error as any);
+
         throw createError({
             statusCode: 500,
             statusMessage: "Failed to fetch reviews from Google.",
