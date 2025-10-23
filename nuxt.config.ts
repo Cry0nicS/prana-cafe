@@ -2,6 +2,10 @@
 import {DEFAULT_LOCALE, i18nPages} from "./shared/utils/constants";
 
 export default defineNuxtConfig({
+    colorMode: {
+        fallback: "light",
+        preference: "system"
+    },
     compatibilityDate: "2025-07-15",
     css: ["./app/assets/main.css"],
     devtools: {enabled: true},
