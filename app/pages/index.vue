@@ -95,12 +95,6 @@ const menuHighlights = computed(() => [
     }
 ]);
 
-const testimonials = computed(() => [
-    {name: "Anna  K.", quote: t("testimonials.anna.quote")},
-    {name: "Markus  S.", quote: t("testimonials.markus.quote")},
-    {name: "Sophie  L.", quote: t("testimonials.sophie.quote")}
-]);
-
 const faqs = computed(() => [
     {
         label: t("faq.items.glutenFree.question"),
@@ -218,19 +212,7 @@ const ctaLinks = computed(() => [
         </UPageSection>
 
         <!-- Testimonials section -->
-        <UPageSection>
-            <template #title>{{ t("testimonials.title") }}</template>
-            <template #description>{{ t("testimonials.description") }}</template>
-            <UPageColumns class="flex flex-col lg:flex-row">
-                <div
-                    v-for="testimonial in testimonials"
-                    :key="testimonial.name"
-                    class="dark:bg-muted flex h-full flex-col justify-between rounded-lg bg-gray-50 p-6 shadow-sm">
-                    <p class="mb-2 italic">“{{ testimonial.quote }}”</p>
-                    <p class="text-sm text-gray-600 dark:text-gray-400">— {{ testimonial.name }}</p>
-                </div>
-            </UPageColumns>
-        </UPageSection>
+        <LazyGoogleReviews />
 
         <!-- FAQ section using accordion -->
         <UPageSection
