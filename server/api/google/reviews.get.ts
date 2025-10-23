@@ -17,9 +17,10 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
         return cachedReviews;
     }
 
-    const placesClient = new PlacesClient({
-        apiKey: googleApiKey
-    });
+    // Only provide API key in non-development environments.
+    const placesClient = new PlacesClient(
+        process.env.NUXT_PUBLIC_NODE_ENV === "development" ? {} : {apiKey: googleApiKey}
+    );
 
     try {
         const response = await placesClient.getPlace(
