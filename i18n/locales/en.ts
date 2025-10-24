@@ -79,6 +79,9 @@ export default {
                 description:
                     "Smooth matcha smoothie bowl topped with coconut flakes, granola and seasonal fruit."
             }
+        },
+        cta: {
+            label: "View our menu"
         }
     },
     gallery: {
@@ -136,7 +139,7 @@ export default {
             "Visit Prana  Café today and discover your new favourite spot. We’re open daily for coffee, breakfast, brunch and lunch.",
         links: {
             getDirections: "Get Directions",
-            seeMore: "See More"
+            seeMore: "Reservations"
         }
     }
 };
