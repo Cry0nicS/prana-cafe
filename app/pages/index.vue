@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const localePath = useLocalePath();
 const {t} = useI18n();
 
 // Images used in various sections (these remain static)
@@ -115,7 +114,7 @@ const faqs = computed(() => [
 ]);
 
 const ctaLinks = computed(() => [
-    {label: t("cta.links.getDirections"), to: localePath("/privacy/contact")},
+    {label: t("cta.links.getDirections"), to: "https://maps.app.goo.gl/MToiG3VyXv7PB8kw9"},
     {label: t("cta.links.seeMore"), to: "#"}
 ]);
 </script>
@@ -170,6 +169,18 @@ const ctaLinks = computed(() => [
                         class="w-full rounded-lg object-cover" />
                 </UPageCard>
             </UPageGrid>
+            <div class="flex justify-center">
+                <UButton
+                    class="mx-auto inline-flex w-full items-center justify-center gap-2 sm:w-auto"
+                    icon="mdi:food-fork-drink"
+                    size="xl"
+                    color="info"
+                    variant="solid"
+                    to="https://www.google.com/search?q=google.com+menu+coming+soon&sourceid=chrome&ie=UTF-8"
+                    target="_blank">
+                    {{ t("menu.cta.label") }}
+                </UButton>
+            </div>
         </UPageSection>
 
         <!-- Visual gallery carousel -->

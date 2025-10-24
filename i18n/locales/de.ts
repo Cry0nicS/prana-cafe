@@ -81,6 +81,9 @@ export default {
                 description:
                     "Sanfte Matcha‑Smoothie‑Bowl, garniert mit Kokosflocken, Granola und saisonalem Obst."
             }
+        },
+        cta: {
+            label: "Unsere Speisekarte ansehen"
         }
     },
     gallery: {
@@ -139,7 +142,7 @@ export default {
             "Besuchen Sie noch heute das Prana  Café und entdecken Sie Ihren neuen Lieblingsort. Wir sind täglich für Kaffee, Frühstück, Brunch und Mittagessen geöffnet.",
         links: {
             getDirections: "Wegbeschreibung",
-            seeMore: "Mehr erfahren"
+            seeMore: "Tisch reservieren"
         }
     }
 };
