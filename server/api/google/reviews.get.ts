@@ -1,4 +1,5 @@
 import type {GoogleReview} from "#shared/utils/types";
+import {fallbackTestimonials} from "#shared/utils/constants";
 import {PlacesClient} from "@googlemaps/places";
 import {logger} from "~~/server/utils/logger";
 
@@ -61,13 +62,12 @@ export default defineEventHandler<Promise<GoogleReview[]>>(async (event) => {
 
         return reviews;
     } catch (error) {
-        // eslint-disable-next-line ts/no-explicit-any
-        logger.error("Failed to fetch reviews from Google API", error as any);
-
-        throw createError({
-            statusCode: 500,
-            statusMessage: "Failed to fetch reviews from Google.",
-            data: {details: error}
+        logger.error("Failed to fetch reviews from Google API", {
+            error,
+            // eslint-disable-next-line ts/no-explicit-any
+            details: (error as any)?.details || (error as any)?.data || null
         });
+
+        return fallbackTestimonials;
     }
 });
