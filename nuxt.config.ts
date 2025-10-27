@@ -45,7 +45,7 @@ export default defineNuxtConfig({
             xl: 1280
         }
     },
-    modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/image", "@nuxtjs/i18n"],
+    modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/image", "@nuxtjs/i18n", "@nuxtjs/supabase"],
     runtimeConfig: {
         googleApiKey: process.env.NUXT_GOOGLE_API_KEY || "",
         pranaPlaceId: process.env.NUXT_PRANA_PLACE_ID || "",
@@ -55,6 +55,9 @@ export default defineNuxtConfig({
             rollbarEnabled: process.env.NUXT_PUBLIC_ROLLBAR_ENABLED?.trim().toLowerCase() === "true"
         },
         rollbarServerToken: process.env.NUXT_ROLLBAR_SERVER_TOKEN || ""
+    },
+    supabase: {
+        redirect: false
     },
     typescript: {
         strict: true,
