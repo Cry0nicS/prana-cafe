@@ -24,98 +24,88 @@ const galleryImages = [
 
 // Dynamic arrays computed from translation keys
 const heroLinks = computed(() => [
-    {label: t("hero.links.ourPhilosophy"), to: "#philosophy"},
-    {label: t("hero.links.menuHighlights"), to: "#menu"}
+    {label: t("index.hero.links.ourPhilosophy"), to: "#philosophy"},
+    {label: t("index.hero.links.menuHighlights"), to: "#menu"}
 ]);
 
 const features = computed(() => [
     {
         icon: "mdi:allergy",
-        title: t("features.glutenFree.title"),
-        description: t("features.glutenFree.description")
+        title: t("index.features.glutenFree.title"),
+        description: t("index.features.glutenFree.description")
     },
     {
         icon: "mdi:sprout-outline",
-        title: t("features.plantBased.title"),
-        description: t("features.plantBased.description")
+        title: t("index.features.plantBased.title"),
+        description: t("index.features.plantBased.description")
     },
     {
         icon: "mdi:bowl-mix-outline",
-        title: t("features.bowls.title"),
-        description: t("features.bowls.description")
+        title: t("index.features.bowls.title"),
+        description: t("index.features.bowls.description")
     },
     {
         icon: "mdi:heart-multiple-outline",
-        title: t("features.community.title"),
-        description: t("features.community.description")
+        title: t("index.features.community.title"),
+        description: t("index.features.community.description")
     },
     {
         icon: "mdi:bowl-mix-outline",
-        title: t("features.bowls.title"),
-        description: t("features.bowls.description")
+        title: t("index.features.bowls.title"),
+        description: t("index.features.bowls.description")
     },
     {
         icon: "mdi:heart-multiple-outline",
-        title: t("features.community.title"),
-        description: t("features.community.description")
+        title: t("index.features.community.title"),
+        description: t("index.features.community.description")
     }
 ]);
 
 const menuHighlights = computed(() => [
     {
-        title: t("menu.items.avocado.title"),
-        description: t("menu.items.avocado.description"),
+        title: t("index.menu.items.avocado.title"),
+        description: t("index.menu.items.avocado.description"),
         image: menuImages.avocado
     },
     {
-        title: t("menu.items.rainbow.title"),
-        description: t("menu.items.rainbow.description"),
+        title: t("index.menu.items.rainbow.title"),
+        description: t("index.menu.items.rainbow.description"),
         image: menuImages.rainbow
     },
     {
-        title: t("menu.items.turmericLatte.title"),
-        description: t("menu.items.turmericLatte.description"),
+        title: t("index.menu.items.turmericLatte.title"),
+        description: t("index.menu.items.turmericLatte.description"),
         image: menuImages.turmericLatte
     },
     {
-        title: t("menu.items.berry.title"),
-        description: t("menu.items.berry.description"),
+        title: t("index.menu.items.berry.title"),
+        description: t("index.menu.items.berry.description"),
         image: menuImages.berry
-    },
-    {
-        title: t("menu.items.chickpeaWrap.title"),
-        description: t("menu.items.chickpeaWrap.description"),
-        image: menuImages.chickpeaWrap
-    },
-    {
-        title: t("menu.items.matcha.title"),
-        description: t("menu.items.matcha.description"),
-        image: menuImages.matcha
     }
 ]);
 
 const faqs = computed(() => [
     {
-        label: t("faq.items.glutenFree.question"),
-        content: t("faq.items.glutenFree.answer")
+        label: t("index.faq.items.glutenFree.question"),
+        content: t("index.faq.items.glutenFree.answer")
     },
     {
-        label: t("faq.items.reservations.question"),
-        content: t("faq.items.reservations.answer")
+        label: t("index.faq.items.reservations.question"),
+        content: t("index.faq.items.reservations.answer")
     },
     {
-        label: t("faq.items.pets.question"),
-        content: t("faq.items.pets.answer")
+        label: t("index.faq.items.pets.question"),
+        content: t("index.faq.items.pets.answer")
     },
     {
-        label: t("faq.items.takeaway.question"),
-        content: t("faq.items.takeaway.answer")
+        label: t("index.faq.items.takeaway.question"),
+        content: t("index.faq.items.takeaway.answer")
     }
 ]);
 
 const ctaLinks = computed(() => [
-    {label: t("cta.links.getDirections"), to: "https://maps.app.goo.gl/MToiG3VyXv7PB8kw9"},
-    {label: t("cta.links.seeMore"), to: "#"}
+    {label: t("index.cta.links.getDirections"), to: "https://maps.app.goo.gl/MToiG3VyXv7PB8kw9"},
+    {label: t("index.cta.links.seeMore"), to: "#"}
 ]);
 </script>
 
@@ -123,9 +113,9 @@ const ctaLinks = computed(() => [
     <UPage>
         <!-- Hero section introducing the café -->
         <UPageHero
-            :title="t('hero.title')"
-            :description="t('hero.description')"
-            :headline="t('hero.headline')"
+            :title="t('index.hero.title')"
+            :description="t('index.hero.description')"
+            :headline="t('index.hero.headline')"
             orientation="horizontal"
             :links="heroLinks">
             <img
@@ -138,8 +128,8 @@ const ctaLinks = computed(() => [
         <UPageSection
             id="philosophy"
             icon="mdi:coffee-to-go-outline">
-            <template #title>{{ t("philosophy.title") }}</template>
-            <template #description>{{ t("philosophy.description") }}</template>
+            <template #title>{{ t("index.philosophy.title") }}</template>
+            <template #description>{{ t("index.philosophy.description") }}</template>
             <UPageColumns>
                 <UPageFeature
                     v-for="feature in features"
@@ -152,8 +142,8 @@ const ctaLinks = computed(() => [
 
         <!-- Menu highlights in a responsive grid of cards -->
         <UPageSection id="menu">
-            <template #title>{{ t("menu.title") }}</template>
-            <template #description>{{ t("menu.description") }}</template>
+            <template #title>{{ t("index.menu.title") }}</template>
+            <template #description>{{ t("index.menu.description") }}</template>
             <UPageGrid class="gap-6 lg:grid-cols-2">
                 <UPageCard
                     v-for="item in menuHighlights"
@@ -178,15 +168,15 @@ const ctaLinks = computed(() => [
                     variant="solid"
                     to="https://www.google.com/search?q=google.com+menu+coming+soon&sourceid=chrome&ie=UTF-8"
                     target="_blank">
-                    {{ t("menu.cta.label") }}
+                    {{ t("index.menu.cta.label") }}
                 </UButton>
             </div>
         </UPageSection>
 
         <!-- Visual gallery carousel -->
         <UPageSection>
-            <template #title>{{ t("gallery.title") }}</template>
-            <template #description>{{ t("gallery.description") }}</template>
+            <template #title>{{ t("index.gallery.title") }}</template>
+            <template #description>{{ t("index.gallery.description") }}</template>
             <UCarousel
                 v-slot="{item}"
                 loop
@@ -208,12 +198,12 @@ const ctaLinks = computed(() => [
 
         <!-- Our story section with two columns -->
         <UPageSection>
-            <template #title>{{ t("story.title") }}</template>
-            <template #description>{{ t("story.description") }}</template>
+            <template #title>{{ t("index.story.title") }}</template>
+            <template #description>{{ t("index.story.description") }}</template>
             <UPageColumns class="lg:columns-2">
                 <div class="prose dark:prose-invert">
-                    <p>{{ t("story.paragraph1") }}</p>
-                    <p>{{ t("story.paragraph2") }}</p>
+                    <p>{{ t("index.story.paragraph1") }}</p>
+                    <p>{{ t("index.story.paragraph2") }}</p>
                 </div>
                 <img
                     src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
@@ -228,16 +218,16 @@ const ctaLinks = computed(() => [
         <!-- FAQ section using accordion -->
         <UPageSection
             orientation="horizontal"
-            :description="t('faq.description')"
-            :title="t('faq.title')"
+            :description="t('index.faq.description')"
+            :title="t('index.faq.title')"
             icon="mdi:frequently-asked-questions">
             <UAccordion :items="faqs" />
         </UPageSection>
 
         <!-- Final call to action -->
         <UPageCTA
-            :title="t('cta.title')"
-            :description="t('cta.description')"
+            :title="t('index.cta.title')"
+            :description="t('index.cta.description')"
             :links="ctaLinks"
             class="mb-24" />
     </UPage>

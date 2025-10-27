@@ -11,8 +11,8 @@ const {data} = await useLazyAsyncData<Review[]>("google-reviews", () =>
 
 <template>
     <UPageSection>
-        <template #title>{{ t("testimonials.title") }}</template>
-        <template #description>{{ t("testimonials.description") }}</template>
+        <template #title>{{ t("index.testimonials.title") }}</template>
+        <template #description>{{ t("index.testimonials.description") }}</template>
         <div class="flex flex-col items-stretch gap-6 md:flex-row">
             <div
                 v-for="testimonial in data"

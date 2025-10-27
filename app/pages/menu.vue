@@ -1,0 +1,186 @@
+<script setup lang="ts">
+import {useI18n} from "vue-i18n";
+
+const {t} = useI18n();
+
+const categories = [
+    {
+        id: "deals",
+        items: [
+            {
+                name: "coworking",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "10€/h"
+            },
+            {
+                name: "businessBreak",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "10€ p.p."
+            },
+            {
+                name: "businessLunch",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "40€ for 2"
+            },
+            {
+                name: "tastyDate",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "24€ for 2"
+            }
+        ]
+    },
+    {
+        id: "drinksCoffee",
+        items: [
+            {
+                name: "espresso",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "2,5 / 3,3€"
+            },
+            {
+                name: "flatWhite",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "4,6€"
+            },
+            {
+                name: "latte",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5,3€"
+            },
+            {
+                name: "haselnussLatte",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5,8€"
+            }
+        ]
+    },
+    {
+        id: "drinksHot",
+        items: [
+            {
+                name: "sunshineMilk",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5,2€"
+            },
+            {
+                name: "chaiLatte",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "4,6€"
+            },
+            {
+                name: "matchaLatte",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5,9€"
+            },
+            {
+                name: "hotChocolate",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "4,9€"
+            }
+        ]
+    },
+    {
+        id: "food",
+        items: [
+            {
+                name: "porridge",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "6,5 / 11,8€"
+            },
+            {
+                name: "bananaBread",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "9,5€"
+            },
+            {
+                name: "waffle",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "9–14€"
+            },
+            {
+                name: "brunch",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "18€"
+            }
+        ]
+    }
+];
+
+function scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+<template>
+    <UContainer class="py-10">
+        <!-- Mobile Navigation -->
+        <div class="sticky top-0 z-10 flex gap-3 overflow-x-auto pb-3 backdrop-blur-md lg:hidden">
+            <UButton
+                v-for="category in categories"
+                :key="category.id"
+                size="sm"
+                variant="soft"
+                color="primary"
+                class="whitespace-nowrap"
+                @click="scrollTo(category.id)">
+                {{ t(`menu.${category.id}.title`) }}
+            </UButton>
+        </div>
+        <div class="flex flex-col gap-10 md:flex-row">
+            <!-- Sidebar Navigation -->
+            <aside class="sticky top-10 hidden self-start md:w-1/4 lg:block">
+                <UCard>
+                    <ul class="space-y-2">
+                        <li
+                            v-for="category in categories"
+                            :key="category.id">
+                            <UButton
+                                color="primary"
+                                variant="ghost"
+                                @click="scrollTo(category.id)"
+                                class="w-full justify-start">
+                                {{ t(`menu.${category.id}.title`) }}
+                            </UButton>
+                        </li>
+                    </ul>
+                </UCard>
+            </aside>
+
+            <!-- Menu Content -->
+            <section class="flex-1 space-y-16">
+                <div
+                    v-for="category in categories"
+                    :id="category.id"
+                    :key="category.id"
+                    class="scroll-mt-20">
+                    <h2 class="mb-6 text-3xl font-semibold">
+                        {{ t(`menu.${category.id}.title`) }}
+                    </h2>
+
+                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <UCard
+                            v-for="item in category.items"
+                            :key="item.name"
+                            class="overflow-hidden">
+                            <img
+                                :src="item.image"
+                                alt=""
+                                class="h-40 w-full rounded-t-xl object-cover" />
+                            <div class="p-4">
+                                <h3 class="mb-1 text-xl font-medium">
+                                    {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                </h3>
+                                <p class="mb-2 text-sm text-gray-600">
+                                    {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
+                                </p>
+                                <p class="text-primary font-semibold">
+                                    {{ item.price }}
+                                </p>
+                            </div>
+                        </UCard>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </UContainer>
+</template>

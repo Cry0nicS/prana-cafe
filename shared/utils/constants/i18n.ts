@@ -17,6 +17,10 @@ export const i18nPages = {
     "privacy/contact": {
         en: "/privacy/contact",
         de: "/privacy/kontakt"
+    },
+    "menu/index": {
+        en: "/menu",
+        de: "/speisekarte"
     }
 } as const satisfies NuxtI18nOptions["pages"];
 
