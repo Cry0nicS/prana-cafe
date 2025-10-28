@@ -81,7 +81,6 @@ export default defineEventHandler(async (event: H3Event) => {
     if (reviews && reviews.length > 0) {
         // Return reviews from database if not stale.
         if (now - new Date(reviews[0]!.created_at).getTime() < CACHE_DURATION) {
-            logger.info(`Reviews from database found: ${JSON.stringify(reviews)}`);
             cachedReviews = reviews;
             lastFetched = now;
 
