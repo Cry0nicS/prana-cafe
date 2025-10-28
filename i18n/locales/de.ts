@@ -153,52 +153,73 @@ export default {
             items: {
                 coworking: {
                     title: "Co-working Tage",
-                    desc: "Dienstag bis Freitag – nur Rückraum, 3 Stunden pro Tisch, inkl. Kaffee & Tee."
+                    desc: "Dienstag bis Freitag – nur Rückraum, 3 Stunden pro Tisch, inkl. Kaffee & Tee.",
+                    ingredients: "Inklusive: freier WLAN‑Zugang, Kaffee, Tee, Steckdose"
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "2x Kaffee, 2x Datteln, Computer erlaubt für 1 Stunde (nicht zwischen 12–14 Uhr)."
+                    desc: "2x Kaffee, 2x Datteln, Computer erlaubt für 1 Stunde (nicht zwischen 12–14).",
+                    ingredients: "Enthält: 2x Kaffee, 2x Datteln, kleiner Snack"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2x Sober Bubbles, Oliven, 2x Lunch, 2x Espresso & 2x Mint Shot."
+                    desc: "2x Sober Bubbles, Oliven, 2x Lunch, 2x Espresso & 2x Mint Shot.",
+                    ingredients: "Menü: 2x Hauptgericht, Beilage, Dessert"
                 },
                 tastyDate: {
                     title: "Tasty Date",
-                    desc: "2x Getränke, 2x Datteln & 1 Stück Bananenbrot mit Toppings zum Teilen."
+                    desc: "2x Getränke, 2x Datteln & 1 Stück Bananenbrot mit Toppings zum Teilen.",
+                    ingredients: "Enthält: 2 Getränke, 1 Stück Bananenbrot, Toppings zum Teilen"
                 }
             }
         },
         drinksCoffee: {
             title: "Kaffeespezialitäten",
             items: {
-                espresso: {title: "Espresso / Americano", desc: "Klassischer Espresso oder Lungo."},
+                espresso: {
+                    title: "Espresso / Americano",
+                    desc: "Klassischer Espresso oder Lungo.",
+                    ingredients: "100% Arabica, kurz gebrüht"
+                },
                 flatWhite: {
                     title: "Flat White",
-                    desc: "Cremig und mild mit pflanzlicher Milch deiner Wahl."
+                    desc: "Cremig und mild mit pflanzlicher Milch deiner Wahl.",
+                    ingredients: "Espresso, samtiger Milchschaum, pflanzliche Milch"
                 },
                 latte: {
                     title: "Latte",
-                    desc: "Weicher Kaffee mit Milch, perfekt für den Nachmittag."
+                    desc: "Weicher Kaffee mit Milch, perfekt für den Nachmittag.",
+                    ingredients: "Espresso, viel Milch, milde Crema"
                 },
-                haselnussLatte: {title: "Haselnuss Latte", desc: "Nussig, süß und aromatisch."}
+                haselnussLatte: {
+                    title: "Haselnuss Latte",
+                    desc: "Nussig, süß und aromatisch.",
+                    ingredients: "Espresso, Haselnusssirup, aufgeschäumte Milch"
+                }
             }
         },
         drinksHot: {
             title: "Heiße Spezialitäten",
             items: {
-                sunshineMilk: {title: "Sunshine Milk", desc: "Goldene Milch mit Gewürz & MCT-Öl."},
+                sunshineMilk: {
+                    title: "Sunshine Milk",
+                    desc: "Goldene Milch mit Gewürz & MCT-Öl.",
+                    ingredients: "Kurkuma, Ingwer, MCT‑Öl, Hafermilch"
+                },
                 chaiLatte: {
                     title: "Chai Latte",
-                    desc: "Hausgemacht mit Earl Grey, Kakao oder Golden Blend."
+                    desc: "Hausgemacht mit Earl Grey, Kakao oder Golden Blend.",
+                    ingredients: "Gewürztee, Zimt, Kardamom, Hafermilch"
                 },
                 matchaLatte: {
                     title: "Zeremonieller Matcha Latte",
-                    desc: "Feiner Matcha mit optionalem Extra-Shot."
+                    desc: "Feiner Matcha mit optionalem Extra-Shot.",
+                    ingredients: "Matcha Pulver, heißes Wasser, aufgeschäumte Milch"
                 },
                 hotChocolate: {
                     title: "Geschmolzene Heiße Schokolade",
-                    desc: "Dattelsüße Pflanzenschokolade."
+                    desc: "Dattelsüße Pflanzenschokolade.",
+                    ingredients: "Dunkle Schokolade, Dattelsirup, Hafermilch"
                 }
             }
         },
@@ -207,19 +228,23 @@ export default {
             items: {
                 porridge: {
                     title: "Hafer-Erdmandel Porridge",
-                    desc: "Mit saisonalen Toppings serviert."
+                    desc: "Mit saisonalen Toppings serviert.",
+                    ingredients: "Haferflocken, Mandelmilch, saisonale Früchte, Nüsse"
                 },
                 bananaBread: {
                     title: "Bananenbrot",
-                    desc: "Mit Toppings nach Wahl – ein Klassiker."
+                    desc: "Mit Toppings nach Wahl – ein Klassiker.",
+                    ingredients: "Reife Bananen, Dinkelmehl (glutenfrei), Nüsse"
                 },
                 waffle: {
                     title: "Süße Waffeln",
-                    desc: "Mit Hafermehl & Nussmus, glutenfrei & ungesüßt."
+                    desc: "Mit Hafermehl & Nussmus, glutenfrei & ungesüßt.",
+                    ingredients: "Hafermehl, Pflanzenöl, Ahornsirup als Topping"
                 },
                 brunch: {
                     title: "Veganer Brunch",
-                    desc: "Eiersalat, Dips, Salat, GF Brot & kleine Suppe oder Süßspeise."
+                    desc: "Eiersalat, Dips, Salat, GF Brot & kleine Suppe oder Süßspeise.",
+                    ingredients: "Auswahl: Dip, Salat, glutenfreies Brot, Suppe"
                 }
             }
         }

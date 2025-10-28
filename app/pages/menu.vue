@@ -131,7 +131,7 @@ function scrollTo(id: string) {
 
         <UContainer class="py-10">
             <div class="flex flex-col gap-10 md:flex-row">
-                <!-- Sidebar Navigation -->
+                <!-- Desktop Navigation -->
                 <aside class="sticky top-[100px] hidden self-start md:w-1/4 lg:block">
                     <UCard>
                         <ul class="space-y-2">
@@ -141,16 +141,14 @@ function scrollTo(id: string) {
                                 <UButton
                                     color="primary"
                                     variant="ghost"
-                                    @click="scrollTo(category.id)"
-                                    class="w-full justify-start">
+                                    class="w-full justify-start"
+                                    @click="scrollTo(category.id)">
                                     {{ t(`menu.${category.id}.title`) }}
                                 </UButton>
                             </li>
                         </ul>
                     </UCard>
                 </aside>
-
-                <!-- Menu Content -->
                 <section class="flex-1 space-y-16">
                     <div
                         v-for="category in categories"
@@ -162,26 +160,60 @@ function scrollTo(id: string) {
                         </h2>
 
                         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                            <UCard
+                            <div
                                 v-for="item in category.items"
                                 :key="item.name"
-                                class="overflow-hidden">
-                                <img
-                                    :src="item.image"
-                                    alt=""
-                                    class="h-40 w-full rounded-t-xl object-cover" />
-                                <div class="p-4">
-                                    <h3 class="mb-1 text-xl font-medium">
-                                        {{ t(`menu.${category.id}.items.${item.name}.title`) }}
-                                    </h3>
-                                    <p class="mb-2 text-sm text-gray-600">
-                                        {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
-                                    </p>
-                                    <p class="text-primary font-semibold">
-                                        {{ item.price }}
-                                    </p>
+                                class="group h-80 w-full cursor-pointer focus:outline-none lg:h-100">
+                                <div
+                                    class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                    <!-- Front card -->
+                                    <UCard
+                                        class="absolute h-full w-full overflow-hidden [backface-visibility:hidden]">
+                                        <img
+                                            :src="item.image"
+                                            alt=""
+                                            class="h-40 w-full rounded-t-xl object-cover" />
+                                        <div class="p-4">
+                                            <h3 class="mb-1 text-xl font-medium">
+                                                {{
+                                                    t(
+                                                        `menu.${category.id}.items.${item.name}.title`
+                                                    )
+                                                }}
+                                            </h3>
+                                            <p class="mb-2 text-sm text-gray-600">
+                                                {{
+                                                    t(`menu.${category.id}.items.${item.name}.desc`)
+                                                }}
+                                            </p>
+                                            <p class="text-primary font-semibold">
+                                                {{ item.price }}
+                                            </p>
+                                        </div>
+                                    </UCard>
+
+                                    <!-- Flipped card -->
+                                    <UCard
+                                        class="bg-primary absolute h-full w-full [transform:rotateY(180deg)] items-start justify-center text-white [backface-visibility:hidden]">
+                                        <div class="p-6">
+                                            <h3 class="mb-2 text-lg font-semibold">
+                                                {{
+                                                    t(
+                                                        `menu.${category.id}.items.${item.name}.title`
+                                                    )
+                                                }}
+                                            </h3>
+                                            <p class="text-sm leading-relaxed">
+                                                {{
+                                                    t(
+                                                        `menu.${category.id}.items.${item.name}.ingredients`
+                                                    )
+                                                }}
+                                            </p>
+                                        </div>
+                                    </UCard>
                                 </div>
-                            </UCard>
+                            </div>
                         </div>
                     </div>
                 </section>

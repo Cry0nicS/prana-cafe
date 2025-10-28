@@ -151,49 +151,73 @@ export default {
             items: {
                 coworking: {
                     title: "Co-working Days",
-                    desc: "Tuesday to Friday – back space only, 3 hours per table, includes free coffee & tea."
+                    desc: "Tuesday to Friday – back space only, 3 hours per table, includes free coffee & tea.",
+                    ingredients: "Includes: Wi‑Fi access, coffee, tea, power outlet"
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "2 coffees, 2 dates, computer use for 1 hour (not 12–14)."
+                    desc: "2 coffees, 2 dates, computer use for 1 hour (not 12–14).",
+                    ingredients: "Includes: 2 coffees, 2 dates, small snack"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos & 2 mint shots."
+                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos & 2 mint shots.",
+                    ingredients: "Menu: 2x main, side, dessert"
                 },
                 tastyDate: {
                     title: "Tasty Date",
-                    desc: "2 drinks, 2 dates & a slice of banana bread with toppings to share."
+                    desc: "2 drinks, 2 dates & a slice of banana bread with toppings to share.",
+                    ingredients: "Includes: 2 drinks, banana bread slice, shared toppings"
                 }
             }
         },
         drinksCoffee: {
             title: "Coffee Specials",
             items: {
-                espresso: {title: "Espresso / Americano", desc: "Classic espresso or lungo."},
+                espresso: {
+                    title: "Espresso / Americano",
+                    desc: "Classic espresso or lungo.",
+                    ingredients: "100% Arabica, short pull"
+                },
                 flatWhite: {
                     title: "Flat White",
-                    desc: "Smooth and rich with plant milk of your choice."
+                    desc: "Smooth and rich with plant milk of your choice.",
+                    ingredients: "Espresso, velvety microfoam, plant milk"
                 },
-                latte: {title: "Latte", desc: "Creamy, mild coffee with milk."},
-                haselnussLatte: {title: "Hazelnut Latte", desc: "Nutty, warming and sweet."}
+                latte: {
+                    title: "Latte",
+                    desc: "Creamy, mild coffee with milk.",
+                    ingredients: "Espresso, steamed milk, soft crema"
+                },
+                haselnussLatte: {
+                    title: "Hazelnut Latte",
+                    desc: "Nutty, warming and sweet.",
+                    ingredients: "Espresso, hazelnut syrup, frothed milk"
+                }
             }
         },
         drinksHot: {
             title: "Hot Drinks",
             items: {
-                sunshineMilk: {title: "Sunshine Milk", desc: "Golden milk spice with MCT oil."},
+                sunshineMilk: {
+                    title: "Sunshine Milk",
+                    desc: "Golden milk spice with MCT oil.",
+                    ingredients: "Turmeric, ginger, MCT oil, oat milk"
+                },
                 chaiLatte: {
                     title: "Chai Latte",
-                    desc: "House-made chai with Earl Grey, cacao, or golden blend."
+                    desc: "House-made chai with Earl Grey, cacao, or golden blend.",
+                    ingredients: "Spiced tea, cinnamon, cardamom, oat milk"
                 },
                 matchaLatte: {
                     title: "Ceremonial Matcha Latte",
-                    desc: "High-grade matcha with optional extra shot."
+                    desc: "High-grade matcha with optional extra shot.",
+                    ingredients: "Matcha powder, hot water, steamed milk"
                 },
                 hotChocolate: {
                     title: "Melted Hot Chocolate",
-                    desc: "Date-sweetened plant-based chocolate drink."
+                    desc: "Date-sweetened plant-based chocolate drink.",
+                    ingredients: "Dark chocolate, date syrup, oat milk"
                 }
             }
         },
@@ -202,19 +226,23 @@ export default {
             items: {
                 porridge: {
                     title: "Oat-Almond Porridge",
-                    desc: "Served warm with seasonal toppings."
+                    desc: "Served warm with seasonal toppings.",
+                    ingredients: "Oats, almond milk, seasonal fruit, nuts"
                 },
                 bananaBread: {
                     title: "Banana Bread",
-                    desc: "With your choice of toppings – customer favorite."
+                    desc: "With your choice of toppings – customer favorite.",
+                    ingredients: "Ripe bananas, gluten-free flour, nuts"
                 },
                 waffle: {
                     title: "Sweet Waffles",
-                    desc: "Made with oat flour and nut butter, gluten-free and unsweetened."
+                    desc: "Made with oat flour and nut butter, gluten-free and unsweetened.",
+                    ingredients: "Oat flour, plant oil, maple syrup topping"
                 },
                 brunch: {
                     title: "Vegan Brunch",
-                    desc: "Egg-free salad, dips, salad, gluten-free bread & small soup or dessert."
+                    desc: "Egg-free salad, dips, salad, gluten-free bread & small soup or dessert.",
+                    ingredients: "Selection: dip, salad, gluten-free bread, soup"
                 }
             }
         }
