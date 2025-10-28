@@ -127,3 +127,13 @@
     /* Maintain the same radius in dark mode */
     --ui-radius: 0.5rem;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth transitions for interactive elements */
+button,
+.interactive {
+    transition: all 0.2s ease;
+}

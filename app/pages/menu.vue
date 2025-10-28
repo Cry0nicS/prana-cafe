@@ -112,75 +112,80 @@ function scrollTo(id: string) {
 </script>
 
 <template>
-    <UContainer class="py-10">
+    <div>
         <!-- Mobile Navigation -->
-        <div class="sticky top-0 z-10 flex gap-3 overflow-x-auto pb-3 backdrop-blur-md lg:hidden">
-            <UButton
-                v-for="category in categories"
-                :key="category.id"
-                size="sm"
-                variant="soft"
-                color="primary"
-                class="whitespace-nowrap"
-                @click="scrollTo(category.id)">
-                {{ t(`menu.${category.id}.title`) }}
-            </UButton>
-        </div>
-        <div class="flex flex-col gap-10 md:flex-row">
-            <!-- Sidebar Navigation -->
-            <aside class="sticky top-10 hidden self-start md:w-1/4 lg:block">
-                <UCard>
-                    <ul class="space-y-2">
-                        <li
-                            v-for="category in categories"
-                            :key="category.id">
-                            <UButton
-                                color="primary"
-                                variant="ghost"
-                                @click="scrollTo(category.id)"
-                                class="w-full justify-start">
-                                {{ t(`menu.${category.id}.title`) }}
-                            </UButton>
-                        </li>
-                    </ul>
-                </UCard>
-            </aside>
-
-            <!-- Menu Content -->
-            <section class="flex-1 space-y-16">
-                <div
+        <aside class="bg-default sticky inset-x-0 top-[70px] z-10 lg:hidden">
+            <div class="flex flex-wrap gap-3 overflow-x-auto p-4 pb-3 backdrop-blur-md">
+                <UButton
                     v-for="category in categories"
-                    :id="category.id"
                     :key="category.id"
-                    class="scroll-mt-20">
-                    <h2 class="mb-6 text-3xl font-semibold">
-                        {{ t(`menu.${category.id}.title`) }}
-                    </h2>
+                    size="sm"
+                    variant="soft"
+                    color="primary"
+                    class="whitespace-nowrap"
+                    @click="scrollTo(category.id)">
+                    {{ t(`menu.${category.id}.title`) }}
+                </UButton>
+            </div>
+        </aside>
 
-                    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                        <UCard
-                            v-for="item in category.items"
-                            :key="item.name"
-                            class="overflow-hidden">
-                            <img
-                                :src="item.image"
-                                alt=""
-                                class="h-40 w-full rounded-t-xl object-cover" />
-                            <div class="p-4">
-                                <h3 class="mb-1 text-xl font-medium">
-                                    {{ t(`menu.${category.id}.items.${item.name}.title`) }}
-                                </h3>
-                                <p class="mb-2 text-sm text-gray-600">
-                                    {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
-                                </p>
-                                <p class="text-primary font-semibold">
-                                    {{ item.price }}
-                                </p>
-                            </div>
-                        </UCard>
+        <UContainer class="py-10">
+            <div class="flex flex-col gap-10 md:flex-row">
+                <!-- Sidebar Navigation -->
+                <aside class="sticky top-[100px] hidden self-start md:w-1/4 lg:block">
+                    <UCard>
+                        <ul class="space-y-2">
+                            <li
+                                v-for="category in categories"
+                                :key="category.id">
+                                <UButton
+                                    color="primary"
+                                    variant="ghost"
+                                    @click="scrollTo(category.id)"
+                                    class="w-full justify-start">
+                                    {{ t(`menu.${category.id}.title`) }}
+                                </UButton>
+                            </li>
+                        </ul>
+                    </UCard>
+                </aside>
+
+                <!-- Menu Content -->
+                <section class="flex-1 space-y-16">
+                    <div
+                        v-for="category in categories"
+                        :id="category.id"
+                        :key="category.id"
+                        class="scroll-mt-20">
+                        <h2 class="mb-6 text-3xl font-semibold">
+                            {{ t(`menu.${category.id}.title`) }}
+                        </h2>
+
+                        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                            <UCard
+                                v-for="item in category.items"
+                                :key="item.name"
+                                class="overflow-hidden">
+                                <img
+                                    :src="item.image"
+                                    alt=""
+                                    class="h-40 w-full rounded-t-xl object-cover" />
+                                <div class="p-4">
+                                    <h3 class="mb-1 text-xl font-medium">
+                                        {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                    </h3>
+                                    <p class="mb-2 text-sm text-gray-600">
+                                        {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
+                                    </p>
+                                    <p class="text-primary font-semibold">
+                                        {{ item.price }}
+                                    </p>
+                                </div>
+                            </UCard>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </UContainer>
+                </section>
+            </div>
+        </UContainer>
+    </div>
 </template>
