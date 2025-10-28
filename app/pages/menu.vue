@@ -109,6 +109,15 @@ const categories = [
 function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
 }
+const flipped = ref<string | null>(null);
+
+function toggleFlip(id: string) {
+    flipped.value = flipped.value === id ? null : id;
+}
+
+function isFlipped(id: string) {
+    return flipped.value === id;
+}
 </script>
 
 <template>
@@ -163,16 +172,29 @@ function scrollTo(id: string) {
                             <div
                                 v-for="item in category.items"
                                 :key="item.name"
-                                class="group h-80 w-full cursor-pointer focus:outline-none lg:h-100">
+                                class="group h-80 h-100 w-full cursor-pointer focus:outline-none"
+                                @click="toggleFlip(item.name)">
                                 <div
-                                    class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                    class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]"
+                                    :class="{
+                                        'group-hover:[transform:rotateY(180deg)]': !isFlipped(
+                                            item.name
+                                        ),
+                                        '[transform:rotateY(180deg)]': isFlipped(item.name)
+                                    }">
                                     <!-- Front card -->
                                     <UCard
                                         class="absolute h-full w-full overflow-hidden [backface-visibility:hidden]">
-                                        <img
-                                            :src="item.image"
-                                            alt=""
-                                            class="h-40 w-full rounded-t-xl object-cover" />
+                                        <div
+                                            class="aspect-[4/3] w-full overflow-hidden rounded-t-xl">
+                                            <NuxtImg
+                                                :src="item.image"
+                                                alt=""
+                                                class="h-full w-full object-cover"
+                                                format="webp"
+                                                sizes="sm:100vw md:50vw lg:33vw"
+                                                placeholder />
+                                        </div>
                                         <div class="p-4">
                                             <h3 class="mb-1 text-xl font-medium">
                                                 {{
@@ -194,23 +216,20 @@ function scrollTo(id: string) {
 
                                     <!-- Flipped card -->
                                     <UCard
-                                        class="bg-primary absolute h-full w-full [transform:rotateY(180deg)] items-start justify-center text-white [backface-visibility:hidden]">
-                                        <div class="p-6">
-                                            <h3 class="mb-2 text-lg font-semibold">
-                                                {{
-                                                    t(
-                                                        `menu.${category.id}.items.${item.name}.title`
-                                                    )
-                                                }}
-                                            </h3>
-                                            <p class="text-sm leading-relaxed">
-                                                {{
-                                                    t(
-                                                        `menu.${category.id}.items.${item.name}.ingredients`
-                                                    )
-                                                }}
-                                            </p>
-                                        </div>
+                                        class="bg-primary absolute h-full w-full [transform:rotateY(180deg)] justify-center text-white [backface-visibility:hidden]"
+                                        :ui="{
+                                            body: 'flex h-full flex-col items-center justify-center p-6 text-center'
+                                        }">
+                                        <h3 class="mb-2 text-lg font-semibold">
+                                            {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                        </h3>
+                                        <p class="text-sm leading-relaxed">
+                                            {{
+                                                t(
+                                                    `menu.${category.id}.items.${item.name}.ingredients`
+                                                )
+                                            }}
+                                        </p>
                                     </UCard>
                                 </div>
                             </div>
