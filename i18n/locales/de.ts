@@ -1,9 +1,14 @@
 export default {
     pages: {
         home: "Startseite",
+        menu: "Speisekarte",
+        reservations: "Reservierungen",
         privacy: "Datenschutz",
         imprint: "Impressum",
         contact: "Kontakt"
+    },
+    global: {
+        comingSoon: "Bald"
     },
     language: {
         en: "Englisch",
