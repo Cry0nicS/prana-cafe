@@ -1,14 +1,104 @@
 export default {
     pages: {
         home: "Home",
+        menu: "Menu",
+        reservations: "Reservations",
         privacy: "Privacy",
         imprint: "Imprint",
         contact: "Contact"
+    },
+    global: {
+        comingSoon: "Soon"
     },
     language: {
         en: "English",
         de: "German",
         label: "Language"
+    },
+    imprint: {
+        title: "Imprint",
+
+        section: {
+            company: {
+                title: "Information according to §5 TMG",
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nRepresented by:\n{representative}`
+            },
+            contact: {
+                title: "Contact",
+                content: `Phone: {phone}\nEmail: {email}\nWebsite: {website}`,
+                phoneLabel: "Phone",
+                emailLabel: "Email",
+                websiteLabel: "Website"
+            },
+            vat: {
+                title: "VAT ID",
+                content: `VAT Identification Number according to §27a German VAT Act:\n{vatId}\n\n(If not applicable: remove or state "Not subject to VAT.")`
+            },
+            supervisory: {
+                title: "Supervisory Authority",
+                content: `Responsible supervisory authority (if applicable):\n{authority}`
+            },
+            liability: {
+                title: "Liability for Content",
+                content: `As a service provider, we are responsible for our own content on these pages according to §7(1) TMG and general laws. However, according to §§8-10 TMG, we are not obliged to monitor transmitted or stored external information or investigate circumstances that indicate illegal activity.\n\nObligations to remove or block the use of information under general laws remain unaffected. Liability in this respect is only possible from the time we become aware of a specific infringement. Upon notification of such violations, we will remove these contents immediately.`
+            },
+            links: {
+                title: "Liability for Links",
+                content: `Our website contains links to external websites of third parties, the contents of which we have no control over. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for the content of the pages.\n\nThe linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at that time. Permanent monitoring of the linked pages is not reasonable without specific evidence of a violation. Upon becoming aware of any such violations, we will remove these links immediately.`
+            },
+            copyright: {
+                title: "Copyright",
+                content: `The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.\n\nDownloads and copies of this site are only permitted for private, non-commercial use. Insofar as content on this site was not created by the operator, the copyrights of third parties are respected and such content is marked accordingly.\n\nShould you nevertheless become aware of a copyright infringement, please inform us. Upon notification, we will remove such content immediately.`
+            },
+            dispute: {
+                title: "EU Dispute Resolution / Consumer Mediation",
+                content: `The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr\n\nOur email address can be found above in the imprint.\n\nWe are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board.`
+            }
+        }
+    },
+    privacy: {
+        title: "Privacy & Data Protection",
+        description:
+            "We take your privacy seriously. This page explains what data we collect, why, and what rights you have.",
+        lastUpdated: "Last updated: {date}",
+        section: {
+            controller: {
+                title: "Data Controller",
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nRepresented by:\n{representative}\n\nIf you have questions regarding data processing, contact: {email}`
+            },
+            dataCollected: {
+                title: "What Data We Collect",
+                content: `We may collect personal data that you provide directly (for example, when contacting us), technical data (device and browser information), and usage data (pages visited, interactions). This helps us operate and improve the website.`
+            },
+            legalBasis: {
+                title: "Legal Basis for Processing",
+                content: `We process personal data when necessary to provide our services, comply with legal obligations, protect legitimate interests (e.g., security, fraud prevention), and with your consent where required (e.g., for cookies and analytics).`
+            },
+            cookies: {
+                title: "Cookies",
+                content: `We use cookies and similar technologies only to provide core site functionality Essential cookies are necessary for the site to function.`
+            },
+            retention: {
+                title: "Data Retention",
+                content: `We retain personal data only as long as necessary for the purposes described and to comply with legal obligations. When data is no longer needed, it will be deleted or anonymized.`
+            },
+            security: {
+                title: "Security",
+                content: `We take reasonable technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure or access.`
+            },
+            rights: {
+                title: "Your Rights",
+                content: `Under GDPR you have rights including access, rectification, erasure, restriction of processing, data portability and objection. To exercise these rights, contact us at {email}.`
+            },
+            contact: {
+                title: "Contact",
+                content: `For privacy inquiries contact: {email}\nYou can also use our imprint contact details for legal notices.`
+            },
+            dispute: {
+                title: "EU Dispute Resolution",
+                content: `The European Commission's ODR platform is available here: https://ec.europa.eu/consumers/odr`
+            }
+        }
     },
     index: {
         hero: {
@@ -39,7 +129,7 @@ export default {
             bowls: {
                 title: "Nourishing Bowls  &  Smoothies",
                 description:
-                    "From açai bowls to power smoothies, our dishes fuel your body and mind."
+                    "From açaí bowls to power smoothies, our dishes fuel your body and mind."
             },
             community: {
                 title: "Cozy Community Space",

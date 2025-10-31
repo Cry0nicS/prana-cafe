@@ -1,14 +1,60 @@
 export default {
     pages: {
         home: "Startseite",
+        menu: "Speisekarte",
+        reservations: "Reservierungen",
         privacy: "Datenschutz",
         imprint: "Impressum",
         contact: "Kontakt"
+    },
+    global: {
+        comingSoon: "Bald"
     },
     language: {
         en: "Englisch",
         de: "Deutsch",
         label: "Sprache"
+    },
+    imprint: {
+        title: "Impressum",
+
+        section: {
+            company: {
+                title: "Angaben gemäß § 5 TMG",
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nVertreten durch:\n{representative}`
+            },
+            contact: {
+                title: "Kontakt",
+                content: `Telefon: {phone}\nE-Mail: {email}\nWebseite: {website}`,
+                phoneLabel: "Telefon",
+                emailLabel: "E-Mail",
+                websiteLabel: "Webseite"
+            },
+            vat: {
+                title: "Umsatzsteuer-ID",
+                content: `Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n{vatId}\n\n(Falls nicht vorhanden: diesen Abschnitt löschen oder „Nicht umsatzsteuerpflichtig" angeben.)`
+            },
+            supervisory: {
+                title: "Aufsichtsbehörde (falls zutreffend)",
+                content: `{authority}`
+            },
+            liability: {
+                title: "Haftung für Inhalte",
+                content: `Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.\nNach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.\n\nVerpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.\nEine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.\nBei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.`
+            },
+            links: {
+                title: "Haftung für Links",
+                content: `Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.\nDeshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.\nFür die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.\nRechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar.\nEine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.\nBei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.`
+            },
+            copyright: {
+                title: "Urheberrecht",
+                content: `Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.\nDie Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.\n\nDownloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.\nSoweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und Inhalte Dritter entsprechend gekennzeichnet.\n\nSollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.\nBei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.`
+            },
+            dispute: {
+                title: "EU-Streitschlichtung / Verbraucherstreitbeilegung",
+                content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr\n\nUnsere E-Mail-Adresse finden Sie oben im Impressum.\n\nWir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+            }
+        }
     },
     index: {
         hero: {
@@ -246,6 +292,50 @@ export default {
                     desc: "Eiersalat, Dips, Salat, GF Brot & kleine Suppe oder Süßspeise.",
                     ingredients: "Auswahl: Dip, Salat, glutenfreies Brot, Suppe"
                 }
+            }
+        }
+    },
+    privacy: {
+        title: "Datenschutz",
+        description:
+            "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst. Auf dieser Seite erklären wir, welche Daten wir erheben, warum und welche Rechte Sie haben.",
+        lastUpdated: "Zuletzt aktualisiert: {date}",
+        section: {
+            controller: {
+                title: "Verantwortlicher",
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nVertreten durch:\n{representative}\n\nBei Fragen zur Datenverarbeitung kontaktieren Sie: {email}`
+            },
+            dataCollected: {
+                title: "Welche Daten wir erheben",
+                content: `Wir erheben gegebenenfalls personenbezogene Daten, die Sie uns direkt mitteilen (z. B. bei Kontaktaufnahme), technische Daten (Gerät, Browser) und Nutzungsdaten (besuchte Seiten, Interaktionen). Diese Daten helfen uns, die Website zu betreiben und zu verbessern.`
+            },
+            legalBasis: {
+                title: "Rechtsgrundlagen der Verarbeitung",
+                content: `Wir verarbeiten personenbezogene Daten, wenn dies zur Bereitstellung unserer Dienste erforderlich ist, wir rechtlichen Verpflichtungen nachkommen müssen, berechtigte Interessen verfolgen (z. B. Sicherheit) oder Sie Ihre Einwilligung erteilt haben (z. B. für Cookies/Analytics).`
+            },
+            cookies: {
+                title: "Cookies",
+                content: `Wir verwenden Cookies und ähnliche Technologien für Funktionalität. Essenzielle Cookies sind für den Betrieb der Website erforderlich.`
+            },
+            retention: {
+                title: "Speicherdauer",
+                content: `Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist und um rechtlichen Pflichten nachzukommen. Wenn Daten nicht mehr benötigt werden, werden sie gelöscht oder anonymisiert.`
+            },
+            security: {
+                title: "Sicherheit",
+                content: `Wir treffen technische und organisatorische Maßnahmen, um personenbezogene Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen.`
+            },
+            rights: {
+                title: "Ihre Rechte",
+                content: `Nach der DSGVO stehen Ihnen Rechte wie Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch zu. Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter {email}.`
+            },
+            contact: {
+                title: "Kontakt",
+                content: `Für Datenschutzanfragen kontaktieren Sie: {email}\nSie können auch die Kontaktdaten im Impressum für rechtliche Hinweise verwenden.`
+            },
+            dispute: {
+                title: "EU-Streitschlichtung",
+                content: `Die OS-Plattform der Europäischen Kommission: https://ec.europa.eu/consumers/odr`
             }
         }
     }
