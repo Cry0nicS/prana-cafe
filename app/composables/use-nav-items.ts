@@ -47,6 +47,16 @@ export const useNavItems = () => {
                 icon: "mdi:food-fork-drink"
             },
             {
+                label: t("pages.reservations"),
+                icon: "mdi:calendar-check-outline",
+                disabled: true,
+                badge: {
+                    label: t("global.comingSoon"),
+                    variant: "outline",
+                    color: "neutral"
+                }
+            },
+            {
                 label: t("pages.contact"),
                 to: localePath("/privacy/contact"),
                 icon: "mdi:email-outline"
@@ -60,17 +70,6 @@ export const useNavItems = () => {
                 label: t("pages.privacy"),
                 to: localePath("/privacy"),
                 icon: "mdi:shield-account-outline"
-            },
-            {
-                label: t("pages.reservations"),
-                to: localePath("/"),
-                icon: "mdi:calendar-check-outline",
-                disabled: true,
-                badge: {
-                    label: t("global.comingSoon"),
-                    variant: "outline",
-                    color: "neutral"
-                }
             }
         ];
     });
