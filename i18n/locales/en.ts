@@ -251,7 +251,7 @@ export default {
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos & 2 mint shots.",
+                    desc: "2 sober bubbles, olives, 2 lunches, 2 espresso & 2 mint shots.",
                     ingredients: "Menu: 2x main, side, dessert"
                 },
                 tastyDate: {
@@ -276,13 +276,13 @@ export default {
                 },
                 latte: {
                     title: "Latte",
-                    desc: "Creamy, mild coffee with milk.",
-                    ingredients: "Espresso, steamed milk, soft crema"
+                    desc: "Creamy, mild coffee with mylk.",
+                    ingredients: "Double espresso, foamed mylk, large"
                 },
                 haselnussLatte: {
                     title: "Hazelnut Latte",
-                    desc: "Nutty, warming and sweet.",
-                    ingredients: "Espresso, hazelnut syrup, frothed milk"
+                    desc: "Nutty, rich, and warming.",
+                    ingredients: "Double espresso, roasted hazelnut oil, steamed mylk"
                 }
             }
         },
@@ -292,12 +292,12 @@ export default {
                 sunshineMilk: {
                     title: "Sunshine Milk",
                     desc: "Golden milk spice with MCT oil.",
-                    ingredients: "Turmeric, ginger, MCT oil, oat milk"
+                    ingredients: "Golden spice mix, MCT oil, mylk of choice"
                 },
                 chaiLatte: {
                     title: "Chai Latte",
-                    desc: "House-made chai with Earl Grey, cacao, or golden blend.",
-                    ingredients: "Spiced tea, cinnamon, cardamom, oat milk"
+                    desc: "Homemade chai spice blend with mylk of choice",
+                    ingredients: "Chai spices, mylk of choice"
                 },
                 matchaLatte: {
                     title: "Ceremonial Matcha Latte",
@@ -315,24 +315,25 @@ export default {
             title: "Food & Brunch",
             items: {
                 porridge: {
-                    title: "Oat-Almond Porridge",
-                    desc: "Served warm with seasonal toppings.",
-                    ingredients: "Oats, almond milk, seasonal fruit, nuts"
+                    title: "Oat Porridge",
+                    desc: "Served warm, pure, or with seasonal toppings.",
+                    ingredients:
+                        "Oats, Tigernut porridge freshly made with coconut mylk, and optional toppings"
                 },
                 bananaBread: {
                     title: "Banana Bread",
-                    desc: "With your choice of toppings – customer favorite.",
-                    ingredients: "Ripe bananas, gluten-free flour, nuts"
+                    desc: "Toasted and served with toppings of the day.",
+                    ingredients: "Gluten-free oat flour, nuts"
                 },
                 waffle: {
-                    title: "Sweet Waffles",
-                    desc: "Made with oat flour and nut butter, gluten-free and unsweetened.",
-                    ingredients: "Oat flour, plant oil, maple syrup topping"
+                    title: "Waffles",
+                    desc: "À-la-carte and daily offer: sweet or savory.",
+                    ingredients: "Gluten-free oat flour, sweet potato and almonds"
                 },
                 brunch: {
-                    title: "Vegan Brunch",
-                    desc: "Egg-free salad, dips, salad, gluten-free bread & small soup or dessert.",
-                    ingredients: "Selection: dip, salad, gluten-free bread, soup"
+                    title: "Pranas Brunch",
+                    desc: "Vegg salad, dips, salad, carrot facon, homemade gluten-free bread and soup or dessert.",
+                    ingredients: "Tofu, cashews, seasonal veggies, mustard"
                 }
             }
         }
