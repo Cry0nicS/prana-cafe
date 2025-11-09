@@ -10,7 +10,7 @@ const categories = [
             {
                 name: "coworking",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-                price: "10€/h"
+                price: "10€ p.p. / h"
             },
             {
                 name: "businessBreak",
@@ -33,6 +33,16 @@ const categories = [
         id: "drinksCoffee",
         items: [
             {
+                name: "haselnussLatte",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5,8€"
+            },
+            {
+                name: "dirtyEarl",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "5.2€"
+            },
+            {
                 name: "espresso",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
                 price: "2,5 / 3,3€"
@@ -46,17 +56,17 @@ const categories = [
                 name: "latte",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
                 price: "5,3€"
-            },
-            {
-                name: "haselnussLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-                price: "5,8€"
             }
         ]
     },
     {
         id: "drinksHot",
         items: [
+            {
+                name: "cacao",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "6€"
+            },
             {
                 name: "sunshineMilk",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
@@ -101,6 +111,16 @@ const categories = [
                 name: "brunch",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
                 price: "18€"
+            },
+            {
+                name: "lunch",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "14.90€"
+            },
+            {
+                name: "soup",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                price: "4€ / 8€"
             }
         ]
     }
@@ -167,7 +187,11 @@ function isFlipped(id: string) {
                         <h2 class="mb-6 text-3xl font-semibold">
                             {{ t(`menu.${category.id}.title`) }}
                         </h2>
-
+                        <p
+                            v-if="`menu.${category.id}.options`"
+                            class="text-muted mb-6">
+                            {{ t(`menu.${category.id}.options`) }}
+                        </p>
                         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                             <div
                                 v-for="item in category.items"
@@ -203,7 +227,7 @@ function isFlipped(id: string) {
                                                     )
                                                 }}
                                             </h3>
-                                            <p class="mb-2 text-sm text-gray-600">
+                                            <p class="text-muted mb-2 text-sm">
                                                 {{
                                                     t(`menu.${category.id}.items.${item.name}.desc`)
                                                 }}

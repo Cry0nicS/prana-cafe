@@ -30,6 +30,8 @@ const features = ref([
 
 <template>
     <UPageSection
+        icon="i-mdi-email-outline"
+        variant="outline"
         title="Fresh, Local, and Kind"
         description="Our vegan café is built on a love for plants, sustainability, and community. Reach out to us — we’d love to hear from you."
         :features="features" />
