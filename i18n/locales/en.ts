@@ -8,7 +8,7 @@ export default {
         contact: "Contact"
     },
     global: {
-        comingSoon: "Soon"
+        comingSoon: "Coming soon"
     },
     language: {
         en: "English",
@@ -76,7 +76,7 @@ export default {
             },
             cookies: {
                 title: "Cookies",
-                content: `We use cookies and similar technologies only to provide core site functionality Essential cookies are necessary for the site to function.`
+                content: `We use cookies and similar technologies only to provide core site functionality. Essential cookies are necessary for the site to function.`
             },
             retention: {
                 title: "Data Retention",
@@ -84,11 +84,11 @@ export default {
             },
             security: {
                 title: "Security",
-                content: `We take reasonable technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure or access.`
+                content: `We take reasonable technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.`
             },
             rights: {
                 title: "Your Rights",
-                content: `Under GDPR you have rights including access, rectification, erasure, restriction of processing, data portability and objection. To exercise these rights, contact us at {email}.`
+                content: `Under GDPR, you have rights including access, rectification, erasure, restriction of processing, data portability, and objection. To exercise these rights, contact us at {email}.`
             },
             contact: {
                 title: "Contact",
@@ -102,136 +102,135 @@ export default {
     },
     index: {
         hero: {
-            title: "Welcome to Prana Café",
-            description: "A gluten‑free and vegan haven in the heart of Berlin",
+            title: "Welcome to Café Prana",
+            description: "A gluten-free and vegan haven in the heart of Berlin",
             headline: "Newly opened!",
             links: {
-                ourPhilosophy: "Our Philosophy",
-                menuHighlights: "Menu Highlights"
+                menuHighlights: "Menu Highlights",
+                getDirections: "Get Directions"
             }
         },
         philosophy: {
             title: "Our Philosophy",
             description:
-                "We believe in nourishing food that delights your taste buds and fuels your body. Here’s what makes Prana Café special:"
+                "We believe in nourishing food that delights your taste buds and fuels your body. Here’s what makes Café Prana special:"
         },
         features: {
             glutenFree: {
-                title: "100  %  Gluten‑Free",
+                title: "100% Gluten-Free",
                 description:
-                    "Everything on our menu is gluten‑free, safe for coeliacs and those with sensitivities."
+                    "Everything on our menu is gluten-free, safe for coeliacs and those with sensitivities."
             },
             plantBased: {
-                title: "Plant‑Based  &  Organic",
+                title: "Plant-Based & Organic",
                 description:
-                    "We use plant‑based, organic ingredients sourced locally whenever possible."
+                    "We use plant-based, organic ingredients sourced locally whenever possible."
             },
             bowls: {
-                title: "Nourishing Bowls  &  Smoothies",
+                title: "Nourishing Lunch & Brunch",
                 description:
-                    "From açaí bowls to power smoothies, our dishes fuel your body and mind."
+                    "Our homemade dishes are created to fuel your body with a wide array of macro- and micronutrients."
             },
             community: {
                 title: "Cozy Community Space",
                 description:
                     "Experience a warm atmosphere where you can relax, work or catch up with friends."
+            },
+            drinks: {
+                title: "Heartwarming Drinks",
+                description:
+                    "Whether you opt for a latte with homemade cashew mylk or a seasonal hottie, your heart and mind will thank you."
+            },
+            experience: {
+                title: "Immersive Experience",
+                description:
+                    "At Prana, various spots will pop up where you can express yourself. Workshops are welcome!"
             }
         },
         menu: {
             title: "Menu Highlights",
-            description: "Here are a few of our favourite dishes and drinks you can enjoy today.",
+            description:
+                "Here are a few of our favourite dishes and drinks you can enjoy every day.",
             items: {
-                avocado: {
-                    title: "Avocado Toast Supreme",
+                waffle: {
+                    title: "Savoury Waffle",
                     description:
-                        "Toasted gluten‑free sourdough topped with smashed avocado, chilli flakes, hemp seeds and microgreens."
+                        "Sweet potato waffle topped with today's savoury toppings, refreshed daily."
                 },
-                rainbow: {
-                    title: "Rainbow Power Bowl",
+                chai: {
+                    title: "Chai Latte",
                     description:
-                        "A colourful bowl of quinoa, roasted veggies, pickled beets, and a creamy tahini dressing."
+                        "A warm, homemade chai spice blend crafted with care and served with your choice of plant-based milk."
                 },
-                turmericLatte: {
-                    title: "Golden Turmeric Latte",
+                bananaBread: {
+                    title: "Prana's Banana Bread",
                     description:
-                        "Creamy oat milk blended with turmeric, ginger, cinnamon and a hint of maple, served warm or iced."
+                        "Very nourishing and sweetened banana bread, served with sweet seasonal toppings."
                 },
-                berry: {
-                    title: "Berry Bliss Smoothie",
+                cacao: {
+                    title: "Ceremonial Cacao",
                     description:
-                        "A vibrant blend of mixed berries, banana, coconut milk and a touch of agave."
-                },
-                chickpeaWrap: {
-                    title: "Chickpea Salad Wrap",
-                    description:
-                        "Crunchy vegetables and smashed chickpeas wrapped in a gluten‑free tortilla with lemon‑dill sauce."
-                },
-                matcha: {
-                    title: "Matcha Magic Bowl",
-                    description:
-                        "Smooth matcha smoothie bowl topped with coconut flakes, granola and seasonal fruit."
+                        "Yes, we believe in mindfulness and the power of pure, raw cacao to uplift your spirit."
                 }
             },
             cta: {
-                label: "View our menu"
+                label: "Explore the full menu"
             }
         },
         gallery: {
             title: "Gallery",
             description:
-                "Get a glimpse of the ambience, dishes and drinks that make Prana Café special."
+                "Get a glimpse of the ambience, dishes and drinks that make Café Prana special."
         },
         story: {
             title: "Our Story",
             description:
-                "Learn how Prana Café was born out of a passion for holistic health and community.",
-            paragraph1:
-                "Founded by friends who wanted to share their love of wholesome food, Prana  Café brings together locally‑sourced ingredients and creative recipes. We’re committed to sustainability, compassion and a welcoming community. Whether you’re grabbing coffee on the go or settling in for brunch, we’ve created a space where everyone feels at home.",
-            paragraph2:
-                "Drop by to experience colourful bowls, seasonal specials and our signature drinks crafted with superfoods and adaptogens. Every item on our menu is 100  %  gluten‑free and vegan, so you can eat with confidence and delight."
+                "Learn how Café Prana was born out of a passion for holistic health and wellbeing.",
+            text: "Founded by a yogini, nutritionist, foodie, nature lover, fitness trainer, health cook, and barista (…you get the persona…) who wanted to bring the holistic aspects of health and energy under one roof. Café Prana is a one-woman show that combines a welcoming atmosphere with high-quality sourcing. Regional, seasonal vegetables meet nutritious pseudocereals and natural superfoods under the creative touch of the kitchen fairy. Whether you’re grabbing a specialty coffee to go or settling into the cushions for brunch, it is a safe and open space awaiting you. Prana’s long-term goal is to implement even more sustainable practices and foster a sense of community and profound respect."
         },
         testimonials: {
             title: "What Our Guests Say",
-            description: "Don’t just take our word for it—hear from people who love Prana  Café.",
-            anna: {
-                quote: "Best vegan brunch in Berlin! I can always find something new and exciting on the menu."
-            },
-            markus: {
-                quote: "As someone with coeliac disease, I love that I don’t have to worry about gluten here—everything is delicious and safe."
-            },
-            sophie: {
-                quote: "The atmosphere at Prana is so relaxing and welcoming. My go‑to spot for an afternoon latte and a catch‑up with friends."
-            }
+            description: "Don’t just take our word for it, hear from people who love Café Prana."
         },
         faq: {
             title: "Frequently Asked Questions",
             description: "Have a question? We’ve got answers.",
             items: {
                 glutenFree: {
-                    question: "Is everything on the menu gluten‑free?",
-                    answer: "Yes! We are entirely gluten‑free. All of our dishes are prepared without gluten so you can enjoy your meal worry‑free."
+                    question: "Is everything on the menu gluten-free?",
+                    answer: "Yes! We are entirely gluten-free. All of our dishes are prepared without gluten so you can enjoy your meal worry-free."
                 },
                 reservations: {
                     question: "Do you take reservations?",
-                    answer: "At the moment we operate on a first‑come, first‑served basis. Feel free to drop by—there’s usually a seat waiting for you!"
+                    answer: "At the moment we accept reservations only via Instagram or email. Feel free to drop by. There’s usually a seat waiting for you!"
                 },
                 pets: {
                     question: "Are pets allowed?",
-                    answer: "Absolutely! Well‑behaved pets are welcome in our outdoor seating area."
+                    answer: "We currently do not allow animals indoors to ensure the comfort and safety of all our guests, including those with allergies or fears. Additionally, our shared space and open kitchen setup are not compatible with animals for hygiene reasons. Thank you for understanding!"
                 },
                 takeaway: {
-                    question: "Do you offer take‑away?",
-                    answer: "Yes, we offer take‑away for most of our menu items. Stop by and ask our staff for details."
+                    question: "Do you offer take-away?",
+                    answer: "Yes, we offer take-away for most of our menu items. Stop by and ask our staff for details."
                 }
             }
         },
         cta: {
             title: "Come taste the difference",
             description:
-                "Visit Prana  Café today and discover your new favourite spot. We’re open daily for coffee, breakfast, brunch and lunch.",
+                "Visit Café Prana today and discover your new favourite spot. We’re open Tuesday to Sunday for coffee, breakfast, brunch and lunch.",
+            hours: {
+                heading: "Opening Hours",
+                monday: {day: "Monday", time: "Closed"},
+                tuesday: {day: "Tuesday", time: "06:00 - 18:00"},
+                wednesday: {day: "Wednesday", time: "06:00 - 18:00"},
+                thursday: {day: "Thursday", time: "06:00 - 18:00"},
+                friday: {day: "Friday", time: "06:00 - 18:00"},
+                saturday: {day: "Saturday", time: "08:00 - 16:00"},
+                sunday: {day: "Sunday", time: "06:00 - 18:00"}
+            },
             links: {
                 getDirections: "Get Directions",
-                seeMore: "Reservations"
+                reservations: "Reservations"
             }
         }
     },
@@ -242,16 +241,16 @@ export default {
                 coworking: {
                     title: "Co-working Days",
                     desc: "Tuesday to Friday – back space only, 3 hours per table, includes free coffee & tea.",
-                    ingredients: "Includes: Wi‑Fi access, coffee, tea, power outlet"
+                    ingredients: "Includes: Wi-Fi access, coffee, tea, power outlet"
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "2 coffees, 2 dates, computer use for 1 hour (not 12–14).",
+                    desc: "2 coffees, 2 dates, computer use for 1 hour (except 12–14).",
                     ingredients: "Includes: 2 coffees, 2 dates, small snack"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos & 2 mint shots.",
+                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos, and 2 mint shots.",
                     ingredients: "Menu: 2x main, side, dessert"
                 },
                 tastyDate: {
@@ -276,13 +275,13 @@ export default {
                 },
                 latte: {
                     title: "Latte",
-                    desc: "Creamy, mild coffee with milk.",
-                    ingredients: "Espresso, steamed milk, soft crema"
+                    desc: "Creamy, mild coffee with mylk.",
+                    ingredients: "Double espresso, foamed mylk, large"
                 },
                 haselnussLatte: {
                     title: "Hazelnut Latte",
-                    desc: "Nutty, warming and sweet.",
-                    ingredients: "Espresso, hazelnut syrup, frothed milk"
+                    desc: "Nutty, rich, and warming.",
+                    ingredients: "Double espresso, roasted hazelnut oil, steamed mylk"
                 }
             }
         },
@@ -292,12 +291,12 @@ export default {
                 sunshineMilk: {
                     title: "Sunshine Milk",
                     desc: "Golden milk spice with MCT oil.",
-                    ingredients: "Turmeric, ginger, MCT oil, oat milk"
+                    ingredients: "Golden spice mix, MCT oil, mylk of choice"
                 },
                 chaiLatte: {
                     title: "Chai Latte",
-                    desc: "House-made chai with Earl Grey, cacao, or golden blend.",
-                    ingredients: "Spiced tea, cinnamon, cardamom, oat milk"
+                    desc: "Homemade chai spice blend with mylk of choice",
+                    ingredients: "Chai spices, mylk of choice"
                 },
                 matchaLatte: {
                     title: "Ceremonial Matcha Latte",
@@ -315,24 +314,25 @@ export default {
             title: "Food & Brunch",
             items: {
                 porridge: {
-                    title: "Oat-Almond Porridge",
-                    desc: "Served warm with seasonal toppings.",
-                    ingredients: "Oats, almond milk, seasonal fruit, nuts"
+                    title: "Oat Porridge",
+                    desc: "Served warm, pure, or with seasonal toppings.",
+                    ingredients:
+                        "Oats, Tigernut porridge freshly made with coconut mylk, and optional toppings"
                 },
                 bananaBread: {
                     title: "Banana Bread",
-                    desc: "With your choice of toppings – customer favorite.",
-                    ingredients: "Ripe bananas, gluten-free flour, nuts"
+                    desc: "Toasted and served with toppings of the day.",
+                    ingredients: "Gluten-free oat flour, nuts"
                 },
                 waffle: {
-                    title: "Sweet Waffles",
-                    desc: "Made with oat flour and nut butter, gluten-free and unsweetened.",
-                    ingredients: "Oat flour, plant oil, maple syrup topping"
+                    title: "Waffles",
+                    desc: "À la carte and daily offer: sweet or savory.",
+                    ingredients: "Gluten-free oat flour, sweet potato and almonds"
                 },
                 brunch: {
-                    title: "Vegan Brunch",
-                    desc: "Egg-free salad, dips, salad, gluten-free bread & small soup or dessert.",
-                    ingredients: "Selection: dip, salad, gluten-free bread, soup"
+                    title: "Pranas Brunch",
+                    desc: "Veggie salad, dips, carrot facon, homemade gluten-free bread, and soup or dessert.",
+                    ingredients: "Tofu, cashews, seasonal veggies, mustard"
                 }
             }
         }

@@ -1,14 +1,14 @@
 export default {
     pages: {
         home: "Startseite",
-        menu: "Speisekarte",
+        menu: "Menü",
         reservations: "Reservierungen",
         privacy: "Datenschutz",
         imprint: "Impressum",
         contact: "Kontakt"
     },
     global: {
-        comingSoon: "Bald"
+        comingSoon: "Demnächst"
     },
     language: {
         en: "Englisch",
@@ -20,202 +20,242 @@ export default {
 
         section: {
             company: {
-                title: "Angaben gemäß § 5 TMG",
+                title: "Angaben gemäß §5 TMG",
                 content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nVertreten durch:\n{representative}`
             },
             contact: {
                 title: "Kontakt",
-                content: `Telefon: {phone}\nE-Mail: {email}\nWebseite: {website}`,
+                content: `Telefon: {phone}\nE-Mail: {email}\nWebsite: {website}`,
                 phoneLabel: "Telefon",
                 emailLabel: "E-Mail",
-                websiteLabel: "Webseite"
+                websiteLabel: "Website"
             },
             vat: {
                 title: "Umsatzsteuer-ID",
-                content: `Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:\n{vatId}\n\n(Falls nicht vorhanden: diesen Abschnitt löschen oder „Nicht umsatzsteuerpflichtig" angeben.)`
+                content: `Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:\n{vatId}\n\n(Falls nicht zutreffend: entfernen oder „Nicht umsatzsteuerpflichtig“ angeben.)`
             },
             supervisory: {
-                title: "Aufsichtsbehörde (falls zutreffend)",
-                content: `{authority}`
+                title: "Aufsichtsbehörde",
+                content: `Zuständige Aufsichtsbehörde (falls zutreffend):\n{authority}`
             },
             liability: {
                 title: "Haftung für Inhalte",
-                content: `Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.\nNach §§ 8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.\n\nVerpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.\nEine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.\nBei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.`
+                content: `Als Dienstanbieter sind wir gemäß §7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§8 bis 10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.\n\nVerpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine Haftung ist jedoch erst ab dem Zeitpunkt möglich, an dem wir von einer konkreten Rechtsverletzung Kenntnis erlangen. Bei Bekanntwerden solcher Verstöße entfernen wir diese Inhalte umgehend.`
             },
             links: {
                 title: "Haftung für Links",
-                content: `Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.\nDeshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.\nFür die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.\nRechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar.\nEine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.\nBei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.`
+                content: `Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine dauerhafte inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Links umgehend.`
             },
             copyright: {
                 title: "Urheberrecht",
-                content: `Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.\nDie Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.\n\nDownloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.\nSoweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und Inhalte Dritter entsprechend gekennzeichnet.\n\nSollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.\nBei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.`
+                content: `Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors oder Erstellers.\n\nDownloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und entsprechend gekennzeichnet.\n\nSolltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, gib uns bitte Bescheid. Bei Bekanntwerden von Rechtsverletzungen entfernen wir derartige Inhalte umgehend.`
             },
             dispute: {
-                title: "EU-Streitschlichtung / Verbraucherstreitbeilegung",
-                content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr\n\nUnsere E-Mail-Adresse finden Sie oben im Impressum.\n\nWir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+                title: "EU-Streitschlichtung / Verbraucher­streitbeilegung",
+                content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr\n\nUnsere E-Mail-Adresse findest du oben im Impressum.\n\nWir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+            }
+        }
+    },
+    privacy: {
+        title: "Datenschutz & Privatsphäre",
+        description:
+            "Uns ist dein Datenschutz wichtig. Auf dieser Seite erfährst du, welche Daten wir erheben, warum und welche Rechte du hast.",
+        lastUpdated: "Zuletzt aktualisiert: {date}",
+        section: {
+            controller: {
+                title: "Verantwortliche Stelle",
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nVertreten durch:\n{representative}\n\nWenn du Fragen zur Datenverarbeitung hast, schreib uns an: {email}`
+            },
+            dataCollected: {
+                title: "Welche Daten wir erheben",
+                content: `Wir können personenbezogene Daten erfassen, die du uns direkt gibst (z. B. bei Kontaktaufnahme), technische Daten (Geräte- und Browserinformationen) sowie Nutzungsdaten (besuchte Seiten, Interaktionen). Das hilft uns, die Website zu betreiben und zu verbessern.`
+            },
+            legalBasis: {
+                title: "Rechtsgrundlage der Verarbeitung",
+                content: `Wir verarbeiten personenbezogene Daten, wenn dies notwendig ist, um unsere Dienste bereitzustellen, rechtliche Verpflichtungen zu erfüllen, berechtigte Interessen zu wahren (z. B. Sicherheit, Betrugsprävention) oder – sofern erforderlich – mit deiner Einwilligung (z. B. für Cookies und Analysezwecke).`
+            },
+            cookies: {
+                title: "Cookies",
+                content: `Wir verwenden Cookies und ähnliche Technologien nur, um grundlegende Funktionen der Website bereitzustellen. Essenzielle Cookies sind notwendig, damit die Seite funktioniert.`
+            },
+            retention: {
+                title: "Speicherdauer",
+                content: `Wir speichern personenbezogene Daten nur so lange, wie es für die genannten Zwecke erforderlich ist oder gesetzliche Vorschriften es verlangen. Wenn die Daten nicht mehr benötigt werden, löschen oder anonymisieren wir sie.`
+            },
+            security: {
+                title: "Sicherheit",
+                content: `Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor versehentlicher oder unrechtmäßiger Zerstörung, Verlust, Veränderung, unbefugter Offenlegung oder Zugriff zu schützen.`
+            },
+            rights: {
+                title: "Deine Rechte",
+                content: `Nach der DSGVO hast du Rechte wie Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Um diese Rechte auszuüben, kontaktiere uns unter {email}.`
+            },
+            contact: {
+                title: "Kontakt",
+                content: `Bei Fragen zum Datenschutz erreichst du uns unter: {email}\nDu kannst auch die im Impressum genannten Kontaktdaten für rechtliche Hinweise verwenden.`
+            },
+            dispute: {
+                title: "EU-Streitbeilegung",
+                content: `Die OS-Plattform der Europäischen Kommission findest du hier: https://ec.europa.eu/consumers/odr`
             }
         }
     },
     index: {
         hero: {
-            title: "Willkommen im Prana  Café",
+            title: "Willkommen im Café Prana",
             description: "Ein glutenfreies und veganes Paradies im Herzen Berlins",
-            headline: "Newly opened!",
+            headline: "Neu eröffnet!",
             links: {
-                ourPhilosophy: "Unsere Philosophie",
-                menuHighlights: "Menü‑Highlights"
+                menuHighlights: "Menü-Highlights",
+                getDirections: "Route anzeigen"
             }
         },
         philosophy: {
             title: "Unsere Philosophie",
             description:
-                "Wir glauben an nahrhaftes Essen, das Ihre Geschmacksknospen erfreut und Ihren Körper stärkt. Das macht das Prana  Café besonders:"
+                "Wir glauben an nährstoffreiche, köstliche Gerichte, die deinen Körper stärken und deinen Gaumen verwöhnen. Das macht Café Prana besonders:"
         },
         features: {
             glutenFree: {
-                title: "100  %  glutenfrei",
+                title: "100 % Glutenfrei",
                 description:
-                    "Alles auf unserer Speisekarte ist glutenfrei und daher sicher für Menschen mit Zöliakie oder Unverträglichkeiten."
+                    "Alles auf unserer Karte ist glutenfrei – sicher für Zöliakie-Betroffene und Menschen mit Unverträglichkeiten."
             },
             plantBased: {
-                title: "Pflanzenbasiert  &  Bio",
+                title: "Pflanzlich & Bio",
                 description:
-                    "Wir verwenden pflanzliche und biologische Zutaten, die wann immer möglich aus der Region stammen."
+                    "Wir verwenden ausschließlich pflanzliche, biologische Zutaten – so regional wie möglich."
             },
             bowls: {
-                title: "Nährstoffreiche Bowls  &  Smoothies",
+                title: "Nährstoffreiches Lunch & Brunch",
                 description:
-                    "Von Açai‑Bowls bis zu Power‑Smoothies: Unsere Gerichte stärken Körper und Geist."
+                    "Unsere hausgemachten Gerichte versorgen dich mit einer Vielfalt an Makro- und Mikronährstoffen."
             },
             community: {
-                title: "Gemütlicher Gemeinschaftsraum",
+                title: "Gemütlicher Community Space",
                 description:
-                    "Genießen Sie eine warme Atmosphäre, in der Sie sich entspannen, arbeiten oder Freunde treffen können."
+                    "Genieß eine warme Atmosphäre, in der du entspannen, arbeiten oder Freunde treffen kannst."
+            },
+            drinks: {
+                title: "Wärmende Getränke",
+                description:
+                    "Ob du dich für einen Latte mit hausgemachter Cashew-Mylk oder ein saisonales Heißgetränk entscheidest – Herz und Geist werden sich bedanken."
+            },
+            experience: {
+                title: "Ein Ort zum Erleben",
+                description:
+                    "Im Prana entstehen immer wieder neue Orte zum Ausdruck. Workshops sind herzlich willkommen!"
             }
         },
         menu: {
-            title: "Menü‑Highlights",
+            title: "Menü-Highlights",
             description:
-                "Hier sind einige unserer Lieblingsgerichte und ‑getränke, die Sie heute genießen können.",
+                "Hier findest du einige unserer Lieblingsgerichte und Getränke, die du täglich genießen kannst.",
             items: {
-                avocado: {
-                    title: "Avocado‑Toast Supreme",
-                    description:
-                        "Geröstetes glutenfreies Sauerteigbrot mit Avocadocreme, Chiliflocken, Hanfsamen und Microgreens."
+                waffle: {
+                    title: "Herzhafte Waffel",
+                    description: "Süßkartoffelwaffel mit täglich wechselnden herzhaften Toppings."
                 },
-                rainbow: {
-                    title: "Regenbogen Power Bowl",
+                chai: {
+                    title: "Chai Latte",
                     description:
-                        "Eine bunte Bowl aus Quinoa, geröstetem Gemüse, eingelegten Rote Bete und cremigem Tahini‑Dressing."
+                        "Hausgemachte Chai-Gewürzmischung, liebevoll zubereitet und mit pflanzlicher Milch deiner Wahl serviert."
                 },
-                turmericLatte: {
-                    title: "Goldener Kurkuma‑Latte",
-                    description:
-                        "Cremige Hafermilch gemixt mit Kurkuma, Ingwer, Zimt und einem Hauch Ahornsirup, warm oder kalt serviert."
+                bananaBread: {
+                    title: "Pranas Bananenbrot",
+                    description: "Nährendes, süßes Bananenbrot mit saisonalen Toppings."
                 },
-                berry: {
-                    title: "Berry  Bliss  Smoothie",
+                cacao: {
+                    title: "Zeremonieller Kakao",
                     description:
-                        "Eine lebhafte Mischung aus Beeren, Banane, Kokosmilch und einem Hauch Agave."
-                },
-                chickpeaWrap: {
-                    title: "Chickpea  Salad  Wrap",
-                    description:
-                        "Knackiges Gemüse und zerdrückte Kichererbsen in einer glutenfreien Tortilla mit Zitronen‑Dill‑Sauce."
-                },
-                matcha: {
-                    title: "Matcha  Magic  Bowl",
-                    description:
-                        "Sanfte Matcha‑Smoothie‑Bowl, garniert mit Kokosflocken, Granola und saisonalem Obst."
+                        "Wir glauben an Achtsamkeit – und an die Kraft von purem, rohem Kakao, der Körper und Seele stärkt."
                 }
             },
             cta: {
-                label: "Unsere Speisekarte ansehen"
+                label: "Zum vollständigen Menü"
             }
         },
         gallery: {
             title: "Galerie",
             description:
-                "Werfen Sie einen Blick auf das Ambiente, die Speisen und Getränke, die das Prana  Café so besonders machen."
+                "Wirf einen Blick auf das Ambiente, die Gerichte und Getränke, die Café Prana so besonders machen."
         },
         story: {
             title: "Unsere Geschichte",
             description:
-                "Erfahren Sie, wie das Prana  Café aus der Leidenschaft für ganzheitliche Gesundheit und Gemeinschaft entstanden ist.",
-            paragraph1:
-                "Gegründet von Freunden, die ihre Liebe zu vollwertigem Essen teilen wollten, vereint das Prana  Café lokal beschaffte Zutaten und kreative Rezepte. Wir setzen uns für Nachhaltigkeit, Mitgefühl und eine einladende Gemeinschaft ein. Ob Sie sich einen Kaffee zum Mitnehmen holen oder sich zum Brunch niederlassen – wir haben einen Ort geschaffen, an dem sich jeder wohlfühlt.",
-            paragraph2:
-                "Kommen Sie vorbei und erleben Sie bunte Bowls, saisonale Spezialitäten und unsere charakteristischen Getränke mit Superfoods und Adaptogenen. Jeder Artikel auf unserer Speisekarte ist zu 100  %  glutenfrei und vegan, sodass Sie bedenkenlos genießen können."
+                "Erfahre, wie Café Prana aus der Leidenschaft für ganzheitliche Gesundheit und Wohlbefinden entstanden ist.",
+            text: "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista (…du siehst schon das Bild…), die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show, die eine einladende Atmosphäre mit hochwertigen Zutaten kombiniert. Regionale, saisonale Gemüse treffen auf nährstoffreiche Pseudogetreide und natürliche Superfoods – mit einer kreativen Prise aus der Küche. Ob du einen Specialty Coffee to go holst oder dich für den Brunch in die Kissen sinken lässt – hier wartet ein sicherer, offener Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden, Gemeinschaft fördern und echten Respekt leben."
         },
         testimonials: {
-            title: "Was unsere Gäste sagen",
-            description:
-                "Glauben Sie uns nicht nur aufs Wort – hören Sie von Menschen, die das Prana  Café lieben.",
-            anna: {
-                quote: "Bester veganer Brunch in Berlin! Ich finde immer etwas Neues und Spannendes auf der Speisekarte."
-            },
-            markus: {
-                quote: "Als jemand mit Zöliakie liebe ich es, dass ich mir hier keine Sorgen um Gluten machen muss – alles ist lecker und sicher."
-            },
-            sophie: {
-                quote: "Die Atmosphäre im Prana ist so entspannend und einladend. Mein Lieblingsort für einen Nachmittag‑Latte und um Freunde zu treffen."
-            }
+            title: "Das sagen unsere Gäste",
+            description: "Vertrau nicht nur uns – lies, was andere über Café Prana sagen."
         },
         faq: {
-            title: "Häufig gestellte Fragen",
-            description: "Haben Sie eine Frage? Wir haben die Antworten.",
+            title: "Häufige Fragen",
+            description:
+                "Hier findest du Antworten auf die Fragen, die uns am häufigsten gestellt werden.",
             items: {
                 glutenFree: {
-                    question: "Ist alles auf der Speisekarte glutenfrei?",
-                    answer: "Ja! Wir sind komplett glutenfrei. Alle unsere Gerichte werden ohne Gluten zubereitet, sodass Sie Ihr Essen sorgenfrei genießen können."
+                    question: "Ist wirklich alles glutenfrei?",
+                    answer: "Ja! Wir sind komplett glutenfrei. Alle unsere Gerichte werden ohne Gluten zubereitet – du kannst also sorgenfrei genießen."
                 },
                 reservations: {
-                    question: "Nehmen Sie Reservierungen an?",
-                    answer: "Zurzeit arbeiten wir nach dem Prinzip “Wer zuerst kommt, mahlt zuerst”. Kommen Sie einfach vorbei – es wartet meist ein Platz auf Sie!"
+                    question: "Kann man reservieren?",
+                    answer: "Im Moment nehmen wir Reservierungen nur über Instagram oder E-Mail entgegen. Komm aber gern einfach vorbei – meist ist ein Platz frei!"
                 },
                 pets: {
                     question: "Sind Haustiere erlaubt?",
-                    answer: "Absolut! Gut erzogene Haustiere sind in unserem Außenbereich willkommen."
+                    answer: "Aktuell dürfen keine Tiere ins Innere, um die Sicherheit und den Komfort aller Gäste zu gewährleisten – auch für Menschen mit Allergien oder Ängsten. Außerdem ist unser geteilter Raum mit offener Küche aus Hygienegründen nicht für Tiere geeignet. Danke für dein Verständnis!"
                 },
                 takeaway: {
-                    question: "Bieten Sie Essen zum Mitnehmen an?",
-                    answer: "Ja, wir bieten für die meisten unserer Gerichte Take‑away an. Schauen Sie vorbei und fragen Sie unser Team nach Details."
+                    question: "Gibt es Take-away?",
+                    answer: "Ja, du kannst die meisten unserer Gerichte auch mitnehmen. Frag einfach unser Team vor Ort."
                 }
             }
         },
         cta: {
-            title: "Kommen Sie vorbei und schmecken Sie den Unterschied",
+            title: "Komm vorbei und schmeck den Unterschied",
             description:
-                "Besuchen Sie noch heute das Prana  Café und entdecken Sie Ihren neuen Lieblingsort. Wir sind täglich für Kaffee, Frühstück, Brunch und Mittagessen geöffnet.",
+                "Besuch das Café Prana und entdecke deinen neuen Lieblingsort. Wir haben Dienstag bis Sonntag geöffnet – für Kaffee, Frühstück, Brunch und Mittagessen.",
+            hours: {
+                heading: "Öffnungszeiten",
+                monday: {day: "Montag", time: "Geschlossen"},
+                tuesday: {day: "Dienstag", time: "06:00 - 18:00"},
+                wednesday: {day: "Mittwoch", time: "06:00 - 18:00"},
+                thursday: {day: "Donnerstag", time: "06:00 - 18:00"},
+                friday: {day: "Freitag", time: "06:00 - 18:00"},
+                saturday: {day: "Samstag", time: "08:00 - 16:00"},
+                sunday: {day: "Sonntag", time: "06:00 - 18:00"}
+            },
             links: {
-                getDirections: "Wegbeschreibung",
-                seeMore: "Tisch reservieren"
+                getDirections: "Route anzeigen",
+                reservations: "Reservierungen"
             }
         }
     },
     menu: {
         deals: {
-            title: "Prana Deals",
+            title: "Prana-Angebote",
             items: {
                 coworking: {
-                    title: "Co-working Tage",
-                    desc: "Dienstag bis Freitag – nur Rückraum, 3 Stunden pro Tisch, inkl. Kaffee & Tee.",
-                    ingredients: "Inklusive: freier WLAN‑Zugang, Kaffee, Tee, Steckdose"
+                    title: "Co-Working-Tage",
+                    desc: "Dienstag bis Freitag – nur im hinteren Bereich, 3 Stunden pro Tisch, inkl. Kaffee & Tee.",
+                    ingredients: "Enthalten: WLAN, Kaffee, Tee, Steckdose"
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "2x Kaffee, 2x Datteln, Computer erlaubt für 1 Stunde (nicht zwischen 12–14).",
-                    ingredients: "Enthält: 2x Kaffee, 2x Datteln, kleiner Snack"
+                    desc: "2 Kaffees, 2 Datteln, 1 Stunde Computer-Nutzung (außer 12–14 Uhr).",
+                    ingredients: "Enthalten: 2 Kaffees, 2 Datteln, kleiner Snack"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2x Sober Bubbles, Oliven, 2x Lunch, 2x Espresso & 2x Mint Shot.",
+                    desc: "2 alkoholfreie Sprudel, Oliven, 2 Lunches, 2 Espressi und 2 Minz-Shots.",
                     ingredients: "Menü: 2x Hauptgericht, Beilage, Dessert"
                 },
                 tastyDate: {
                     title: "Tasty Date",
-                    desc: "2x Getränke, 2x Datteln & 1 Stück Bananenbrot mit Toppings zum Teilen.",
-                    ingredients: "Enthält: 2 Getränke, 1 Stück Bananenbrot, Toppings zum Teilen"
+                    desc: "2 Drinks, 2 Datteln & ein Stück Bananenbrot mit Toppings zum Teilen.",
+                    ingredients: "Enthalten: 2 Drinks, Stück Bananenbrot, gemeinsame Toppings"
                 }
             }
         },
@@ -225,117 +265,74 @@ export default {
                 espresso: {
                     title: "Espresso / Americano",
                     desc: "Klassischer Espresso oder Lungo.",
-                    ingredients: "100% Arabica, kurz gebrüht"
+                    ingredients: "100 % Arabica, kurzer Bezug"
                 },
                 flatWhite: {
                     title: "Flat White",
-                    desc: "Cremig und mild mit pflanzlicher Milch deiner Wahl.",
-                    ingredients: "Espresso, samtiger Milchschaum, pflanzliche Milch"
+                    desc: "Sanft und vollmundig mit pflanzlicher Milch deiner Wahl.",
+                    ingredients: "Espresso, feiner Mikroschaum, Pflanzenmilch"
                 },
                 latte: {
                     title: "Latte",
-                    desc: "Weicher Kaffee mit Milch, perfekt für den Nachmittag.",
-                    ingredients: "Espresso, viel Milch, milde Crema"
+                    desc: "Cremiger, milder Kaffee mit Mylk.",
+                    ingredients: "Doppelter Espresso, aufgeschäumte Mylk, groß"
                 },
                 haselnussLatte: {
-                    title: "Haselnuss Latte",
-                    desc: "Nussig, süß und aromatisch.",
-                    ingredients: "Espresso, Haselnusssirup, aufgeschäumte Milch"
+                    title: "Haselnuss-Latte",
+                    desc: "Nussig, reichhaltig und wärmend.",
+                    ingredients: "Doppelter Espresso, geröstetes Haselnussöl, gedämpfte Mylk"
                 }
             }
         },
         drinksHot: {
-            title: "Heiße Spezialitäten",
+            title: "Heiße Getränke",
             items: {
                 sunshineMilk: {
                     title: "Sunshine Milk",
-                    desc: "Goldene Milch mit Gewürz & MCT-Öl.",
-                    ingredients: "Kurkuma, Ingwer, MCT‑Öl, Hafermilch"
+                    desc: "Goldene Gewürzmilch mit MCT-Öl.",
+                    ingredients: "Goldene Gewürzmischung, MCT-Öl, Mylk nach Wahl"
                 },
                 chaiLatte: {
                     title: "Chai Latte",
-                    desc: "Hausgemacht mit Earl Grey, Kakao oder Golden Blend.",
-                    ingredients: "Gewürztee, Zimt, Kardamom, Hafermilch"
+                    desc: "Hausgemachte Chai-Gewürzmischung mit Mylk deiner Wahl.",
+                    ingredients: "Chai-Gewürze, Mylk nach Wahl"
                 },
                 matchaLatte: {
                     title: "Zeremonieller Matcha Latte",
-                    desc: "Feiner Matcha mit optionalem Extra-Shot.",
-                    ingredients: "Matcha Pulver, heißes Wasser, aufgeschäumte Milch"
+                    desc: "Hochwertiger Matcha mit optionalem Extraschuss.",
+                    ingredients: "Matcha-Pulver, heißes Wasser, aufgeschäumte Milch"
                 },
                 hotChocolate: {
-                    title: "Geschmolzene Heiße Schokolade",
-                    desc: "Dattelsüße Pflanzenschokolade.",
+                    title: "Heiße Schokolade",
+                    desc: "Pflanzliche Schokolade, mit Datteln gesüßt.",
                     ingredients: "Dunkle Schokolade, Dattelsirup, Hafermilch"
                 }
             }
         },
         food: {
-            title: "Speisen & Brunch",
+            title: "Essen & Brunch",
             items: {
                 porridge: {
-                    title: "Hafer-Erdmandel Porridge",
-                    desc: "Mit saisonalen Toppings serviert.",
-                    ingredients: "Haferflocken, Mandelmilch, saisonale Früchte, Nüsse"
+                    title: "Hafer-Porridge",
+                    desc: "Warm serviert, pur oder mit saisonalen Toppings.",
+                    ingredients:
+                        "Hafer, frisches Erdmandel-Porridge mit Kokos-Mylk, optionale Toppings"
                 },
                 bananaBread: {
                     title: "Bananenbrot",
-                    desc: "Mit Toppings nach Wahl – ein Klassiker.",
-                    ingredients: "Reife Bananen, Dinkelmehl (glutenfrei), Nüsse"
+                    desc: "Getoastet und mit den Toppings des Tages serviert.",
+                    ingredients: "Glutenfreies Hafermehl, Nüsse"
                 },
                 waffle: {
-                    title: "Süße Waffeln",
-                    desc: "Mit Hafermehl & Nussmus, glutenfrei & ungesüßt.",
-                    ingredients: "Hafermehl, Pflanzenöl, Ahornsirup als Topping"
+                    title: "Waffeln",
+                    desc: "À la carte oder als Tagesangebot – süß oder herzhaft.",
+                    ingredients: "Glutenfreies Hafermehl, Süßkartoffel, Mandeln"
                 },
                 brunch: {
-                    title: "Veganer Brunch",
-                    desc: "Eiersalat, Dips, Salat, GF Brot & kleine Suppe oder Süßspeise.",
-                    ingredients: "Auswahl: Dip, Salat, glutenfreies Brot, Suppe"
+                    title: "Pranas Brunch",
+                    desc: "Veggie-Salat, Dips, Karotten-Facon, hausgemachtes glutenfreies Brot und Suppe oder Dessert.",
+                    ingredients: "Tofu, Cashews, saisonales Gemüse, Senf"
                 }
-            }
-        }
-    },
-    privacy: {
-        title: "Datenschutz",
-        description:
-            "Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst. Auf dieser Seite erklären wir, welche Daten wir erheben, warum und welche Rechte Sie haben.",
-        lastUpdated: "Zuletzt aktualisiert: {date}",
-        section: {
-            controller: {
-                title: "Verantwortlicher",
-                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nVertreten durch:\n{representative}\n\nBei Fragen zur Datenverarbeitung kontaktieren Sie: {email}`
-            },
-            dataCollected: {
-                title: "Welche Daten wir erheben",
-                content: `Wir erheben gegebenenfalls personenbezogene Daten, die Sie uns direkt mitteilen (z. B. bei Kontaktaufnahme), technische Daten (Gerät, Browser) und Nutzungsdaten (besuchte Seiten, Interaktionen). Diese Daten helfen uns, die Website zu betreiben und zu verbessern.`
-            },
-            legalBasis: {
-                title: "Rechtsgrundlagen der Verarbeitung",
-                content: `Wir verarbeiten personenbezogene Daten, wenn dies zur Bereitstellung unserer Dienste erforderlich ist, wir rechtlichen Verpflichtungen nachkommen müssen, berechtigte Interessen verfolgen (z. B. Sicherheit) oder Sie Ihre Einwilligung erteilt haben (z. B. für Cookies/Analytics).`
-            },
-            cookies: {
-                title: "Cookies",
-                content: `Wir verwenden Cookies und ähnliche Technologien für Funktionalität. Essenzielle Cookies sind für den Betrieb der Website erforderlich.`
-            },
-            retention: {
-                title: "Speicherdauer",
-                content: `Personenbezogene Daten werden nur so lange gespeichert, wie es für die Zwecke erforderlich ist und um rechtlichen Pflichten nachzukommen. Wenn Daten nicht mehr benötigt werden, werden sie gelöscht oder anonymisiert.`
-            },
-            security: {
-                title: "Sicherheit",
-                content: `Wir treffen technische und organisatorische Maßnahmen, um personenbezogene Daten vor unbefugtem Zugriff, Verlust oder Missbrauch zu schützen.`
-            },
-            rights: {
-                title: "Ihre Rechte",
-                content: `Nach der DSGVO stehen Ihnen Rechte wie Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch zu. Zur Ausübung Ihrer Rechte kontaktieren Sie uns unter {email}.`
-            },
-            contact: {
-                title: "Kontakt",
-                content: `Für Datenschutzanfragen kontaktieren Sie: {email}\nSie können auch die Kontaktdaten im Impressum für rechtliche Hinweise verwenden.`
-            },
-            dispute: {
-                title: "EU-Streitschlichtung",
-                content: `Die OS-Plattform der Europäischen Kommission: https://ec.europa.eu/consumers/odr`
             }
         }
     }

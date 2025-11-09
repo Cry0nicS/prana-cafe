@@ -10,6 +10,11 @@ export const useNavItems = () => {
 
         return [
             {
+                label: t("pages.home"),
+                to: localePath("/"),
+                icon: "mdi:home-outline"
+            },
+            {
                 label: t("pages.menu"),
                 to: localePath("/menu"),
                 icon: "mdi:food-fork-drink"

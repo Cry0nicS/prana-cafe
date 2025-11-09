@@ -1,15 +1,13 @@
 <script setup lang="ts">
 const {t} = useI18n();
+const localePath = useLocalePath();
 
-// Images used in various sections (these remain static)
 const menuImages = {
-    avocado:
+    waffle: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    chai: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    bananaBread:
         "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    rainbow:
-        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    turmericLatte:
-        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    berry: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+    cacao: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
     chickpeaWrap:
         "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
     matcha: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
@@ -22,10 +20,9 @@ const galleryImages = [
     "https://images.unsplash.com/photo-1550565088-49d86e5f7d5b?auto=format&fit=crop&w=900&q=80"
 ];
 
-// Dynamic arrays computed from translation keys
 const heroLinks = computed(() => [
-    {label: t("index.hero.links.ourPhilosophy"), to: "#philosophy"},
-    {label: t("index.hero.links.menuHighlights"), to: "#menu"}
+    {label: t("index.hero.links.menuHighlights"), to: "#menu"},
+    {label: t("index.hero.links.getDirections"), to: "#directions"}
 ]);
 
 const features = computed(() => [
@@ -50,37 +47,37 @@ const features = computed(() => [
         description: t("index.features.community.description")
     },
     {
-        icon: "mdi:bowl-mix-outline",
-        title: t("index.features.bowls.title"),
-        description: t("index.features.bowls.description")
+        icon: "mdi:coffee-outline",
+        title: t("index.features.drinks.title"),
+        description: t("index.features.drinks.description")
     },
     {
-        icon: "mdi:heart-multiple-outline",
-        title: t("index.features.community.title"),
-        description: t("index.features.community.description")
+        icon: "mdi:account-group-outline",
+        title: t("index.features.experience.title"),
+        description: t("index.features.experience.description")
     }
 ]);
 
 const menuHighlights = computed(() => [
     {
-        title: t("index.menu.items.avocado.title"),
-        description: t("index.menu.items.avocado.description"),
-        image: menuImages.avocado
+        title: t("index.menu.items.waffle.title"),
+        description: t("index.menu.items.waffle.description"),
+        image: menuImages.waffle
     },
     {
-        title: t("index.menu.items.rainbow.title"),
-        description: t("index.menu.items.rainbow.description"),
-        image: menuImages.rainbow
+        title: t("index.menu.items.chai.title"),
+        description: t("index.menu.items.chai.description"),
+        image: menuImages.chai
     },
     {
-        title: t("index.menu.items.turmericLatte.title"),
-        description: t("index.menu.items.turmericLatte.description"),
-        image: menuImages.turmericLatte
+        title: t("index.menu.items.bananaBread.title"),
+        description: t("index.menu.items.bananaBread.description"),
+        image: menuImages.bananaBread
     },
     {
-        title: t("index.menu.items.berry.title"),
-        description: t("index.menu.items.berry.description"),
-        image: menuImages.berry
+        title: t("index.menu.items.cacao.title"),
+        description: t("index.menu.items.cacao.description"),
+        image: menuImages.cacao
     }
 ]);
 
@@ -104,8 +101,21 @@ const faqs = computed(() => [
 ]);
 
 const ctaLinks = computed(() => [
-    {label: t("index.cta.links.getDirections"), to: "https://maps.app.goo.gl/MToiG3VyXv7PB8kw9"},
-    {label: t("index.cta.links.seeMore"), to: "#"}
+    {
+        label: t("index.cta.links.getDirections"),
+        icon: "mdi:map-outline",
+        to: "https://maps.app.goo.gl/MToiG3VyXv7PB8kw9"
+    },
+    {
+        label: t("index.cta.links.reservations"),
+        icon: "mdi:calendar-check-outline",
+        disabled: true,
+        badge: {
+            label: t("global.comingSoon"),
+            variant: "outline",
+            color: "neutral"
+        }
+    }
 ]);
 </script>
 
@@ -125,9 +135,7 @@ const ctaLinks = computed(() => [
         </UPageHero>
 
         <!-- Values / philosophy section using features -->
-        <UPageSection
-            id="philosophy"
-            icon="mdi:coffee-to-go-outline">
+        <UPageSection icon="mdi:food-apple-outline">
             <template #title>{{ t("index.philosophy.title") }}</template>
             <template #description>{{ t("index.philosophy.description") }}</template>
             <UPageColumns>
@@ -141,7 +149,9 @@ const ctaLinks = computed(() => [
         </UPageSection>
 
         <!-- Menu highlights in a responsive grid of cards -->
-        <UPageSection id="menu">
+        <UPageSection
+            id="menu"
+            icon="mdi:food-outline">
             <template #title>{{ t("index.menu.title") }}</template>
             <template #description>{{ t("index.menu.description") }}</template>
             <UPageGrid class="gap-6 lg:grid-cols-2">
@@ -166,15 +176,14 @@ const ctaLinks = computed(() => [
                     size="xl"
                     color="info"
                     variant="solid"
-                    to="https://www.google.com/search?q=google.com+menu+coming+soon&sourceid=chrome&ie=UTF-8"
-                    target="_blank">
+                    :to="localePath('/menu')">
                     {{ t("index.menu.cta.label") }}
                 </UButton>
             </div>
         </UPageSection>
 
         <!-- Visual gallery carousel -->
-        <UPageSection>
+        <UPageSection icon="mdi:camera-outline">
             <template #title>{{ t("index.gallery.title") }}</template>
             <template #description>{{ t("index.gallery.description") }}</template>
             <UCarousel
@@ -197,13 +206,12 @@ const ctaLinks = computed(() => [
         </UPageSection>
 
         <!-- Our story section with two columns -->
-        <UPageSection>
+        <UPageSection icon="mdi:book-open-page-variant-outline">
             <template #title>{{ t("index.story.title") }}</template>
             <template #description>{{ t("index.story.description") }}</template>
             <UPageColumns class="lg:columns-2">
                 <div class="prose dark:prose-invert">
-                    <p>{{ t("index.story.paragraph1") }}</p>
-                    <p>{{ t("index.story.paragraph2") }}</p>
+                    <p class="text-justify">{{ t("index.story.text") }}</p>
                 </div>
                 <img
                     src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
@@ -226,9 +234,24 @@ const ctaLinks = computed(() => [
 
         <!-- Final call to action -->
         <UPageCTA
+            id="directions"
             :title="t('index.cta.title')"
-            :description="t('index.cta.description')"
             :links="ctaLinks"
-            class="mb-24" />
+            orientation="horizontal"
+            variant="outline"
+            reverse
+            class="mb-24">
+            <template #description>
+                {{ t("index.cta.description") }}
+                <LazyElementsSchedule />
+            </template>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.9518671037786!2d13.428888413148465!3d52.53430503505275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fb49a2ba2a9%3A0xa2e6d18bdc39e1de!2sCaf%C3%A9%20Prana!5e0!3m2!1sen!2sde!4v1762693543237!5m2!1sen!2sde"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" />
+        </UPageCTA>
     </UPage>
 </template>
