@@ -4,7 +4,6 @@ import {company} from "#shared/utils/constants";
 const sectionKeys = [
     "company",
     "contact",
-    "vat",
     "supervisory",
     "liability",
     "links",

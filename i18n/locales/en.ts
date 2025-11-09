@@ -21,7 +21,7 @@ export default {
         section: {
             company: {
                 title: "Information according to §5 TMG",
-                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nRepresented by:\n{representative}`
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}`
             },
             contact: {
                 title: "Contact",
@@ -29,10 +29,6 @@ export default {
                 phoneLabel: "Phone",
                 emailLabel: "Email",
                 websiteLabel: "Website"
-            },
-            vat: {
-                title: "VAT ID",
-                content: `VAT Identification Number according to §27a German VAT Act:\n{vatId}\n\n(If not applicable: remove or state "Not subject to VAT.")`
             },
             supervisory: {
                 title: "Supervisory Authority",
@@ -64,7 +60,7 @@ export default {
         section: {
             controller: {
                 title: "Data Controller",
-                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nRepresented by:\n{representative}\n\nIf you have questions regarding data processing, contact: {email}`
+                content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nIf you have questions regarding data processing, contact: {email}`
             },
             dataCollected: {
                 title: "What Data We Collect",
@@ -221,12 +217,12 @@ export default {
             hours: {
                 heading: "Opening Hours",
                 monday: {day: "Monday", time: "Closed"},
-                tuesday: {day: "Tuesday", time: "06:00 - 18:00"},
-                wednesday: {day: "Wednesday", time: "06:00 - 18:00"},
-                thursday: {day: "Thursday", time: "06:00 - 18:00"},
-                friday: {day: "Friday", time: "06:00 - 18:00"},
-                saturday: {day: "Saturday", time: "08:00 - 16:00"},
-                sunday: {day: "Sunday", time: "06:00 - 18:00"}
+                tuesday: {day: "Tuesday", time: "07:00 - 15:00"},
+                wednesday: {day: "Wednesday", time: "07:00 - 15:00"},
+                thursday: {day: "Thursday", time: "07:00 - 15:00"},
+                friday: {day: "Friday", time: "07:00 - 15:00"},
+                saturday: {day: "Saturday", time: "09:00 - 17:00"},
+                sunday: {day: "Sunday", time: "09:00 - 17:00"}
             },
             links: {
                 getDirections: "Get Directions",
@@ -237,36 +233,51 @@ export default {
     menu: {
         deals: {
             title: "Prana Deals",
+            options: "Happiness only true when shared!",
             items: {
                 coworking: {
                     title: "Co-working Days",
-                    desc: "Tuesday to Friday – back space only, 3 hours per table, includes free coffee & tea.",
+                    desc: "Tuesday to Friday until 12PM – 3 hours per table, includes free coffee & tea.",
                     ingredients: "Includes: Wi-Fi access, coffee, tea, power outlet"
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "2 coffees, 2 dates, computer use for 1 hour (except 12–14).",
-                    ingredients: "Includes: 2 coffees, 2 dates, small snack"
+                    desc: "Looking for a cozy place for your  1:1? Enjoy 2 coffees, 2 dates & WI-FI.",
+                    ingredients:
+                        "Includes: 2 coffees (espresso, americano, cappuccino, etc), 2 date pralines"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2 sober bubbles, olives, 2 lunches, 2 espressos, and 2 mint shots.",
-                    ingredients: "Menu: 2x main, side, dessert"
+                    desc: "2 sober bubbles, healthy lunches, and espressi to boost your productivity.",
+                    ingredients: "Includes: appetizers, 2 lunches, 2 espressi, and 2 mint shots."
                 },
                 tastyDate: {
                     title: "Tasty Date",
-                    desc: "2 drinks, 2 dates & a slice of banana bread with toppings to share.",
-                    ingredients: "Includes: 2 drinks, banana bread slice, shared toppings"
+                    desc: "Enjoy a cozy date with hotties, and treats for two.",
+                    ingredients:
+                        "Includes: 2 drinks, 2 date pralines, and banana bread slice with toppings"
                 }
             }
         },
         drinksCoffee: {
             title: "Coffee Specials",
+            options:
+                "Choose your favorite: oat-almond blend, oat-coconut blend, homemade cashew-coconut mylk, soy, almond",
             items: {
+                haselnussLatte: {
+                    title: "Hazelnut Latte",
+                    desc: "Nutty, rich, and warming.",
+                    ingredients: "Double espresso, roasted hazelnut oil, steamed mylk of choice"
+                },
+                dirtyEarl: {
+                    title: "Dirty Earl",
+                    desc: "Finest blend of black tea and coffee.",
+                    ingredients: "Earl Grey tea, single espresso shot, steamed mylk of choice"
+                },
                 espresso: {
-                    title: "Espresso / Americano",
-                    desc: "Classic espresso or lungo.",
-                    ingredients: "100% Arabica, short pull"
+                    title: "Organic fair trade Espresso / Americano",
+                    desc: "Classic espresso or lungo pulled from our special blend.",
+                    ingredients: "Low acidity blend, short pull"
                 },
                 flatWhite: {
                     title: "Flat White",
@@ -274,19 +285,16 @@ export default {
                     ingredients: "Espresso, velvety microfoam, plant milk"
                 },
                 latte: {
-                    title: "Latte",
+                    title: "Milchkaffee",
                     desc: "Creamy, mild coffee with mylk.",
-                    ingredients: "Double espresso, foamed mylk, large"
-                },
-                haselnussLatte: {
-                    title: "Hazelnut Latte",
-                    desc: "Nutty, rich, and warming.",
-                    ingredients: "Double espresso, roasted hazelnut oil, steamed mylk"
+                    ingredients: "Single or double lungo with foamed mylk"
                 }
             }
         },
         drinksHot: {
             title: "Hot Drinks",
+            options:
+                "Choose your favorite: oat-almond blend, oat-coconut blend, homemade cashew-coconut mylk, soy, rice-coconut, hazelnut, almond",
             items: {
                 sunshineMilk: {
                     title: "Sunshine Milk",
@@ -300,39 +308,58 @@ export default {
                 },
                 matchaLatte: {
                     title: "Ceremonial Matcha Latte",
-                    desc: "High-grade matcha with optional extra shot.",
-                    ingredients: "Matcha powder, hot water, steamed milk"
+                    desc: "First-grade matcha with optional extra shot.",
+                    ingredients: "Matcha powder, steamed milk"
                 },
                 hotChocolate: {
                     title: "Melted Hot Chocolate",
-                    desc: "Date-sweetened plant-based chocolate drink.",
-                    ingredients: "Dark chocolate, date syrup, oat milk"
+                    desc: "Melted date-sweetened chocolate with mylk.",
+                    ingredients: "Date chocolate, mylk of choice"
+                },
+                cacao: {
+                    title: "Ceremonial Cacao",
+                    desc: "Yes, we believe in mindfulness and the power of pure, raw cacao to uplift your spirit.",
+                    ingredients: "Raw cacao, hot water or mylk"
                 }
             }
         },
         food: {
             title: "Food & Brunch",
+            options: "Toppings of the day are chosen with care to complement each other.",
             items: {
                 porridge: {
-                    title: "Oat Porridge",
-                    desc: "Served warm, pure, or with seasonal toppings.",
+                    title: "Porridge",
+                    desc: "Served warm, pure or with seasonal toppings.",
                     ingredients:
-                        "Oats, Tigernut porridge freshly made with coconut mylk, and optional toppings"
+                        "Oat and tigernut porridge freshly made with coconut mylk, and optional toppings"
                 },
                 bananaBread: {
                     title: "Banana Bread",
                     desc: "Toasted and served with toppings of the day.",
-                    ingredients: "Gluten-free oat flour, nuts"
+                    ingredients: "Gluten-free homemade flour blend, banana, almonds"
                 },
                 waffle: {
                     title: "Waffles",
                     desc: "À la carte and daily offer: sweet or savory.",
-                    ingredients: "Gluten-free oat flour, sweet potato and almonds"
+                    ingredients:
+                        "Gluten-free oat flour, sweet potato and almonds, toppings of the day"
                 },
                 brunch: {
                     title: "Pranas Brunch",
-                    desc: "Veggie salad, dips, carrot facon, homemade gluten-free bread, and soup or dessert.",
-                    ingredients: "Tofu, cashews, seasonal veggies, mustard"
+                    desc: "Enjoy a healthy-rich brunch with our with a gourmet touch.",
+                    ingredients:
+                        'Tofu-based "egg" salad, dips, carrot facon, homemade gluten-free bread, and soup or dessert'
+                },
+                lunch: {
+                    title: "Pranas Lunch",
+                    desc: "Balanced and nourishing lunch to fuel your afternoon.",
+                    ingredients:
+                        "Our lunch options depend on the season and availability of fresh ingredients."
+                },
+                soup: {
+                    title: "Soup of the Day",
+                    desc: "Heartwarming soup with toppings.",
+                    ingredients: "Our soups are made with seasonal vegetables, spices, and herbs."
                 }
             }
         }
