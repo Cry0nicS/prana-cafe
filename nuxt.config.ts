@@ -32,11 +32,11 @@ export default defineNuxtConfig({
         strategy: "prefix_except_default"
     },
     image: {
-        dir: "app/assets/images",
         format: ["webp"],
         provider: "vercel",
         quality: 80,
         screens: {
+            10: 10,
             icon: 20,
             icon2x: 40,
             lg: 1024,
@@ -45,7 +45,17 @@ export default defineNuxtConfig({
             xl: 1280
         }
     },
-    modules: ["@nuxt/eslint", "@nuxt/ui", "@nuxt/image", "@nuxtjs/i18n", "@nuxtjs/supabase"],
+    modules: [
+        "@nuxt/eslint",
+        "@nuxt/ui",
+        "@nuxt/image",
+        "@nuxtjs/i18n",
+        "@nuxtjs/supabase",
+        "@nuxtjs/seo"
+    ],
+    ogImage: {
+        enabled: false
+    },
     runtimeConfig: {
         googleApiKey: process.env.NUXT_GOOGLE_API_KEY || "",
         pranaPlaceId: process.env.NUXT_PRANA_PLACE_ID || "",
@@ -55,6 +65,11 @@ export default defineNuxtConfig({
             rollbarEnabled: process.env.NUXT_PUBLIC_ROLLBAR_ENABLED?.trim().toLowerCase() === "true"
         },
         rollbarServerToken: process.env.NUXT_ROLLBAR_SERVER_TOKEN || ""
+    },
+    site: {
+        description: "Welcome to Café Prana, your gluten-free and vegan haven in Berlin.",
+        name: "Café Prana",
+        url: "https://cafeprana.de"
     },
     supabase: {
         redirect: false

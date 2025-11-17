@@ -21,6 +21,7 @@
         "@nuxt/image": "^1.11.0",
         "@nuxt/ui": "^4.0.1",
         "@nuxtjs/i18n": "^10.1.0",
+        "@nuxtjs/seo": "^3.2.2",
         "@nuxtjs/supabase": "^2.0.1",
         "eslint": "^9.38.0",
         "nuxt": "^4.1.3",

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {extractLocaleIso} from "#shared/utils/helpers";
 import * as locales from "@nuxt/ui/locale";
 
 const {themedFavicon} = useUtils();
@@ -6,14 +7,11 @@ const {locale} = useI18n();
 
 const lang = computed(() => locales[locale.value].code);
 
-// TODO: Translate all static text.
 useSeoMeta({
-    title: "Prana Cafe",
-    description: "Prana Cafe",
-    ogTitle: "Prana Cafe",
-    ogDescription: "Prana Cafe",
     ogType: "website",
-    ogLocale: "de_DE"
+    ogLocale: () => extractLocaleIso(locale.value),
+    robots: "index,follow",
+    twitterCard: "summary_large_image"
 });
 
 useHead({

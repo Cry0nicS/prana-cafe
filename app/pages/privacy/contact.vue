@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import {company} from "#shared/utils/constants";
 
+const {t} = useI18n();
+
+useSeoMeta({
+    title: () => t("seo.contact.title"),
+    description: () => t("seo.contact.description"),
+    ogImage: "/images/hero.png"
+});
+
 const telHref = computed(() => `tel:${company.phone.replace(/\s+/g, "")}`);
 const mailHref = computed(() => `mailto:${company.email}`);
 const instagramUrl = "https://instagram.com/pranacafe";

@@ -10,6 +10,30 @@ export default {
     global: {
         comingSoon: "Coming soon"
     },
+    seo: {
+        index: {
+            title: "Café Prana",
+            description:
+                "Café Prana in Berlin offers a 100% gluten-free, vegan, organic menu in a cozy community space. Enjoy nourishing brunches, warm drinks, and a welcoming atmosphere."
+        },
+        menu: {
+            title: "Menu",
+            description:
+                "Discover Café Prana's gluten-free and vegan menu, featuring nourishing brunches, wholesome lunches, and heartwarming drinks made from organic, plant-based ingredients."
+        },
+        imprint: {
+            title: "Imprint",
+            description: "Café Prana's legal imprint information."
+        },
+        privacy: {
+            title: "Privacy & Data Protection",
+            description: "Learn about Café Prana's commitment to your privacy and data protection."
+        },
+        contact: {
+            title: "Contact us",
+            description: "Get in touch with Café Prana for inquiries, reservations, or feedback."
+        }
+    },
     language: {
         en: "English",
         de: "German",
@@ -150,18 +174,17 @@ export default {
             items: {
                 waffle: {
                     title: "Savoury Waffle",
-                    description:
-                        "Sweet potato waffle topped with today's savoury toppings, refreshed daily."
+                    description: "Sweet potato waffle with Prana's savoury toppings of the day."
                 },
                 chai: {
                     title: "Chai Latte",
                     description:
-                        "A warm, homemade chai spice blend crafted with care and served with your choice of plant-based milk."
+                        "A warming, homemade chai spice blend crafted with care and served with your choice of plant-based milk."
                 },
                 bananaBread: {
                     title: "Prana's Banana Bread",
                     description:
-                        "Very nourishing and sweetened banana bread, served with sweet seasonal toppings."
+                        "Very nourishing and sweetened banana bread, served with seasonal toppings like nut butter or compote."
                 },
                 cacao: {
                     title: "Ceremonial Cacao",
@@ -176,13 +199,13 @@ export default {
         gallery: {
             title: "Gallery",
             description:
-                "Get a glimpse of the ambience, dishes and drinks that make Café Prana special."
+                "Get a glimpse of the ambience, dishes and drinks that convey Café Prana's philosophy."
         },
         story: {
             title: "Our Story",
             description:
                 "Learn how Café Prana was born out of a passion for holistic health and wellbeing.",
-            text: "Founded by a yogini, nutritionist, foodie, nature lover, fitness trainer, health cook, and barista (…you get the persona…) who wanted to bring the holistic aspects of health and energy under one roof. Café Prana is a one-woman show that combines a welcoming atmosphere with high-quality sourcing. Regional, seasonal vegetables meet nutritious pseudocereals and natural superfoods under the creative touch of the kitchen fairy. Whether you’re grabbing a specialty coffee to go or settling into the cushions for brunch, it is a safe and open space awaiting you. Prana’s long-term goal is to implement even more sustainable practices and foster a sense of community and profound respect."
+            text: "Founded by a yogini, nutritionist, foodie, nature lover, fitness trainer, health cook, and barista (…you get the persona…) who wanted to bring the holistic aspects of health and energy under one roof, Café Prana is a one-woman show that combines a welcoming atmosphere with high-quality sourcing. Regional, seasonal vegetables meet nutritious pseudocereals and natural superfoods under the creative touch of the kitchen fairy. Whether you’re grabbing a specialty coffee to go or settling into the cushions for brunch, it is a safe and open space awaiting you. Prana’s long-term goal is to implement even more sustainable practices and foster a sense of community and profound respect."
         },
         testimonials: {
             title: "What Our Guests Say",
