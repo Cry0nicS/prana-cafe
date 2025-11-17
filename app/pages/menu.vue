@@ -109,7 +109,7 @@ const categories = [
             {
                 name: "waffle",
                 image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-                price: "9–14€"
+                price: "15€"
             },
             {
                 name: "brunch",

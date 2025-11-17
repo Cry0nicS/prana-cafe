@@ -51,10 +51,10 @@ export default {
             },
             contact: {
                 title: "Kontakt",
-                content: `Telefon: {phone}\nE-Mail: {email}\nWebsite: {website}`,
+                content: `Telefon: {phone}\nE-Mail: {email}\nWebseite: {website}`,
                 phoneLabel: "Telefon",
                 emailLabel: "E-Mail",
-                websiteLabel: "Website"
+                websiteLabel: "Webseite"
             },
             supervisory: {
                 title: "Aufsichtsbehörde",
@@ -66,7 +66,7 @@ export default {
             },
             links: {
                 title: "Haftung für Links",
-                content: `Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entfernen wir diese Links umgehend.`
+                content: `Unsere Webseite enthält Links zu externen Webseites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entfernen wir diese Links umgehend.`
             },
             copyright: {
                 title: "Urheberrecht",
@@ -90,7 +90,7 @@ export default {
             },
             dataCollected: {
                 title: "Welche Daten wir erfassen",
-                content: `Wir erfassen eventuell personenbezogene Daten, die du uns direkt gibst (z. B. bei Kontaktaufnahme), technische Daten (Geräte- und Browserinformationen) sowie Nutzungsdaten (besuchte Seiten, Interaktionen). Das hilft uns, die Website zu betreiben und zu verbessern.`
+                content: `Wir erfassen eventuell personenbezogene Daten, die du uns direkt gibst (z. B. bei Kontaktaufnahme), technische Daten (Geräte- und Browserinformationen) sowie Nutzungsdaten (besuchte Seiten, Interaktionen). Das hilft uns, die Webseite zu betreiben und zu verbessern.`
             },
             legalBasis: {
                 title: "Rechtsgrundlage der Verarbeitung",
@@ -98,7 +98,7 @@ export default {
             },
             cookies: {
                 title: "Cookies",
-                content: `Wir verwenden Cookies und ähnliche Technologien nur, um die grundlegende Funktion der Website sicherzustellen. Essenzielle Cookies sind notwendig, damit die Seite richtig funktioniert.`
+                content: `Wir verwenden Cookies und ähnliche Technologien nur, um die grundlegende Funktion der Webseite sicherzustellen. Essenzielle Cookies sind notwendig, damit die Seite richtig funktioniert.`
             },
             retention: {
                 title: "Speicherdauer",
@@ -161,18 +161,18 @@ export default {
             drinks: {
                 title: "Wärmende Getränke",
                 description:
-                    "Ob du dich für einen Latte mit hausgemachter Cashew-Mylk oder ein saisonales Heißgetränk entscheidest – Herz und Geist werden sich bedanken."
+                    "Ob du dich für einen Latte mit hausgemachter Cashew-Mylk oder ein saisonales Heißgetränk entscheidest – Herz und Geist werden dir dankbar sein."
             },
             experience: {
                 title: "Erlebnisraum",
                 description:
-                    "Im Prana entstehen Orte, an denen du dich ausdrücken kannst. Workshops sind herzlich willkommen!"
+                    "Im Prana gibt es pop-up Flächen, an denen du dich ausdrücken kannst. Workshops sind herzlich willkommen!"
             }
         },
         menu: {
             title: "Menü-Highlights",
             description:
-                "Hier findest du einige unserer liebsten Gerichte und Getränke, die du jeden Tag genießen kannst.",
+                "Hier findest du einige unserer beliebtesten Gerichte und Getränke, die du jeden Tag genießen kannst.",
             items: {
                 waffle: {
                     title: "Herzhafte Waffel",
@@ -185,7 +185,7 @@ export default {
                 },
                 bananaBread: {
                     title: "Pranas Bananenbrot",
-                    description: "Süßes, nährendes Bananenbrot mit saisonalen Toppings."
+                    description: "Nährendes Bananenbrot mit saisonalen Toppings."
                 },
                 cacao: {
                     title: "Zeremonieller Kakao",
@@ -206,7 +206,7 @@ export default {
             title: "Unsere Geschichte",
             description:
                 "Erfahre, wie Café Prana aus Leidenschaft für ganzheitliche Gesundheit und Wohlbefinden entstanden ist.",
-            text: "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista – die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show mit herzlicher Atmosphäre und hochwertigen Zutaten. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
+            text: "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista – die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mich hochwertigen Zutaten abspeilt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
         },
         testimonials: {
             title: "Das sagen unsere Gäste",
@@ -226,7 +226,7 @@ export default {
                 },
                 pets: {
                     question: "Sind Haustiere erlaubt?",
-                    answer: "Aktuell dürfen keine Tiere ins Innere, um den Komfort und die Sicherheit aller Gäste zu gewährleisten. Außerdem ist unsere offene Küche aus Hygienegründen nicht für Tiere geeignet. Danke für dein Verständnis!"
+                    answer: "Aktuell dürfen keine Tiere ins Innere, um den Komfort und die Sicherheit aller Gäste zu gewährleisten. Außerdem ist die offene Küche aus hygienischen Gründen nicht kompatible mir Tieren. Danke für dein Verständnis!"
                 },
                 takeaway: {
                     question: "Gibt’s Take-away?",
@@ -266,14 +266,15 @@ export default {
                 },
                 businessBreak: {
                     title: "Business Break",
-                    desc: "Suchst du einen gemütlichen Ort fürs 1:1? Genieß 2 Kaffees, 2 Datteln & WLAN.",
+                    desc: "Suchst du einen gemütlichen Ort fürs 1:1? Genieß 2 Kaffees, 2 Datteln & WLAN. (Laptop-Nutzung: 1 Stunde außerhalb der Lunchzeiten)",
                     ingredients:
                         "Enthalten: 2 Kaffees (Espresso, Americano, Cappuccino usw.), 2 Dattel-Pralinen"
                 },
                 businessLunch: {
                     title: "Business Lunch",
-                    desc: "2 alkoholfreie Sprudel, gesunde Lunches und Espressi für deinen Produktivitätsschub.",
-                    ingredients: "Enthalten: Vorspeisen, 2 Lunches, 2 Espressi und 2 Minz-Shots"
+                    desc: "2 alkoholfreie Weine, gesunde Lunches und Espressi für den Produktivitätsschub.",
+                    ingredients:
+                        "Fingerfood, 2x Wein des Tages, 2 Lunches, 2 Espressi, 2 Minze-Shots (nur unter der Woche)"
                 },
                 tastyDate: {
                     title: "Tasty Date",
@@ -301,12 +302,13 @@ export default {
                 },
                 espresso: {
                     title: "Bio Fairtrade Espresso / Americano",
-                    desc: "Klassischer Espresso oder Lungo aus unserer Spezialmischung.",
-                    ingredients: "Säurearme Mischung, kurzer Bezug"
+                    desc: "Klassischer Espresso oder Lungo aus säuerarmen Kaffeebohnen.",
+                    ingredients:
+                        "Arabica-Robusta Blend, sehr wenig Säure, intensive, dunkle Röstung, schokoladiger Haselnussaroma"
                 },
                 flatWhite: {
                     title: "Flat White",
-                    desc: "Sanft und cremig mit pflanzlicher Milch deiner Wahl.",
+                    desc: "Intensiv und fein-cremig zugleich.",
                     ingredients: "Espresso, feiner Mikroschaum, Pflanzenmilch"
                 },
                 latte: {
