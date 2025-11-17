@@ -126,17 +126,19 @@ const categories = [
     }
 ];
 
+const flippedByCategory = ref<Record<string, string | null>>({});
+
+function isFlipCardActive(categoryId: string, itemName: string) {
+    return flippedByCategory.value[categoryId] === itemName;
+}
+
+function toggleFlipCard(categoryId: string, itemName: string) {
+    const current = flippedByCategory.value[categoryId] || null;
+    flippedByCategory.value[categoryId] = current === itemName ? null : itemName;
+}
+
 function scrollTo(id: string) {
     document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
-}
-const flipped = ref<string | null>(null);
-
-function toggleFlip(id: string) {
-    flipped.value = flipped.value === id ? null : id;
-}
-
-function isFlipped(id: string) {
-    return flipped.value === id;
 }
 </script>
 
@@ -193,70 +195,45 @@ function isFlipped(id: string) {
                             {{ t(`menu.${category.id}.options`) }}
                         </p>
                         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                            <div
+                            <ElementsFlipCard
                                 v-for="item in category.items"
-                                :key="item.name"
-                                class="group h-80 h-100 w-full cursor-pointer focus:outline-none"
-                                @click="toggleFlip(item.name)">
-                                <div
-                                    class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]"
-                                    :class="{
-                                        'group-hover:[transform:rotateY(180deg)]': !isFlipped(
-                                            item.name
-                                        ),
-                                        '[transform:rotateY(180deg)]': isFlipped(item.name)
-                                    }">
-                                    <!-- Front card -->
-                                    <UCard
-                                        class="absolute h-full w-full overflow-hidden [backface-visibility:hidden]">
-                                        <div
-                                            class="aspect-[4/3] w-full overflow-hidden rounded-t-xl">
-                                            <NuxtImg
-                                                :src="item.image"
-                                                alt=""
-                                                class="h-full w-full object-cover"
-                                                format="webp"
-                                                sizes="sm:100vw md:50vw lg:33vw"
-                                                placeholder />
-                                        </div>
-                                        <div class="p-4">
-                                            <h3 class="mb-1 text-xl font-medium">
-                                                {{
-                                                    t(
-                                                        `menu.${category.id}.items.${item.name}.title`
-                                                    )
-                                                }}
-                                            </h3>
-                                            <p class="text-muted mb-2 text-sm">
-                                                {{
-                                                    t(`menu.${category.id}.items.${item.name}.desc`)
-                                                }}
-                                            </p>
-                                            <p class="text-primary font-semibold">
-                                                {{ item.price }}
-                                            </p>
-                                        </div>
-                                    </UCard>
-
-                                    <!-- Flipped card -->
-                                    <UCard
-                                        class="bg-primary absolute h-full w-full [transform:rotateY(180deg)] justify-center text-white [backface-visibility:hidden]"
-                                        :ui="{
-                                            body: 'flex h-full flex-col items-center justify-center p-6 text-center'
-                                        }">
-                                        <h3 class="mb-2 text-lg font-semibold">
+                                :key="`${category.id}-${item.name}`"
+                                :name="item.name"
+                                :active="isFlipCardActive(category.id, item.name)"
+                                @toggle="toggleFlipCard(category.id, item.name)">
+                                <template #front-image>
+                                    <NuxtImg
+                                        :src="item.image"
+                                        alt=""
+                                        class="h-full w-full object-cover"
+                                        format="webp"
+                                        sizes="sm:100vw md:50vw lg:33vw"
+                                        placeholder />
+                                </template>
+                                <template #front-text>
+                                    <div class="p-4">
+                                        <h3 class="mb-1 text-xl font-medium">
                                             {{ t(`menu.${category.id}.items.${item.name}.title`) }}
                                         </h3>
-                                        <p class="text-sm leading-relaxed">
-                                            {{
-                                                t(
-                                                    `menu.${category.id}.items.${item.name}.ingredients`
-                                                )
-                                            }}
+                                        <p class="text-muted mb-2 text-sm">
+                                            {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
                                         </p>
-                                    </UCard>
-                                </div>
-                            </div>
+                                        <p class="text-primary font-semibold">
+                                            {{ item.price }}
+                                        </p>
+                                    </div>
+                                </template>
+                                <template #back>
+                                    <h3 class="mb-2 text-lg font-semibold">
+                                        {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                    </h3>
+                                    <p class="text-sm leading-relaxed">
+                                        {{
+                                            t(`menu.${category.id}.items.${item.name}.ingredients`)
+                                        }}
+                                    </p>
+                                </template>
+                            </ElementsFlipCard>
                         </div>
                     </div>
                 </section>
