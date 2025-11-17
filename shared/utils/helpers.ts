@@ -18,7 +18,5 @@ export function extractLocaleCode(locale: LocaleCodes | LocaleMeta): LocaleCodes
  * @returns The ISO code string (e.g., "en-US", "de-DE").
  */
 export function extractLocaleIso(locale: LocaleCodes): string {
-    const code = extractLocaleCode(locale);
-
-    return LOCALE_META[code].iso;
+    return LOCALE_META[locale].iso;
 }

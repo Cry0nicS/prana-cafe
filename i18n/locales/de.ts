@@ -66,7 +66,7 @@ export default {
             },
             links: {
                 title: "Haftung für Links",
-                content: `Unsere Webseite enthält Links zu externen Webseites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entfernen wir diese Links umgehend.`
+                content: `Unsere Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entfernen wir diese Links umgehend.`
             },
             copyright: {
                 title: "Urheberrecht",
@@ -226,7 +226,7 @@ export default {
                 },
                 pets: {
                     question: "Sind Haustiere erlaubt?",
-                    answer: "Aktuell dürfen keine Tiere ins Innere, um den Komfort und die Sicherheit aller Gäste zu gewährleisten. Außerdem ist die offene Küche aus hygienischen Gründen nicht kompatible mir Tieren. Danke für dein Verständnis!"
+                    answer: "Aktuell dürfen keine Tiere ins Innere, um den Komfort und die Sicherheit aller Gäste zu gewährleisten. Außerdem ist die offene Küche aus hygienischen Gründen nicht kompatibel mit Tieren. Danke für dein Verständnis!"
                 },
                 takeaway: {
                     question: "Gibt’s Take-away?",

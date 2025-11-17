@@ -13,22 +13,22 @@ const categories = [
         items: [
             {
                 name: "coworking",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/business-break.png",
                 price: "10€ p.p. / h"
             },
             {
                 name: "businessBreak",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/business-break.png",
                 price: "10€ p.p."
             },
             {
                 name: "businessLunch",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/business-lunch.png",
                 price: "40€ for 2"
             },
             {
                 name: "tastyDate",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/tasty-date.png",
                 price: "24€ for 2"
             }
         ]
@@ -38,7 +38,7 @@ const categories = [
         items: [
             {
                 name: "haselnussLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/haselnuss-latte.png",
                 price: "5,8€"
             },
             {
@@ -53,7 +53,7 @@ const categories = [
             },
             {
                 name: "flatWhite",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/flat-white.png",
                 price: "4,6€"
             },
             {
@@ -73,7 +73,7 @@ const categories = [
             },
             {
                 name: "sunshineMilk",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/sunshine-milk.png",
                 price: "5,2€"
             },
             {
@@ -83,7 +83,7 @@ const categories = [
             },
             {
                 name: "matchaLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/matcha-latte.png",
                 price: "5,9€"
             },
             {
@@ -98,32 +98,32 @@ const categories = [
         items: [
             {
                 name: "porridge",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/porridge.png",
                 price: "6,5 / 11,8€"
             },
             {
                 name: "bananaBread",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/banana-bread.png",
                 price: "9,5€"
             },
             {
                 name: "waffle",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/waffle.png",
                 price: "15€"
             },
             {
                 name: "brunch",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/brunch.png",
                 price: "18€"
             },
             {
                 name: "lunch",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/lunch.png",
                 price: "14.90€"
             },
             {
                 name: "soup",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/soup.png",
                 price: "4€ / 8€"
             }
         ]
@@ -205,13 +205,19 @@ function scrollTo(id: string) {
                                 :active="isFlipCardActive(category.id, item.name)"
                                 @toggle="toggleFlipCard(category.id, item.name)">
                                 <template #front-image>
-                                    <NuxtImg
-                                        :src="item.image"
-                                        alt=""
-                                        class="h-full w-full object-cover"
-                                        format="webp"
-                                        sizes="sm:100vw md:50vw lg:33vw"
-                                        placeholder />
+                                    <div
+                                        class="w-full"
+                                        style="aspect-ratio: 4 / 3; overflow: hidden">
+                                        <NuxtImg
+                                            :src="item.image"
+                                            alt=""
+                                            class="h-full w-full object-fill"
+                                            format="webp"
+                                            width="300"
+                                            height="226"
+                                            sizes="sm:100vw md:50vw lg:33vw"
+                                            placeholder />
+                                    </div>
                                 </template>
                                 <template #front-text>
                                     <div class="p-4">

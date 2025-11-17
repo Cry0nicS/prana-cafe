@@ -16,7 +16,7 @@ function onToggle() {
         tabindex="0"
         :aria-label="props.active ? 'Show front of card' : 'Show back of card'"
         :aria-pressed="props.active"
-        class="group focus:ring-primary h-100 w-full cursor-pointer rounded-lg focus:ring-2 focus:ring-offset-2"
+        class="group focus:ring-primary min-h-110 w-full cursor-pointer rounded-lg focus:ring-2 focus:ring-offset-2"
         @click="onToggle"
         @keydown.enter="onToggle"
         @keydown.space.prevent="onToggle">

@@ -9,14 +9,10 @@ useSeoMeta({
 });
 
 const menuImages = {
-    waffle: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    chai: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    bananaBread:
-        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    cacao: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    chickpeaWrap:
-        "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-    matcha: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    waffle: "/images/menu/waffle.png",
+    chai: "/images/menu/haselnuss-latte.png",
+    bananaBread: "/images/menu/banana-bread.png",
+    cacao: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
 };
 
 const galleryImages = [
@@ -169,10 +165,12 @@ const ctaLinks = computed(() => [
                     class="dark:bg-muted flex flex-col items-start bg-gray-50"
                     orientation="horizontal"
                     reverse>
-                    <img
+                    <NuxtImg
                         :src="item.image"
                         :alt="item.title"
-                        class="w-full rounded-lg object-cover" />
+                        class="h-full w-full rounded-lg object-cover"
+                        sizes="sm:100vw md:50vw lg:33vw"
+                        placeholder />
                 </UPageCard>
             </UPageGrid>
             <div class="flex justify-center">

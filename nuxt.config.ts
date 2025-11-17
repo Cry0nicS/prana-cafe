@@ -32,11 +32,11 @@ export default defineNuxtConfig({
         strategy: "prefix_except_default"
     },
     image: {
-        dir: "app/assets/images",
         format: ["webp"],
         provider: "vercel",
         quality: 80,
         screens: {
+            10: 10,
             icon: 20,
             icon2x: 40,
             lg: 1024,
