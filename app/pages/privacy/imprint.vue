@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import {company} from "#shared/utils/constants";
 
+const {t} = useI18n();
+
+useSeoMeta({
+    title: () => t("seo.imprint.title"),
+    description: () => t("seo.imprint.description"),
+    ogImage: "/images/hero.png"
+});
+
 const sectionKeys = [
     "company",
     "contact",
@@ -11,7 +19,6 @@ const sectionKeys = [
     "dispute"
 ];
 
-const {t} = useI18n();
 const telHref = `tel:${company.phone.replace(/\s+/g, "")}`;
 const mailHref = `mailto:${company.email}`;
 </script>

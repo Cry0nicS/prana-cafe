@@ -1,4 +1,5 @@
 import type {LocaleCodes, LocaleMeta} from "#shared/utils/types";
+import {LOCALE_META} from "#shared/utils/constants";
 
 /**
  * Extracts and returns the locale code from a locale identifier or a locale metadata object.
@@ -8,4 +9,10 @@ import type {LocaleCodes, LocaleMeta} from "#shared/utils/types";
  */
 export function extractLocaleCode(locale: LocaleCodes | LocaleMeta): LocaleCodes {
     return (typeof locale === "string" ? locale : locale.code) as LocaleCodes;
+}
+
+export function extractLocaleIso(locale: LocaleCodes): string {
+    const code = extractLocaleCode(locale);
+
+    return LOCALE_META[code].iso;
 }

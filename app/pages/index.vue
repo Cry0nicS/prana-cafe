@@ -2,6 +2,12 @@
 const {t} = useI18n();
 const localePath = useLocalePath();
 
+useSeoMeta({
+    title: () => t("seo.index.title"),
+    description: () => t("seo.index.description"),
+    ogImage: "/images/hero.png"
+});
+
 const menuImages = {
     waffle: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
     chai: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",

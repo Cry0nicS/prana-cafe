@@ -10,6 +10,32 @@ export default {
     global: {
         comingSoon: "Demnächst verfügbar"
     },
+    seo: {
+        index: {
+            title: "Café Prana",
+            description:
+                "Café Prana in Berlin bietet ein 100% glutenfreies, veganes Menü in einem gemütlichen Café. Genieße Brunch, warme Getränke und einladendes Ambiente."
+        },
+        menu: {
+            title: "Speisekarte",
+            description:
+                "Entdecke die glutenfreie und vegane Speisekarte von Café Prana mit nahrhaften Brunchs, ausgewogenen Mittagsgerichten und herzhaften Getränken."
+        },
+        imprint: {
+            title: "Impressum",
+            description: "Rechtliche Impressumsangaben von Café Prana."
+        },
+        privacy: {
+            title: "Datenschutz & Datensicherheit",
+            description:
+                "Erfahre mehr über Café Pranas Umgang mit deiner Privatsphäre und dem Schutz personenbezogener Daten."
+        },
+        contact: {
+            title: "Kontakt",
+            description:
+                "Nimm Kontakt mit Café Prana auf für Anfragen, Reservierungen oder Feedback."
+        }
+    },
     language: {
         en: "Englisch",
         de: "Deutsch",

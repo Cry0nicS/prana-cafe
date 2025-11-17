@@ -10,6 +10,30 @@ export default {
     global: {
         comingSoon: "Coming soon"
     },
+    seo: {
+        index: {
+            title: "Café Prana",
+            description:
+                "Café Prana in Berlin offers a 100% gluten-free, vegan, organic menu in a cozy community space. Enjoy nourishing brunches, warm drinks, and a welcoming atmosphere."
+        },
+        menu: {
+            title: "Menu",
+            description:
+                "Discover Café Prana's gluten-free and vegan menu, featuring nourishing brunches, wholesome lunches, and heartwarming drinks made from organic, plant-based ingredients."
+        },
+        imprint: {
+            title: "Imprint",
+            description: "Café Prana's legal imprint information."
+        },
+        privacy: {
+            title: "Privacy & Data Protection",
+            description: "Learn about Café Prana's commitment to your privacy and data protection."
+        },
+        contact: {
+            title: "Contact us",
+            description: "Get in touch with Café Prana for inquiries, reservations, or feedback."
+        }
+    },
     language: {
         en: "English",
         de: "German",

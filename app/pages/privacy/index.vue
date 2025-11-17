@@ -2,6 +2,12 @@
 import {company} from "#shared/utils/constants";
 
 const {t} = useI18n();
+
+useSeoMeta({
+    title: () => t("seo.privacy.title"),
+    description: () => t("seo.privacy.description"),
+    ogImage: "/images/hero.png"
+});
 </script>
 
 <template>
