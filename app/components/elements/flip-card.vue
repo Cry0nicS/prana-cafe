@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const props = defineProps({
-    name: {type: String, default: ""},
     active: {type: Boolean, default: false}
 });
 
@@ -13,8 +12,14 @@ function onToggle() {
 
 <template>
     <div
-        class="group h-100 w-full cursor-pointer focus:outline-none"
-        @click="onToggle">
+        role="button"
+        tabindex="0"
+        :aria-label="props.active ? 'Show front of card' : 'Show back of card'"
+        :aria-pressed="props.active"
+        class="group focus:ring-primary h-100 w-full cursor-pointer rounded-lg focus:ring-2 focus:ring-offset-2"
+        @click="onToggle"
+        @keydown.enter="onToggle"
+        @keydown.space.prevent="onToggle">
         <div
             class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]"
             :class="{

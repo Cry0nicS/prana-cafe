@@ -202,7 +202,6 @@ function scrollTo(id: string) {
                             <ElementsFlipCard
                                 v-for="item in category.items"
                                 :key="`${category.id}-${item.name}`"
-                                :name="item.name"
                                 :active="isFlipCardActive(category.id, item.name)"
                                 @toggle="toggleFlipCard(category.id, item.name)">
                                 <template #front-image>
