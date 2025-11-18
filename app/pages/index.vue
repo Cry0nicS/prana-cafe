@@ -9,10 +9,10 @@ useSeoMeta({
 });
 
 const menuImages = {
-    waffle: "/images/menu/waffle.png",
-    chai: "/images/menu/haselnuss-latte.png",
+    waffle: "/images/menu/herzhafte-waffel.png",
+    chai: "/images/menu/chai-latte.png",
     bananaBread: "/images/menu/banana-bread.png",
-    cacao: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    cacao: "/images/menu/hot-chocolate.png"
 };
 
 const galleryImages = [
@@ -66,20 +66,21 @@ const menuHighlights = computed(() => [
         description: t("index.menu.items.waffle.description"),
         image: menuImages.waffle
     },
+
     {
         title: t("index.menu.items.chai.title"),
         description: t("index.menu.items.chai.description"),
         image: menuImages.chai
     },
     {
-        title: t("index.menu.items.bananaBread.title"),
-        description: t("index.menu.items.bananaBread.description"),
-        image: menuImages.bananaBread
-    },
-    {
         title: t("index.menu.items.cacao.title"),
         description: t("index.menu.items.cacao.description"),
         image: menuImages.cacao
+    },
+    {
+        title: t("index.menu.items.bananaBread.title"),
+        description: t("index.menu.items.bananaBread.description"),
+        image: menuImages.bananaBread
     }
 ]);
 
@@ -166,10 +167,11 @@ const ctaLinks = computed(() => [
                     orientation="horizontal"
                     reverse>
                     <NuxtImg
+                        format="webp"
                         :src="item.image"
                         :alt="item.title"
-                        class="h-full w-full rounded-lg object-cover"
-                        sizes="sm:100vw md:50vw lg:33vw"
+                        class="h-full w-full max-w-[292px] rounded-lg object-cover lg:max-w-[242px]"
+                        sizes="292px lg:242px"
                         placeholder />
                 </UPageCard>
             </UPageGrid>

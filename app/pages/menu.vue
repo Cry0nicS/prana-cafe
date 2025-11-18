@@ -13,7 +13,7 @@ const categories = [
         items: [
             {
                 name: "coworking",
-                image: "/images/menu/business-break.png",
+                image: "/images/menu/cup.png",
                 price: "10€ p.p. / h"
             },
             {
@@ -43,12 +43,12 @@ const categories = [
             },
             {
                 name: "dirtyEarl",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/dirty-earl.png",
                 price: "5.2€"
             },
             {
                 name: "espresso",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/espresso.png",
                 price: "2,5 / 3,3€"
             },
             {
@@ -58,7 +58,7 @@ const categories = [
             },
             {
                 name: "latte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/latte.png",
                 price: "5,3€"
             }
         ]
@@ -78,17 +78,17 @@ const categories = [
             },
             {
                 name: "chaiLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/chai-latte.png",
                 price: "4,6€"
             },
             {
                 name: "matchaLatte",
-                image: "/images/menu/matcha-latte.png",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
                 price: "5,9€"
             },
             {
                 name: "hotChocolate",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/hot-chocolate.png",
                 price: "4,9€"
             }
         ]
@@ -123,7 +123,7 @@ const categories = [
             },
             {
                 name: "soup",
-                image: "/images/menu/soup.png",
+                image: "/images/menu/soup2.png",
                 price: "4€ / 8€"
             }
         ]
@@ -205,32 +205,25 @@ function scrollTo(id: string) {
                                 :active="isFlipCardActive(category.id, item.name)"
                                 @toggle="toggleFlipCard(category.id, item.name)">
                                 <template #front-image>
-                                    <div
-                                        class="w-full"
-                                        style="aspect-ratio: 4 / 3; overflow: hidden">
-                                        <NuxtImg
-                                            :src="item.image"
-                                            alt=""
-                                            class="h-full w-full object-fill"
-                                            format="webp"
-                                            width="300"
-                                            height="226"
-                                            sizes="sm:100vw md:50vw lg:33vw"
-                                            placeholder />
-                                    </div>
+                                    <NuxtImg
+                                        :src="item.image"
+                                        :alt="t(`menu.${category.id}.items.${item.name}.title`)"
+                                        class="aspect-[4/3] h-full w-full max-w-[294px] overflow-hidden object-cover lg:max-w-[210px]"
+                                        format="webp"
+                                        width="294"
+                                        sizes="294px lg:210px"
+                                        placeholder />
                                 </template>
                                 <template #front-text>
-                                    <div class="p-4">
-                                        <h3 class="mb-1 text-xl font-medium">
-                                            {{ t(`menu.${category.id}.items.${item.name}.title`) }}
-                                        </h3>
-                                        <p class="text-muted mb-2 text-sm">
-                                            {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
-                                        </p>
-                                        <p class="text-primary font-semibold">
-                                            {{ item.price }}
-                                        </p>
-                                    </div>
+                                    <h3 class="mb-1 text-xl font-medium">
+                                        {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                    </h3>
+                                    <p class="text-muted mb-2 text-sm">
+                                        {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
+                                    </p>
+                                    <p class="text-primary font-semibold">
+                                        {{ item.price }}
+                                    </p>
                                 </template>
                                 <template #back>
                                     <h3 class="mb-2 text-lg font-semibold">
