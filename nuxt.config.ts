@@ -37,7 +37,6 @@ export default defineNuxtConfig({
         quality: 80,
         screens: {
             10: 10,
-            card: 294,
             icon: 20,
             icon2x: 40,
             lg: 1024,

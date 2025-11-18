@@ -205,31 +205,26 @@ function scrollTo(id: string) {
                                 :active="isFlipCardActive(category.id, item.name)"
                                 @toggle="toggleFlipCard(category.id, item.name)">
                                 <template #front-image>
-                                    <div
-                                        class="w-full"
-                                        style="aspect-ratio: 4 / 3; overflow: hidden">
-                                        <NuxtImg
-                                            :src="item.image"
-                                            :alt="t(`menu.${category.id}.items.${item.name}.title`)"
-                                            class="h-full w-full object-cover"
-                                            format="webp"
-                                            width="294"
-                                            sizes="294px"
-                                            placeholder />
-                                    </div>
+                                    <NuxtImg
+                                        :src="item.image"
+                                        :alt="t(`menu.${category.id}.items.${item.name}.title`)"
+                                        class="h-full w-full max-w-[294px] object-cover lg:max-w-[210px]"
+                                        style="aspect-ratio: 4 / 3; overflow: hidden"
+                                        format="webp"
+                                        width="294"
+                                        sizes="294px lg:210px"
+                                        placeholder />
                                 </template>
                                 <template #front-text>
-                                    <div class="p-4">
-                                        <h3 class="mb-1 text-xl font-medium">
-                                            {{ t(`menu.${category.id}.items.${item.name}.title`) }}
-                                        </h3>
-                                        <p class="text-muted mb-2 text-sm">
-                                            {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
-                                        </p>
-                                        <p class="text-primary font-semibold">
-                                            {{ item.price }}
-                                        </p>
-                                    </div>
+                                    <h3 class="mb-1 text-xl font-medium">
+                                        {{ t(`menu.${category.id}.items.${item.name}.title`) }}
+                                    </h3>
+                                    <p class="text-muted mb-2 text-sm">
+                                        {{ t(`menu.${category.id}.items.${item.name}.desc`) }}
+                                    </p>
+                                    <p class="text-primary font-semibold">
+                                        {{ item.price }}
+                                    </p>
                                 </template>
                                 <template #back>
                                     <h3 class="mb-2 text-lg font-semibold">

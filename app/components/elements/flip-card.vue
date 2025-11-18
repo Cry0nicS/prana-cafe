@@ -16,7 +16,7 @@ function onToggle() {
         tabindex="0"
         :aria-label="props.active ? 'Show front of card' : 'Show back of card'"
         :aria-pressed="props.active"
-        class="group focus:ring-primary min-h-110 w-full cursor-pointer rounded-lg focus:ring-2 focus:ring-offset-2"
+        class="group focus:ring-primary min-h-110 max-w-[330px] cursor-pointer rounded-lg focus:ring-2 focus:ring-offset-2"
         @click="onToggle"
         @keydown.enter="onToggle"
         @keydown.space.prevent="onToggle">
@@ -28,9 +28,7 @@ function onToggle() {
             }">
             <!-- Front card -->
             <UCard class="absolute h-full w-full overflow-hidden [backface-visibility:hidden]">
-                <div class="aspect-[4/3] w-full overflow-hidden rounded-t-xl">
-                    <slot name="front-image" />
-                </div>
+                <slot name="front-image" />
                 <div class="p-4">
                     <slot name="front-text" />
                 </div>

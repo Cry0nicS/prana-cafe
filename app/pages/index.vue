@@ -171,7 +171,7 @@ const ctaLinks = computed(() => [
                         :src="item.image"
                         :alt="item.title"
                         class="h-full w-full max-w-[292px] rounded-lg object-cover lg:max-w-[242px]"
-                        sizes="294px"
+                        sizes="292px lg:242px"
                         placeholder />
                 </UPageCard>
             </UPageGrid>
