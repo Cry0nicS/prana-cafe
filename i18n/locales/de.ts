@@ -203,10 +203,9 @@ export default {
                 "Ein Einblick in das Ambiente, die Gerichte und Getränke, die Café Prana so besonders machen."
         },
         story: {
-            title: "Unsere Geschichte",
+            title: "Meine Geschichte",
             description:
-                "Erfahre, wie Café Prana aus Leidenschaft für ganzheitliche Gesundheit und Wohlbefinden entstanden ist.",
-            text: "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista – die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mich hochwertigen Zutaten abspeilt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
+                "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista – die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mich hochwertigen Zutaten abspeilt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
         },
         testimonials: {
             title: "Das sagen unsere Gäste",
@@ -332,6 +331,11 @@ export default {
                     title: "Chai Latte",
                     desc: "Hausgemachte Chai-Gewürzmischung mit Mylk deiner Wahl.",
                     ingredients: "Chai-Gewürze, Mylk nach Wahl"
+                },
+                matcha: {
+                    title: "Zeremonieller Matcha",
+                    desc: "Hochwertiger Matcha, traditionell zubereitet.",
+                    ingredients: "Matcha-Pulver, heißes Wasser"
                 },
                 matchaLatte: {
                     title: "Zeremonieller Matcha Latte",

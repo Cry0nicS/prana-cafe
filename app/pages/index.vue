@@ -12,14 +12,15 @@ const menuImages = {
     waffle: "/images/menu/herzhafte-waffel.png",
     chai: "/images/menu/chai-latte.png",
     bananaBread: "/images/menu/banana-bread.png",
-    cacao: "/images/menu/hot-chocolate.png"
+    cacao: "/images/menu/cacao.png"
 };
 
 const galleryImages = [
-    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1550565088-49d86e5f7d5b?auto=format&fit=crop&w=900&q=80"
+    "/images/home/gallery/gallery-1.png",
+    "/images/home/gallery/gallery-2.png",
+    "/images/home/gallery/gallery-3.png",
+    "/images/home/gallery/gallery-4.png",
+    "/images/home/gallery/gallery-5.png"
 ];
 
 const heroLinks = computed(() => [
@@ -203,27 +204,37 @@ const ctaLinks = computed(() => [
                 }"
                 :items="galleryImages"
                 :wrap-around="true"
-                class="overflow-hidden rounded-lg">
-                <img
+                :ui="{item: 'lg:basis-1/3'}"
+                class="rounded-lg">
+                <NuxtImg
+                    format="webp"
                     :src="item"
-                    class="h-64 w-full object-cover"
-                    alt="Prana Café photo" />
+                    :alt="`${t('index.gallery.title')}`"
+                    class="h-full w-full max-w-[500px] overflow-hidden object-cover lg:aspect-[3/4]"
+                    sizes="500px"
+                    placeholder />
             </UCarousel>
         </UPageSection>
 
-        <!-- Our story section with two columns -->
-        <UPageSection icon="mdi:book-open-page-variant-outline">
+        <!-- My story section with two columns -->
+        <UPageSection
+            icon="mdi:book-open-page-variant-outline"
+            orientation="horizontal"
+            reverse>
             <template #title>{{ t("index.story.title") }}</template>
-            <template #description>{{ t("index.story.description") }}</template>
-            <UPageColumns class="lg:columns-2">
+            <template #description>
                 <div class="prose dark:prose-invert">
-                    <p class="text-justify">{{ t("index.story.text") }}</p>
+                    <p class="text-justify">{{ t("index.story.description") }}</p>
                 </div>
-                <img
-                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-                    alt="Founders enjoying coffee"
-                    class="h-72 w-full rounded-lg object-cover" />
-            </UPageColumns>
+            </template>
+
+            <NuxtImg
+                format="webp"
+                src="/images/home/my-story.png"
+                :alt="t('index.story.title')"
+                class="h-full w-full rounded-lg object-cover"
+                sizes="640px"
+                placeholder />
         </UPageSection>
 
         <!-- Testimonials section -->
@@ -245,7 +256,6 @@ const ctaLinks = computed(() => [
             :links="ctaLinks"
             orientation="horizontal"
             variant="outline"
-            reverse
             class="mb-24">
             <template #description>
                 {{ t("index.cta.description") }}
