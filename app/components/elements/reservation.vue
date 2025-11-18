@@ -3,8 +3,11 @@ import type {Reservation, ReservationForm} from "#shared/utils/types/reservation
 import type {DateValue} from "@internationalized/date";
 import {ReservationSchema} from "#shared/utils/schemas";
 import {CalendarDate, DateFormatter, getLocalTimeZone} from "@internationalized/date";
+import {useValidation} from "~/composables/use-validation";
 
+const {t} = useI18n();
 const localePath = useLocalePath();
+const {translateValidationMessage} = useValidation();
 
 const df = new DateFormatter("de-DE", {
     dateStyle: "medium"
@@ -64,8 +67,8 @@ const sendReservation = async () => {
 
     if (!validationResult.success) {
         toast.add({
-            title: "Fehler im Formular",
-            description: validationResult.error,
+            title: t("reservations.form.toasts.validationTitle"),
+            description: translateValidationMessage(validationResult.error),
             color: "error",
             icon: "mdi:shield-alert"
         });
@@ -80,8 +83,8 @@ const sendReservation = async () => {
         });
 
         toast.add({
-            title: "Reservierung erfolgreich gesendet",
-            description: " Wir melden uns, sobald wie deine Anfrage bearbeitet haben.",
+            title: t("reservations.form.toasts.successTitle"),
+            description: t("reservations.form.toasts.successDescription"),
             color: "success",
             icon: "mdi:thumb-up"
         });
@@ -89,8 +92,8 @@ const sendReservation = async () => {
         resetFormData();
     } catch {
         toast.add({
-            title: "Fehler beim Senden der Anfrage",
-            description: "Bitte versuche es später erneut.",
+            title: t("reservations.form.toasts.sendErrorTitle"),
+            description: t("reservations.form.toasts.sendErrorDescription"),
             color: "error",
             icon: "mdi:shield-alert"
         });
@@ -105,140 +108,137 @@ function toJsDate(value: CalendarDate) {
 </script>
 
 <template>
-    <UPage>
-        <UForm
-            :state="formState"
-            @submit="sendReservation">
-            <div class="space-y-4">
-                <UFormField
-                    label="Vorname"
-                    name="firstName"
-                    placeholder="First name"
-                    required>
-                    <UInput
-                        v-model="formState.firstName"
-                        type="text"
-                        class="w-full"
-                        trailing-icon="mdi:account"
-                        required />
-                </UFormField>
-                <UFormField
-                    label="Nachname"
-                    name="lastName"
-                    placeholder="Last name"
-                    required>
-                    <UInput
-                        v-model="formState.lastName"
-                        type="text"
-                        class="w-full"
-                        trailing-icon="mdi:account"
-                        required />
-                </UFormField>
-                <UFormField
-                    label="E-Mail"
-                    name="email"
-                    required>
-                    <UInput
-                        v-model="formState.email"
-                        type="email"
-                        class="w-full"
-                        trailing-icon="mdi:at"
-                        required />
-                </UFormField>
-                <UFormField
-                    name="phone"
-                    label="Phone Number (with country code)">
-                    <UInput
-                        v-model="formState.phone"
-                        placeholder="+49 345 678 9012"
-                        autocomplete="tel"
-                        type="tel"
-                        trailing-icon="mdi:phone"
-                        class="w-full" />
-                </UFormField>
-                <UFormField
-                    name="date"
-                    label="Reservation Date">
-                    <UPopover class="w-full justify-center">
-                        <UButton
-                            color="neutral"
-                            variant="outline"
-                            size="lg"
-                            trailing-icon="mdi:calendar"
-                            class="flex w-full items-center justify-between">
-                            <span class="flex-1 text-left">
-                                {{
-                                    formState.date
-                                        ? df.format(toJsDate(formState.date as CalendarDate))
-                                        : "Select a date"
-                                }}
-                            </span>
-                        </UButton>
+    <UForm
+        :state="formState"
+        @submit="sendReservation">
+        <div class="space-y-4">
+            <UFormField
+                :label="t('reservations.form.fields.firstName.label')"
+                name="firstName"
+                :placeholder="t('reservations.form.fields.firstName.placeholder')"
+                required>
+                <UInput
+                    v-model="formState.firstName"
+                    type="text"
+                    class="w-full"
+                    trailing-icon="mdi:account"
+                    required />
+            </UFormField>
+            <UFormField
+                :label="t('reservations.form.fields.lastName.label')"
+                name="lastName"
+                :placeholder="t('reservations.form.fields.lastName.placeholder')"
+                required>
+                <UInput
+                    v-model="formState.lastName"
+                    type="text"
+                    class="w-full"
+                    trailing-icon="mdi:account"
+                    required />
+            </UFormField>
+            <UFormField
+                :label="t('reservations.form.fields.email.label')"
+                name="email"
+                required>
+                <UInput
+                    v-model="formState.email"
+                    type="email"
+                    class="w-full"
+                    trailing-icon="mdi:at"
+                    :placeholder="t('reservations.form.fields.email.placeholder')"
+                    required />
+            </UFormField>
+            <UFormField
+                name="phone"
+                :label="t('reservations.form.fields.phone.label')">
+                <UInput
+                    v-model="formState.phone"
+                    :placeholder="t('reservations.form.fields.phone.placeholder')"
+                    autocomplete="tel"
+                    type="tel"
+                    trailing-icon="mdi:phone"
+                    class="w-full" />
+            </UFormField>
+            <UFormField
+                name="date"
+                :label="t('reservations.form.fields.date.label')">
+                <UPopover class="w-full justify-center">
+                    <UButton
+                        color="neutral"
+                        variant="outline"
+                        size="lg"
+                        trailing-icon="mdi:calendar"
+                        class="flex w-full items-center justify-between">
+                        <span class="flex-1 text-left">
+                            {{
+                                formState.date
+                                    ? df.format(toJsDate(formState.date as CalendarDate))
+                                    : t("reservations.form.fields.date.select")
+                            }}
+                        </span>
+                    </UButton>
 
-                        <template #content>
-                            <UCalendar
-                                v-model="formState.date as unknown as DateValue"
-                                size="xl"
-                                class="justify-between p-2" />
-                        </template>
-                    </UPopover>
-                </UFormField>
-                <UFormField
-                    name="guests"
-                    label="Anzahl der Gäste">
-                    <UInputNumber
-                        v-model="formState.guests"
-                        :min="1"
-                        :max="20"
-                        class="w-full"
-                        size="lg"
-                        increment-icon="mdi:arrow-up-bold"
-                        decrement-icon="mdi:arrow-down-bold"
-                        trailing-icon="mdi:account-multiple" />
-                </UFormField>
-                <UFormField
-                    name="message"
-                    label="Nachricht (optional)">
-                    <UTextarea
-                        v-model="formState.message"
-                        class="w-full"
-                        :maxrows="8"
-                        autoresize
-                        size="lg"
-                        maxlength="1000"
-                        trailing-icon="mdi:message" />
-                </UFormField>
-                <UCheckbox
-                    v-model="formState.privacyConsent"
-                    name="privacyConsent"
-                    required
-                    :ui="{label: 'text-left text-sm'}">
-                    <template #label>
-                        Die
-                        <a
-                            :href="localePath('/privacy')"
-                            target="_blank"
-                            rel="noopener">
-                            Datenschutzerklärung
-                        </a>
-                        wurde zur Kenntnis genommen und akzeptiert. Es wurde eingewilligt, dass die
-                        freiwillig angegebenen Daten speichern und zur Kontaktaufnahme verwenden
-                        darf. Die Verarbeitung kann jederzeit widerrufen werden.
+                    <template #content>
+                        <UCalendar
+                            v-model="formState.date as unknown as DateValue"
+                            size="xl"
+                            class="justify-between p-2" />
                     </template>
-                </UCheckbox>
-            </div>
-            <div class="mt-4 flex items-center justify-end">
-                <UButton
-                    type="submit"
-                    :loading="isSubmitting"
-                    :disabled="isSubmitting"
-                    size="xl"
-                    class="flex w-full items-center justify-center gap-1.5"
-                    trailing-icon="i-heroicons-arrow-long-right"
-                    loading-icon="i-heroicons-arrow-path">
-                    Submit
-                </UButton>
-            </div>
-        </UForm>
-    </UPage>
+                </UPopover>
+            </UFormField>
+            <UFormField
+                name="guests"
+                :label="t('reservations.form.fields.guests.label')">
+                <UInputNumber
+                    v-model="formState.guests"
+                    :min="1"
+                    :max="20"
+                    class="w-full"
+                    size="lg"
+                    increment-icon="mdi:arrow-up-bold"
+                    decrement-icon="mdi:arrow-down-bold"
+                    trailing-icon="mdi:account-multiple" />
+            </UFormField>
+            <UFormField
+                name="message"
+                :label="t('reservations.form.fields.message.label')">
+                <UTextarea
+                    v-model="formState.message"
+                    class="w-full"
+                    :maxrows="8"
+                    autoresize
+                    size="lg"
+                    maxlength="1000"
+                    trailing-icon="mdi:message" />
+            </UFormField>
+            <UCheckbox
+                v-model="formState.privacyConsent"
+                name="privacyConsent"
+                required
+                :ui="{label: 'text-left text-sm'}">
+                <template #label>
+                    {{ t("reservations.form.fields.privacy.preLink") }}
+                    <a
+                        :href="localePath('/privacy')"
+                        target="_blank"
+                        rel="noopener">
+                        {{ t("reservations.form.fields.privacy.linkText") }}
+                    </a>
+                    {{ t("reservations.form.fields.privacy.postLink") }}
+                </template>
+            </UCheckbox>
+        </div>
+        <div class="mt-4 flex items-center justify-end">
+            <UButton
+                type="submit"
+                :loading="isSubmitting"
+                :disabled="isSubmitting"
+                size="xl"
+                class="flex w-full items-center justify-center gap-1.5"
+                trailing-icon="mdi:send"
+                loading-icon="mdi:loading">
+                {{ t("reservations.form.submit") }}
+            </UButton>
+        </div>
+    </UForm>
 </template>

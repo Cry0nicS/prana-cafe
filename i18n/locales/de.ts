@@ -395,5 +395,86 @@ export default {
                 }
             }
         }
+    },
+    reservations: {
+        title: "Planen Sie Ihren Besuch im Cafe Prana",
+        description:
+            "Ob besonderer Anlass, entspanntes Treffen oder ein ruhiges Date – mit einer Reservierung können wir Ihren Platz ganz nach Ihren Wünschen vorbereiten.",
+
+        features: {
+            request: {
+                title: "Tisch anfragen",
+                description:
+                    "Wählen Sie Datum, Uhrzeit und Anzahl der Gäste, um eine Reservierung anzufragen. Wir versuchen, allen Wünschen gerecht zu werden."
+            },
+            confirmation: {
+                title: "Bestätigung innerhalb von 24 Stunden",
+                description:
+                    "Reservierungen werden innerhalb von 24 Stunden bestätigt. Bitte geben Sie uns bis zu einem Tag Zeit für die endgültige Rückmeldung."
+            },
+            email: {
+                title: "E-Mail-Bestätigung",
+                description:
+                    "Sie erhalten eine E-Mail mit allen Details zur Reservierung sowie möglichen weiteren Hinweisen."
+            },
+            special: {
+                title: "Besondere Wünsche & Allergien",
+                description:
+                    "Nutzen Sie das Nachrichtenfeld, um uns Allergien, besondere Bedürfnisse oder spezielle Wünsche mitzuteilen."
+            },
+            changes: {
+                title: "Änderungen & Stornierung",
+                description:
+                    "Sie möchten ändern oder stornieren? Bitte informieren Sie uns so früh wie möglich, damit wir den Tisch anderweitig vergeben können."
+            }
+        },
+
+        form: {
+            fields: {
+                firstName: {label: "Vorname", placeholder: "Vorname"},
+                lastName: {label: "Nachname", placeholder: "Nachname"},
+                email: {label: "E-Mail", placeholder: ""},
+                phone: {
+                    label: "Telefonnummer (mit Ländervorwahl)",
+                    placeholder: "+49 345 678 9012"
+                },
+                date: {label: "Reservierungsdatum", select: "Datum auswählen"},
+                guests: {label: "Anzahl der Gäste"},
+                message: {label: "Nachricht (optional)"},
+                privacy: {
+                    linkText: "Datenschutzerklärung",
+                    preLink: "Ich habe die ",
+                    postLink:
+                        " gelesen und akzeptiere sie. Die freiwillig angegebenen Daten dürfen gespeichert und zur Kontaktaufnahme genutzt werden. Die Einwilligung kann jederzeit widerrufen werden."
+                }
+            },
+
+            submit: "Absenden",
+
+            errors: {
+                firstName: {required: "Vorname ist erforderlich"},
+                lastName: {required: "Nachname ist erforderlich"},
+                email: {
+                    required: "E-Mail ist erforderlich",
+                    invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+                },
+                phone: {
+                    invalid: "Bitte geben Sie eine gültige Telefonnummer mit Ländervorwahl ein"
+                },
+                guests: {min: "Mindestens 1 Gast erforderlich", max: "Maximal 20 Gäste erlaubt"},
+                date: {invalid: "Bitte ein gültiges Datum angeben (heute oder später)"},
+                privacy: {
+                    required: "Bitte bestätigen Sie die Datenschutzerklärung und Ihre Einwilligung."
+                }
+            },
+
+            toasts: {
+                validationTitle: "Formularfehler",
+                successTitle: "Reservierung erfolgreich gesendet",
+                successDescription: "Wir melden uns, sobald wir Ihre Anfrage bearbeitet haben.",
+                sendErrorTitle: "Fehler beim Senden",
+                sendErrorDescription: "Bitte versuchen Sie es später erneut."
+            }
+        }
     }
 };

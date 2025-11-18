@@ -391,5 +391,76 @@ export default {
                 }
             }
         }
+    },
+    reservations: {
+        title: "Plan Your Visit to Cafe Prana",
+        description:
+            "Whether you're planning a special moment, a relaxed gathering, or a quiet date, reserving your table helps us prepare a comfortable setting just for you.",
+        features: {
+            request: {
+                title: "Request a Table",
+                description:
+                    "Choose date, time and party size to request a reservation. We try to accommodate all requests."
+            },
+            confirmation: {
+                title: "Confirmation within 24 hours",
+                description:
+                    "Reservations are confirmed within 24 hours. Please allow up to a day for final confirmation."
+            },
+            email: {
+                title: "Email Confirmation",
+                description:
+                    "You will receive an email to confirm the reservation with all details and any follow-up instructions."
+            },
+            special: {
+                title: "Special Requests & Allergies",
+                description:
+                    "Use the message section to tell us about allergies, accessibility needs, or other special requests."
+            },
+            changes: {
+                title: "Changes & Cancellation",
+                description:
+                    "Need to change or cancel? Please notify us as soon as possible so we can free the table for others."
+            }
+        },
+        form: {
+            fields: {
+                firstName: {label: "First name", placeholder: "First name"},
+                lastName: {label: "Last name", placeholder: "Last name"},
+                email: {label: "Email", placeholder: ""},
+                phone: {label: "Phone Number (with country code)", placeholder: "+49 345 678 9012"},
+                date: {label: "Reservation Date", select: "Select a date"},
+                guests: {label: "Number of guests"},
+                message: {label: "Message (optional)"},
+                privacy: {
+                    linkText: "Privacy Policy",
+                    preLink: "I have read and accept the ",
+                    postLink:
+                        " It is agreed that the voluntarily provided data may be stored and used to contact you. Processing can be revoked at any time."
+                }
+            },
+            submit: "Submit",
+            errors: {
+                firstName: {required: "First name is required"},
+                lastName: {required: "Last name is required"},
+                email: {
+                    required: "Email is required",
+                    invalid: "Please provide a valid email address"
+                },
+                phone: {invalid: "Please provide a valid phone number with country code"},
+                guests: {min: "At least 1 guest is required", max: "Maximum 20 guests allowed"},
+                date: {invalid: "Please provide a valid date (today or later)"},
+                privacy: {
+                    required: "Please confirm the privacy policy and consent to be contacted."
+                }
+            },
+            toasts: {
+                validationTitle: "Form error",
+                successTitle: "Reservation sent successfully",
+                successDescription: "We will get back to you as soon as we processed your request.",
+                sendErrorTitle: "Error sending request",
+                sendErrorDescription: "Please try again later."
+            }
+        }
     }
 };
