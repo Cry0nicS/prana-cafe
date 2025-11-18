@@ -4,6 +4,7 @@ import {ReservationSchema} from "#shared/utils/schemas";
 import {serverSupabaseClient} from "#supabase/server";
 import * as z from "zod";
 import {insertReservation} from "~~/server/repositories/reservations";
+import {sendReservationEmail} from "~~/server/utils/email";
 type ReservationInsertType = Database["public"]["Tables"]["reservations"]["Insert"];
 
 export default defineEventHandler(async (event: H3Event) => {
@@ -47,6 +48,8 @@ export default defineEventHandler(async (event: H3Event) => {
         };
 
         reservation = await insertReservation(client, reservationData);
+
+        await sendReservationEmail(reservation);
     } catch (error) {
         throw createError({
             statusCode: 500,
