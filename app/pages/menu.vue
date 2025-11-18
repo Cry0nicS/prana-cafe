@@ -208,8 +208,7 @@ function scrollTo(id: string) {
                                     <NuxtImg
                                         :src="item.image"
                                         :alt="t(`menu.${category.id}.items.${item.name}.title`)"
-                                        class="h-full w-full max-w-[294px] object-cover lg:max-w-[210px]"
-                                        style="aspect-ratio: 4 / 3; overflow: hidden"
+                                        class="aspect-[4/3] h-full w-full max-w-[294px] overflow-hidden object-cover lg:max-w-[210px]"
                                         format="webp"
                                         width="294"
                                         sizes="294px lg:210px"
