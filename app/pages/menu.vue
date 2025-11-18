@@ -13,7 +13,7 @@ const categories = [
         items: [
             {
                 name: "coworking",
-                image: "/images/menu/business-break.png",
+                image: "/images/menu/cup.png",
                 price: "10€ p.p. / h"
             },
             {
@@ -43,12 +43,12 @@ const categories = [
             },
             {
                 name: "dirtyEarl",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/dirty-earl.png",
                 price: "5.2€"
             },
             {
                 name: "espresso",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/espresso.png",
                 price: "2,5 / 3,3€"
             },
             {
@@ -58,7 +58,7 @@ const categories = [
             },
             {
                 name: "latte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/latte.png",
                 price: "5,3€"
             }
         ]
@@ -78,17 +78,17 @@ const categories = [
             },
             {
                 name: "chaiLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/chai-latte.png",
                 price: "4,6€"
             },
             {
                 name: "matchaLatte",
-                image: "/images/menu/matcha-latte.png",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
                 price: "5,9€"
             },
             {
                 name: "hotChocolate",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/hot-chocolate.png",
                 price: "4,9€"
             }
         ]
@@ -123,7 +123,7 @@ const categories = [
             },
             {
                 name: "soup",
-                image: "/images/menu/soup.png",
+                image: "/images/menu/soup2.png",
                 price: "4€ / 8€"
             }
         ]
@@ -210,12 +210,11 @@ function scrollTo(id: string) {
                                         style="aspect-ratio: 4 / 3; overflow: hidden">
                                         <NuxtImg
                                             :src="item.image"
-                                            alt=""
-                                            class="h-full w-full object-fill"
+                                            :alt="t(`menu.${category.id}.items.${item.name}.title`)"
+                                            class="h-full w-full object-cover"
                                             format="webp"
-                                            width="300"
-                                            height="226"
-                                            sizes="sm:100vw md:50vw lg:33vw"
+                                            width="294"
+                                            sizes="294px"
                                             placeholder />
                                     </div>
                                 </template>
