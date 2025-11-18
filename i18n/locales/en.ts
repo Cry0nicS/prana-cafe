@@ -32,6 +32,11 @@ export default {
         contact: {
             title: "Contact us",
             description: "Get in touch with Café Prana for inquiries, reservations, or feedback."
+        },
+        reservations: {
+            title: "Reservations",
+            description:
+                "Reserve your spot at Café Prana in Berlin for a delightful gluten-free and vegan dining experience."
         }
     },
     language: {

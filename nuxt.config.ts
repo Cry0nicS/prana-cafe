@@ -72,7 +72,8 @@ export default defineNuxtConfig({
         url: "https://cafeprana.de"
     },
     supabase: {
-        redirect: false
+        redirect: false,
+        types: "../shared/utils/types/database.ts"
     },
     typescript: {
         strict: true,

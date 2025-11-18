@@ -34,6 +34,11 @@ export default {
             title: "Kontakt",
             description:
                 "Nimm Kontakt mit Café Prana auf für Anfragen, Reservierungen oder Feedback."
+        },
+        reservations: {
+            title: "Reservierungen",
+            description:
+                "Reserviere deinen Tisch im Café Prana online für ein glutenfreies, veganes Erlebnis."
         }
     },
     language: {

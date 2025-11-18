@@ -21,6 +21,10 @@ export const i18nPages = {
     "menu/index": {
         en: "/menu",
         de: "/speisekarte"
+    },
+    "reservations/index": {
+        en: "/reservations",
+        de: "/reservierungen"
     }
 } as const satisfies NuxtI18nOptions["pages"];
 
