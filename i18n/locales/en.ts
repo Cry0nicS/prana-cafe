@@ -465,6 +465,16 @@ export default {
                 }
             },
             submit: "Submit",
+            modal: {
+                title: "Reservation request received",
+                body: {
+                    p1: "Thank you — we've received your reservation request.",
+                    p2_pre: "We will check availability and send a confirmation email within 24 hours. If you don't receive a confirmation, please check your spam folder or",
+                    p2_link: "contact us",
+                    p2_post: "."
+                },
+                closeButton: "Okay"
+            },
             errors: {
                 firstName: {required: "First name is required"},
                 lastName: {required: "Last name is required"},

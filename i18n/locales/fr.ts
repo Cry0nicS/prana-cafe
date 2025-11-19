@@ -473,6 +473,16 @@ export default {
                 }
             },
             submit: "Envoyer",
+            modal: {
+                title: "Demande de réservation reçue",
+                body: {
+                    p1: "Merci ! Nous avons bien reçu votre demande de réservation.",
+                    p2_pre: "Nous vérifions la disponibilité et vous enverrons un e-mail de confirmation dans les 24 heures. Si vous ne recevez pas de confirmation, vérifiez votre dossier spam ou",
+                    p2_link: "contactez-nous",
+                    p2_post: "."
+                },
+                closeButton: "D'accord"
+            },
             errors: {
                 firstName: {required: "Le prénom est requis"},
                 lastName: {required: "Le nom de famille est requis"},

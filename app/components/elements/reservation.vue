@@ -17,7 +17,7 @@ const inputDateRef = useTemplateRef("inputDateRef");
 
 const isSubmitting = ref(false);
 const toast = useToast();
-const errorMsg = ref("");
+const showModal = ref(false);
 
 const formState = reactive<ReservationForm>({
     date: todayDate,
@@ -55,7 +55,6 @@ const validateForm = (): {success: boolean; data?: Reservation; error?: string} 
 
 const sendReservation = async () => {
     isSubmitting.value = true;
-    errorMsg.value = "";
 
     // Validate form data.
     const {success: validationSuccess, data, error: validationError} = validateForm();
@@ -85,6 +84,7 @@ const sendReservation = async () => {
             icon: "mdi:thumb-up"
         });
 
+        showModal.value = true;
         resetFormData();
     } catch {
         toast.add({
@@ -279,4 +279,34 @@ const isDateUnavailable = (date: DateValue) => {
             </UButton>
         </div>
     </UForm>
+    <UModal
+        v-model:open="showModal"
+        :title="t('reservations.form.modal.title')"
+        close-icon="mdi:close-thick">
+        <template #body>
+            <p class="mb-2">{{ t("reservations.form.modal.body.p1") }}</p>
+            <p>
+                {{ t("reservations.form.modal.body.p2_pre") }}
+                <a
+                    :href="localePath('/privacy/contact')"
+                    target="_blank"
+                    rel="noopener">
+                    {{ t("reservations.form.modal.body.p2_link") }}
+                </a>
+                {{ t("reservations.form.modal.body.p2_post") }}
+            </p>
+        </template>
+        <template #footer>
+            <div class="flex w-full">
+                <UButton
+                    trailing-icon="mdi:thumb-up-outline"
+                    :ui="{
+                        base: 'bg-[#00C16A]'
+                    }"
+                    @click="showModal = false">
+                    {{ t("reservations.form.modal.closeButton") }}
+                </UButton>
+            </div>
+        </template>
+    </UModal>
 </template>

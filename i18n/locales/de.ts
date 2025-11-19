@@ -469,38 +469,48 @@ export default {
                 message: {label: "Nachricht (optional)"},
                 privacy: {
                     linkText: "Datenschutzerklärung",
-                    preLink: "Ich habe die ",
+                    preLink: "Ich habe die gelesen und akzeptiere die ",
                     postLink:
-                        " gelesen und akzeptiere sie. Die freiwillig angegebenen Daten dürfen gespeichert und zur Kontaktaufnahme genutzt werden. Die Einwilligung kann jederzeit widerrufen werden."
+                        " Es ist vereinbart, dass die freiwillig angegebenen Daten gespeichert und zur Kontaktaufnahme verwendet werden können. Die Verarbeitung kann jederzeit widerrufen werden."
                 }
             },
-
             submit: "Absenden",
-
+            modal: {
+                title: "Reservierungsanfrage erhalten",
+                body: {
+                    p1: "Danke! Wir haben deine Reservierungsanfrage erhalten.",
+                    p2_pre: "Wir prüfen die Verfügbarkeit und senden dir innerhalb von 24 Stunden eine Bestätigungs-E-Mail. Falls du keine Bestätigung erhältst, prüfe bitte deinen Spam-Ordner oder",
+                    p2_link: "kontaktiere uns",
+                    p2_post: "."
+                },
+                closeButton: "Okay"
+            },
             errors: {
-                firstName: {required: "Vorname ist erforderlich"},
-                lastName: {required: "Nachname ist erforderlich"},
+                firstName: {required: "Der Vorname ist erforderlich"},
+                lastName: {required: "Der Nachname ist erforderlich"},
                 email: {
-                    required: "E-Mail ist erforderlich",
-                    invalid: "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+                    required: "Die E-Mail ist erforderlich",
+                    invalid: "Bitte gib eine gültige E-Mail-Adresse an"
                 },
-                phone: {
-                    invalid: "Bitte geben Sie eine gültige Telefonnummer mit Ländervorwahl ein"
+                phone: {invalid: "Bitte gib eine gültige Telefonnummer mit Vorwahl an"},
+                guests: {
+                    min: "Mindestens 1 Gast ist erforderlich",
+                    max: "Maximal 20 Gäste erlaubt"
                 },
-                guests: {min: "Mindestens 1 Gast erforderlich", max: "Maximal 20 Gäste erlaubt"},
-                date: {invalid: "Bitte ein gültiges Datum angeben (heute oder später)"},
-                time: {invalid: "Bitte eine gültige Uhrzeit zwischen 07:00 und 16:00 angeben"},
+                date: {invalid: "Bitte gib ein gültiges Datum an (heute oder später)"},
+                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:00 und 16:00 sein"},
                 privacy: {
-                    required: "Bitte bestätigen Sie die Datenschutzerklärung und Ihre Einwilligung."
+                    required:
+                        "Bitte bestätige die Datenschutzerklärung und stimme der Kontaktaufnahme zu."
                 }
             },
-
             toasts: {
                 validationTitle: "Formularfehler",
                 successTitle: "Reservierung erfolgreich gesendet",
-                successDescription: "Wir melden uns, sobald wir Ihre Anfrage bearbeitet haben.",
+                successDescription:
+                    "Wir melden uns bei dir, sobald wir deine Anfrage bearbeitet haben.",
                 sendErrorTitle: "Fehler beim Senden",
-                sendErrorDescription: "Bitte versuchen Sie es später erneut."
+                sendErrorDescription: "Bitte versuche es später erneut."
             }
         }
     }
