@@ -15,22 +15,21 @@ const instagramUrl = "https://instagram.com/pranacafe";
 
 const features = ref([
     {
-        title: "Email",
-        description:
-            "Got feedback, event inquiries, or collaboration ideas? Send us a note — we’d love to hear from you.",
-        icon: "i-mdi-email-outline",
+        title: t("contact.features.email.title"),
+        description: t("contact.features.email.description"),
+        icon: "mdi-email-outline",
         to: mailHref
     },
     {
-        title: "Phone",
-        description: "Have questions or want to book a table? Give us a quick call.",
-        icon: "i-mdi-phone-outline",
+        title: t("contact.features.phone.title"),
+        description: t("contact.features.phone.description"),
+        icon: "mdi-phone-outline",
         to: telHref
     },
     {
-        title: "Instagram",
-        description: "See what’s brewing today — from vibrant bowls to creamy oat cappuccinos.",
-        icon: "i-mdi-instagram",
+        title: t("contact.features.instagram.title"),
+        description: t("contact.features.instagram.description"),
+        icon: "mdi-instagram",
         to: instagramUrl
     }
 ]);
@@ -38,9 +37,9 @@ const features = ref([
 
 <template>
     <UPageSection
-        icon="i-mdi-email-outline"
+        icon="mdi-email-outline"
         variant="outline"
-        title="Fresh, Local, and Kind"
-        description="Our vegan café is built on a love for plants, sustainability, and community. Reach out to us — we’d love to hear from you."
+        :title="t('contact.pageTitle')"
+        :description="t('contact.pageDescription')"
         :features="features" />
 </template>

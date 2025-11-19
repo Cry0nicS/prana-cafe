@@ -34,6 +34,27 @@ export default {
             description: "Get in touch with Café Prana for inquiries, reservations, or feedback."
         }
     },
+    contact: {
+        pageTitle: "Fresh, Local, and Kind",
+        pageDescription:
+            "Our vegan café is built on a love for plants, sustainability, and community. Reach out to us — we’d love to hear from you.",
+        features: {
+            email: {
+                title: "Email",
+                description:
+                    "Got feedback, event inquiries, or collaboration ideas? Send us a note — we’d love to hear from you."
+            },
+            phone: {
+                title: "Phone",
+                description: "Have questions or want to book a table? Give us a quick call."
+            },
+            instagram: {
+                title: "Instagram",
+                description:
+                    "See what’s brewing today — from vibrant bowls to creamy oat cappuccinos."
+            }
+        }
+    },
     language: {
         en: "English",
         de: "Deutsch",

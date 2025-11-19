@@ -35,6 +35,28 @@ export default {
             description: "Contactez Café Prana pour toute question, réservation ou avis."
         }
     },
+    contact: {
+        pageTitle: "Frais, Local et Bienveillant",
+        pageDescription:
+            "Notre café vegan repose sur l'amour des plantes, la durabilité et la communauté. Contactez-nous — nous serions ravis d'avoir de vos nouvelles.",
+        features: {
+            email: {
+                title: "E-mail",
+                description:
+                    "Des retours, des demandes d'événements ou des idées de collaboration ? Envoyez-nous un message — nous serions ravis de vous lire."
+            },
+            phone: {
+                title: "Téléphone",
+                description:
+                    "Des questions ou souhaitez réserver une table ? Appelez-nous rapidement."
+            },
+            instagram: {
+                title: "Instagram",
+                description:
+                    "Découvrez ce qu'il se prépare aujourd'hui — des bowls colorés aux cappuccinos à l'avoine."
+            }
+        }
+    },
     language: {
         en: "English",
         de: "Deutsch",
@@ -266,13 +288,13 @@ export default {
                     ingredients: "Comprend: Wi-Fi, café, thé, prise électrique"
                 },
                 businessBreak: {
-                    title: "Pause business",
+                    title: "Business Break",
                     desc: "Besoin d’un lieu chaleureux pour un tête-à-tête? Profitez de 2 cafés, 2 dattes et du WI-FI.",
                     ingredients:
                         "Comprend: 2 cafés (espresso, americano, cappuccino, etc), 2 pralines de dattes"
                 },
                 businessLunch: {
-                    title: "Déjeuner business",
+                    title: "Business Lunch",
                     desc: "2 boissons pétillantes sans alcool, des déjeuners sains et des expressos pour booster votre productivité.",
                     ingredients: "Comprend: entrées, 2 déjeuners, 2 expressos et 2 shots de menthe"
                 },
@@ -376,13 +398,13 @@ export default {
                         "Farine d’avoine sans gluten, patate douce et amandes, garnitures du jour"
                 },
                 brunch: {
-                    title: "Brunch Prana",
+                    title: "Pranas Brunch",
                     desc: "Un brunch sain et gourmand avec une touche gastronomique.",
                     ingredients:
                         'Salade "œuf" à base de tofu, dips, bacon de carotte, pain sans gluten maison, soupe ou dessert'
                 },
                 lunch: {
-                    title: "Déjeuner Prana",
+                    title: "Pranas Lunch",
                     desc: "Un déjeuner équilibré et nourrissant pour votre après-midi.",
                     ingredients:
                         "Nos déjeuners varient selon la saison et la disponibilité des ingrédients frais."
