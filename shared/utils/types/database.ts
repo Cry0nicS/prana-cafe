@@ -23,7 +23,7 @@ export type Database = {
           guests: number
           id: number
           last_name: string
-          message: string
+          message: string | null
           phone: string | null
           privacy_consent: string
           time: string
@@ -36,7 +36,7 @@ export type Database = {
           guests: number
           id?: number
           last_name: string
-          message: string
+          message?: string | null
           phone?: string | null
           privacy_consent?: string
           time: string
@@ -49,7 +49,7 @@ export type Database = {
           guests?: number
           id?: number
           last_name?: string
-          message?: string
+          message?: string | null
           phone?: string | null
           privacy_consent?: string
           time?: string
