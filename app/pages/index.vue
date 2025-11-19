@@ -232,11 +232,11 @@ const ctaLinks = computed(() => [
             </template>
 
             <NuxtImg
-                format="webp"
                 src="/images/home/my-story.png"
                 :alt="t('index.story.title')"
-                class="h-full w-full rounded-lg object-cover"
-                sizes="640px"
+                class="aspect-[2/3] h-full w-full max-w-[5700px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
+                format="webp"
+                sizes="lg:550px md:970px sm:710px 570px"
                 placeholder />
         </UPageSection>
 
