@@ -12,14 +12,15 @@ const menuImages = {
     waffle: "/images/menu/herzhafte-waffel.png",
     chai: "/images/menu/chai-latte.png",
     bananaBread: "/images/menu/banana-bread.png",
-    cacao: "/images/menu/hot-chocolate.png"
+    cacao: "/images/menu/cacao.png"
 };
 
 const galleryImages = [
-    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1493770348161-369560ae357d?auto=format&fit=crop&w=900&q=80",
-    "https://images.unsplash.com/photo-1550565088-49d86e5f7d5b?auto=format&fit=crop&w=900&q=80"
+    "/images/home/gallery/gallery-1.png",
+    "/images/home/gallery/gallery-2.png",
+    "/images/home/gallery/gallery-3.png",
+    "/images/home/gallery/gallery-4.png",
+    "/images/home/gallery/gallery-5.png"
 ];
 
 const heroLinks = computed(() => [
@@ -131,10 +132,13 @@ const ctaLinks = computed(() => [
             :headline="t('index.hero.headline')"
             orientation="horizontal"
             :links="heroLinks">
-            <img
-                src="https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-                alt="Prana Café interior"
-                class="h-full w-full rounded-lg object-cover" />
+            <NuxtImg
+                src="/images/hero.png"
+                :alt="t('index.hero.title')"
+                class="aspect-[2/3] h-full w-full max-w-[570px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
+                format="webp"
+                sizes="lg:550px md:970px sm:710px 570px"
+                placeholder />
         </UPageHero>
 
         <!-- Values / philosophy section using features -->
@@ -203,27 +207,37 @@ const ctaLinks = computed(() => [
                 }"
                 :items="galleryImages"
                 :wrap-around="true"
-                class="overflow-hidden rounded-lg">
-                <img
+                :ui="{item: 'lg:basis-1/3'}"
+                class="rounded-lg">
+                <NuxtImg
+                    format="webp"
                     :src="item"
-                    class="h-64 w-full object-cover"
-                    alt="Prana Café photo" />
+                    :alt="`${t('index.gallery.title')}`"
+                    class="h-full w-full max-w-[500px] overflow-hidden object-cover lg:aspect-[3/4]"
+                    sizes="500px"
+                    placeholder />
             </UCarousel>
         </UPageSection>
 
-        <!-- Our story section with two columns -->
-        <UPageSection icon="mdi:book-open-page-variant-outline">
+        <!-- My story section with two columns -->
+        <UPageSection
+            icon="mdi:book-open-page-variant-outline"
+            orientation="horizontal"
+            reverse>
             <template #title>{{ t("index.story.title") }}</template>
-            <template #description>{{ t("index.story.description") }}</template>
-            <UPageColumns class="lg:columns-2">
+            <template #description>
                 <div class="prose dark:prose-invert">
-                    <p class="text-justify">{{ t("index.story.text") }}</p>
+                    <p class="text-justify">{{ t("index.story.description") }}</p>
                 </div>
-                <img
-                    src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80"
-                    alt="Founders enjoying coffee"
-                    class="h-72 w-full rounded-lg object-cover" />
-            </UPageColumns>
+            </template>
+
+            <NuxtImg
+                src="/images/home/my-story.png"
+                :alt="t('index.story.title')"
+                class="aspect-[2/3] h-full w-full max-w-[570px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
+                format="webp"
+                sizes="lg:550px md:970px sm:710px 570px"
+                placeholder />
         </UPageSection>
 
         <!-- Testimonials section -->
@@ -245,7 +259,6 @@ const ctaLinks = computed(() => [
             :links="ctaLinks"
             orientation="horizontal"
             variant="outline"
-            reverse
             class="mb-24">
             <template #description>
                 {{ t("index.cta.description") }}

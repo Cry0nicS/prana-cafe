@@ -68,7 +68,7 @@ const categories = [
         items: [
             {
                 name: "cacao",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
+                image: "/images/menu/cacao.png",
                 price: "6€"
             },
             {
@@ -82,14 +82,19 @@ const categories = [
                 price: "4,6€"
             },
             {
-                name: "matchaLatte",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80",
-                price: "5,9€"
+                name: "matcha",
+                image: "/images/menu/matcha.png",
+                price: "3,6€"
             },
             {
                 name: "hotChocolate",
                 image: "/images/menu/hot-chocolate.png",
                 price: "4,9€"
+            },
+            {
+                name: "matchaLatte",
+                image: "/images/menu/matcha-latte.png",
+                price: "5,9€"
             }
         ]
     },
@@ -123,7 +128,7 @@ const categories = [
             },
             {
                 name: "soup",
-                image: "/images/menu/soup2.png",
+                image: "/images/menu/soup.png",
                 price: "4€ / 8€"
             }
         ]
