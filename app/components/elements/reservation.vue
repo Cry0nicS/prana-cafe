@@ -1,27 +1,25 @@
 <script setup lang="ts">
 import type {Reservation, ReservationForm} from "#shared/utils/types/reservation";
 import type {DateValue} from "@internationalized/date";
+import {LOCALE_META} from "#shared/utils/constants";
 import {ReservationSchema} from "#shared/utils/schemas";
-import {CalendarDate, DateFormatter, getLocalTimeZone} from "@internationalized/date";
+import {CalendarDate, getDayOfWeek} from "@internationalized/date";
 import {useValidation} from "~/composables/use-validation";
 
 const {t} = useI18n();
 const localePath = useLocalePath();
 const {translateValidationMessage} = useValidation();
 
-const df = new DateFormatter("de-DE", {
-    dateStyle: "medium"
-});
-
 const now = new Date();
-const dateNow = new CalendarDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+const today = new CalendarDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+const inputDateRef = useTemplateRef("inputDateRef");
 
 const isSubmitting = ref(false);
 const toast = useToast();
 const errorMsg = ref("");
 
 const formState = reactive<ReservationForm>({
-    date: dateNow,
+    date: today,
     email: "",
     firstName: "",
     guests: 2,
@@ -32,7 +30,7 @@ const formState = reactive<ReservationForm>({
 });
 
 const resetFormData = () => {
-    formState.date = dateNow;
+    formState.date = today;
     formState.email = "";
     formState.firstName = "";
     formState.guests = 2;
@@ -42,37 +40,36 @@ const resetFormData = () => {
     formState.privacyConsent = false;
 };
 
-const validateForm = (data: Reservation): {success: true} | {success: false; error: string} => {
+const validateForm = (): {success: boolean; data?: Reservation; error?: string} => {
+    const data = {
+        ...formState,
+        date: formState.date.toString()
+    };
+
     const result = ReservationSchema.safeParse(data);
     if (!result.success) {
         return {success: false, error: result.error.issues.pop()?.message ?? result.error.message};
     }
 
-    return {success: true};
+    return {success: true, data: result.data as Reservation};
 };
 
 const sendReservation = async () => {
     isSubmitting.value = true;
     errorMsg.value = "";
 
-    const jsDate = formState.date.toDate(getLocalTimeZone());
-    const isoDate = jsDate.toISOString().split("T")[0]!;
+    // Validate form data.
+    const {success: validationSuccess, data, error: validationError} = validateForm();
 
-    const data: Reservation = {
-        ...formState,
-        date: isoDate
-    };
-
-    const validationResult = validateForm(data);
-
-    if (!validationResult.success) {
+    if (!validationSuccess) {
         toast.add({
             title: t("reservations.form.toasts.validationTitle"),
-            description: translateValidationMessage(validationResult.error),
+            description: translateValidationMessage(validationError!),
             color: "error",
             icon: "mdi:shield-alert"
         });
         isSubmitting.value = false;
+
         return;
     }
 
@@ -102,9 +99,10 @@ const sendReservation = async () => {
     }
 };
 
-function toJsDate(value: CalendarDate) {
-    return value.toDate(getLocalTimeZone());
-}
+const isDateUnavailable = (date: DateValue) => {
+    // Example: Disable all Mondays.
+    return getDayOfWeek(date, LOCALE_META.de.iso, "mon") === 0;
+};
 </script>
 
 <template>
@@ -162,29 +160,34 @@ function toJsDate(value: CalendarDate) {
             <UFormField
                 name="date"
                 :label="t('reservations.form.fields.date.label')">
-                <UPopover class="w-full justify-center">
-                    <UButton
-                        color="neutral"
-                        variant="outline"
-                        size="lg"
-                        trailing-icon="mdi:calendar"
-                        class="flex w-full items-center justify-between">
-                        <span class="flex-1 text-left">
-                            {{
-                                formState.date
-                                    ? df.format(toJsDate(formState.date as CalendarDate))
-                                    : t("reservations.form.fields.date.select")
-                            }}
-                        </span>
-                    </UButton>
+                <UInputDate
+                    ref="inputDateRef"
+                    v-model="formState.date as unknown as DateValue"
+                    :min-value="today"
+                    :is-date-unavailable="isDateUnavailable"
+                    required>
+                    <template #trailing>
+                        <UPopover :reference="inputDateRef?.inputsRef[3]?.$el">
+                            <UButton
+                                color="neutral"
+                                variant="link"
+                                size="sm"
+                                icon="mdi:calendar"
+                                aria-label="Select a date"
+                                class="px-0" />
 
-                    <template #content>
-                        <UCalendar
-                            v-model="formState.date as unknown as DateValue"
-                            size="xl"
-                            class="justify-between p-2" />
+                            <template #content>
+                                <UCalendar
+                                    v-model="formState.date as unknown as DateValue"
+                                    :is-date-unavailable="isDateUnavailable"
+                                    :is-date-disabled="isDateUnavailable"
+                                    size="lg"
+                                    :week-starts-on="1"
+                                    class="p-2" />
+                            </template>
+                        </UPopover>
                     </template>
-                </UPopover>
+                </UInputDate>
             </UFormField>
             <UFormField
                 name="guests"
