@@ -26,7 +26,8 @@ export default defineNuxtConfig({
         langDir: "locales/",
         locales: [
             {code: "en", file: "en.ts", iso: "en-US", name: "English"},
-            {code: "de", file: "de.ts", iso: "de-DE", name: "Deutsch"}
+            {code: "de", file: "de.ts", iso: "de-DE", name: "Deutsch"},
+            {code: "fr", file: "fr.ts", iso: "fr-FR", name: "Français"}
         ],
         pages: i18nPages,
         strategy: "prefix_except_default"

@@ -39,9 +39,31 @@ export default {
                 "Reserve your spot at Café Prana in Berlin for a delightful gluten-free and vegan dining experience."
         }
     },
+    contact: {
+        pageTitle: "Fresh, Local, and Kind",
+        pageDescription:
+            "Our vegan café is built on a love for plants, sustainability, and community. Reach out to us — we’d love to hear from you.",
+        features: {
+            email: {
+                title: "Email",
+                description:
+                    "Got feedback, event inquiries, or collaboration ideas? Send us a note — we’d love to hear from you."
+            },
+            phone: {
+                title: "Phone",
+                description: "Have questions or want to book a table? Give us a quick call."
+            },
+            instagram: {
+                title: "Instagram",
+                description:
+                    "See what’s brewing today — from vibrant bowls to creamy oat cappuccinos."
+            }
+        }
+    },
     language: {
         en: "English",
-        de: "German",
+        de: "Deutsch",
+        fr: "Français",
         label: "Language"
     },
     imprint: {
@@ -207,10 +229,9 @@ export default {
                 "Get a glimpse of the ambience, dishes and drinks that convey Café Prana's philosophy."
         },
         story: {
-            title: "Our Story",
+            title: "My Story",
             description:
-                "Learn how Café Prana was born out of a passion for holistic health and wellbeing.",
-            text: "Founded by a yogini, nutritionist, foodie, nature lover, fitness trainer, health cook, and barista (…you get the persona…) who wanted to bring the holistic aspects of health and energy under one roof, Café Prana is a one-woman show that combines a welcoming atmosphere with high-quality sourcing. Regional, seasonal vegetables meet nutritious pseudocereals and natural superfoods under the creative touch of the kitchen fairy. Whether you’re grabbing a specialty coffee to go or settling into the cushions for brunch, it is a safe and open space awaiting you. Prana’s long-term goal is to implement even more sustainable practices and foster a sense of community and profound respect."
+                "Founded by a yogini, nutritionist, foodie, nature lover, fitness trainer, health cook, and barista (…you get the persona…) who wanted to bring the holistic aspects of health and energy under one roof, Café Prana is a one-woman show that combines a welcoming atmosphere with high-quality sourcing. Regional, seasonal vegetables meet nutritious pseudocereals and natural superfoods under the creative touch of the kitchen fairy. Whether you’re grabbing a specialty coffee to go or settling into the cushions for brunch, it is a safe and open space awaiting you. Prana’s long-term goal is to implement even more sustainable practices and foster a sense of community and profound respect."
         },
         testimonials: {
             title: "What Our Guests Say",
@@ -334,9 +355,14 @@ export default {
                     desc: "Homemade chai spice blend with mylk of choice",
                     ingredients: "Chai spices, mylk of choice"
                 },
+                matcha: {
+                    title: "Ceremonial Matcha",
+                    desc: "First-grade matcha served hot.",
+                    ingredients: "Matcha powder served with hot water"
+                },
                 matchaLatte: {
-                    title: "Ceremonial Matcha Latte",
-                    desc: "First-grade matcha with optional extra shot.",
+                    title: "Matcha Latte",
+                    desc: "First-grade matcha with mylk of choice and optional extra shot.",
                     ingredients: "Matcha powder, steamed milk"
                 },
                 hotChocolate: {
