@@ -24,7 +24,7 @@ export const i18nPages = {
     }
 } as const satisfies NuxtI18nOptions["pages"];
 
-export const LOCALE_CODES = ["en", "de"] as const;
+export const LOCALE_CODES = ["en", "de", "fr"] as const;
 export const DEFAULT_LOCALE: LocaleCodes = "en";
 
 export const LOCALE_META = {
@@ -37,5 +37,10 @@ export const LOCALE_META = {
         name: "Deutsch",
         code: "de",
         iso: "de-DE"
+    },
+    fr: {
+        name: "Français",
+        code: "fr",
+        iso: "fr-FR"
     }
 } as const;

@@ -14,6 +14,11 @@ const items = [
         label: t("language.de"),
         value: LOCALE_META.de,
         onClick: () => setLocale(extractLocaleCode(LOCALE_META.de))
+    },
+    {
+        label: t("language.fr"),
+        value: LOCALE_META.fr,
+        onClick: () => setLocale(extractLocaleCode(LOCALE_META.fr))
     }
 ];
 </script>

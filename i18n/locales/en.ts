@@ -36,7 +36,8 @@ export default {
     },
     language: {
         en: "English",
-        de: "German",
+        de: "Deutsch",
+        fr: "Français",
         label: "Language"
     },
     imprint: {
