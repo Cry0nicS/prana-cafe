@@ -174,8 +174,8 @@ const ctaLinks = computed(() => [
                         format="webp"
                         :src="item.image"
                         :alt="item.title"
-                        class="h-full w-full max-w-[292px] rounded-lg object-cover lg:max-w-[242px]"
-                        sizes="292px lg:242px"
+                        class="h-full w-full max-w-[520px] rounded-lg object-cover sm:max-w-[275px] md:max-w-[400px] lg:max-w-[242px]"
+                        sizes="520px sm:275px md:400px lg:242px"
                         placeholder />
                 </UPageCard>
             </UPageGrid>
@@ -207,7 +207,7 @@ const ctaLinks = computed(() => [
                 }"
                 :items="galleryImages"
                 :wrap-around="true"
-                :ui="{item: 'lg:basis-1/3'}"
+                :ui="{item: 'sm:basis-2/3 md:basis-1/3'}"
                 class="rounded-lg">
                 <NuxtImg
                     format="webp"
@@ -267,8 +267,7 @@ const ctaLinks = computed(() => [
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.9518671037786!2d13.428888413148465!3d52.53430503505275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84fb49a2ba2a9%3A0xa2e6d18bdc39e1de!2sCaf%C3%A9%20Prana!5e0!3m2!1sen!2sde!4v1762693543237!5m2!1sen!2sde"
                 width="100%"
-                height="100%"
-                style="border: 0"
+                class="h-[400px] w-full border-0 sm:h-[600px] lg:h-[100%]"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade" />
         </UPageCTA>
