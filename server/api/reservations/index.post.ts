@@ -37,14 +37,14 @@ export default defineEventHandler(async (event: H3Event) => {
 
     try {
         const reservationData: ReservationInsertType = {
-            date: result.data.date,
-            first_name: result.data.firstName,
-            last_name: result.data.lastName,
+            date: result.data.date.toString(),
             email: result.data.email,
-            phone: result.data.phone,
-            message: result.data.message,
+            first_name: result.data.firstName,
             guests: result.data.guests,
-            time: "00:00" // TODO" Placeholder time, adjust as necessary
+            last_name: result.data.lastName,
+            message: result.data.message,
+            phone: result.data.phone,
+            time: result.data.time.toString()
         };
 
         reservation = await insertReservation(client, reservationData);

@@ -23,41 +23,43 @@ export const ReservationSchema = z.object({
         .min(1, "reservations.form.errors.guests.min")
         .max(20, "reservations.form.errors.guests.max"),
     date: z
-        .custom<CalendarDate>(
-            (val) => {
-                // Runtime instance/type validation
-                if (!(val instanceof CalendarDate)) return false;
-
-                // Build a comparable 'today' CalendarDate
-                const now = new Date();
-                const today = new CalendarDate(
-                    now.getFullYear(),
-                    now.getMonth() + 1,
-                    now.getDate()
+        .object({
+            year: z.number(),
+            month: z.number(),
+            day: z.number()
+        })
+        .refine(
+            (d) => {
+                const date = new CalendarDate(d.year, d.month, d.day);
+                const now = new CalendarDate(
+                    new Date().getFullYear(),
+                    new Date().getMonth() + 1,
+                    new Date().getDate()
                 );
-
-                // Check that val is today or in the future
-                return val.compare(today) >= 0;
+                return date.compare(now) >= 0;
             },
             {
                 message: "reservations.form.errors.date.invalid"
             }
         )
-        .transform((val) => val.toString()),
+        .transform((d) => new CalendarDate(d.year, d.month, d.day)),
     time: z
-        .custom<Time>(
-            (val) => {
-                // Check instance and properties
-                if (!(val instanceof Time)) return false;
-                if (val.hour < 7) return false;
-                if (val.hour > 16) return false;
-                return !(val.hour === 16 && val.minute > 0);
+        .object({
+            hour: z.number(),
+            minute: z.number().optional().default(0),
+            second: z.number().optional().default(0)
+        })
+        .refine(
+            (t) => {
+                if (t.hour < 7) return false;
+                if (t.hour > 16) return false;
+                return !(t.hour === 16 && t.minute > 0);
             },
             {
                 message: "reservations.form.errors.time.invalid"
             }
         )
-        .transform((val) => val.toString()),
+        .transform((t) => new Time(t.hour, t.minute, t.second)),
     privacyConsent: z
         .boolean()
         .default(false)

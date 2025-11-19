@@ -72,7 +72,6 @@ const sendReservation = async () => {
         return;
     }
 
-    return;
     try {
         await $fetch("/api/reservations", {
             method: "POST",
