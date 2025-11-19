@@ -205,7 +205,7 @@ export default {
         story: {
             title: "Meine Geschichte",
             description:
-                "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista – die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mich hochwertigen Zutaten abspeilt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
+                "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista, die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mit hochwertigen Zutaten abspielt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
         },
         testimonials: {
             title: "Das sagen unsere Gäste",
