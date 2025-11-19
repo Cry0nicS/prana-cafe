@@ -454,7 +454,8 @@ export default {
                 lastName: {label: "Last name", placeholder: "Last name"},
                 email: {label: "Email", placeholder: ""},
                 phone: {label: "Phone Number (with country code)", placeholder: "+49 345 678 9012"},
-                date: {label: "Reservation Date", select: "Select a date"},
+                date: {label: "Reservation Date"},
+                time: {label: "Time"},
                 guests: {label: "Number of guests"},
                 message: {label: "Message (optional)"},
                 privacy: {
@@ -468,7 +469,7 @@ export default {
             modal: {
                 title: "Reservation request received",
                 body: {
-                    p1: "Thank you — we've received your reservation request.",
+                    p1: "Thank you! We've received your reservation request.",
                     p2_pre: "We will check availability and send a confirmation email within 24 hours. If you don't receive a confirmation, please check your spam folder or",
                     p2_link: "contact us",
                     p2_post: "."

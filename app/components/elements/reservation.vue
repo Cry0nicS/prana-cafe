@@ -187,7 +187,7 @@ const isDateUnavailable = (date: DateValue) => {
                                     variant="link"
                                     size="lg"
                                     icon="mdi:calendar"
-                                    aria-label="Select a date"
+                                    aria-label="t('reservations.form.fields.date.label')"
                                     class="px-0" />
 
                                 <template #content>

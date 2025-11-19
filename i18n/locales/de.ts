@@ -464,7 +464,8 @@ export default {
                     label: "Telefonnummer (mit Ländervorwahl)",
                     placeholder: "+49 345 678 9012"
                 },
-                date: {label: "Reservierungsdatum", select: "Datum auswählen"},
+                date: {label: "Reservierungsdatum"},
+                time: {label: "Reservierungszeit"},
                 guests: {label: "Anzahl der Gäste"},
                 message: {label: "Nachricht (optional)"},
                 privacy: {

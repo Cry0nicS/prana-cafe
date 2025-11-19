@@ -1,6 +1,7 @@
 import type {Database} from "#shared/utils/types";
 import formData from "form-data";
 import Mailgun from "mailgun.js";
+import {logger} from "~~/server/utils/logger";
 type ReservationRow = Database["public"]["Tables"]["reservations"]["Row"];
 
 export const sendReservationEmail = async (reservation: ReservationRow) => {
@@ -27,11 +28,17 @@ export const sendReservationEmail = async (reservation: ReservationRow) => {
         ${reservation.message || "-"}
     `.trim();
 
-    return mg.messages.create("mail.cafeprana.de", {
-        "from": "Cafe Prana <reservation@mail.cafeprana.de>",
-        "to": "info@cafeprana.de",
-        "subject": `Reservation from ${reservation.first_name} ${reservation.last_name}`,
-        "text": textBody,
-        "h:Reply-To": reservation.email
-    });
+    try {
+        return mg.messages.create("mail.cafeprana.de", {
+            "from": "Cafe Prana <reservation@mail.cafeprana.de>",
+            "to": "cafeprana.berlin@gmail.com",
+            "subject": `Reservation from ${reservation.first_name} ${reservation.last_name}`,
+            "text": textBody,
+            "h:Reply-To": reservation.email
+        });
+    } catch (error) {
+        logger.error("Error sending reservation email", {error});
+
+        throw error;
+    }
 };

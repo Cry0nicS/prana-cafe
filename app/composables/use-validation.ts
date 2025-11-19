@@ -10,7 +10,7 @@ export function useValidation() {
      */
     function translateOne(msg: string) {
         try {
-            const translated = t(msg as unknown as string);
+            const translated = t(msg);
             return translated === msg ? msg : translated;
         } catch {
             return msg;

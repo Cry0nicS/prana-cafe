@@ -13,8 +13,7 @@
         "postinstall": "nuxt prepare",
         "prepare": "simple-git-hooks",
         "preview": "nuxt preview",
-        "type-check": "nuxt typecheck",
-        "db-generate": "npx supabase gen types --lang=typescript --project-id hdsdoswzfvfpsatvxamg > ./shared/utils/types/database.ts"
+        "type-check": "nuxt typecheck"
     },
     "dependencies": {
         "@googlemaps/places": "^2.2.0",

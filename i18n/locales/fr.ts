@@ -462,7 +462,8 @@ export default {
                     label: "Numéro de téléphone (avec indicatif)",
                     placeholder: "+49 345 678 9012"
                 },
-                date: {label: "Date de réservation", select: "Sélectionner une date"},
+                date: {label: "Date de réservation"},
+                time: {label: "Heure de réservation"},
                 guests: {label: "Nombre d'invités"},
                 message: {label: "Message (optionnel)"},
                 privacy: {

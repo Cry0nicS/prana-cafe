@@ -53,7 +53,7 @@ export default defineEventHandler(async (event: H3Event) => {
     } catch (error) {
         throw createError({
             statusCode: 500,
-            statusMessage: "Error while inserting reservation in the database",
+            statusMessage: "Error while creating reservation",
             message: typeof error === "string" ? error : String(error),
             data: error
         });

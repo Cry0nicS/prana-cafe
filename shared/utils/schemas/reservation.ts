@@ -14,7 +14,9 @@ export const ReservationSchema = z.object({
             /^(?:\+\d{1,2}\s*)?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/,
             "reservations.form.errors.phone.invalid"
         )
-        .nullish(),
+        .or(z.literal(""))
+        .transform((val) => (val === "" ? null : val))
+        .nullable(),
     message: z.string().trim().nullish(),
     guests: z
         .number()
