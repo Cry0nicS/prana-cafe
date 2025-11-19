@@ -489,6 +489,7 @@ export default {
                 },
                 guests: {min: "Mindestens 1 Gast erforderlich", max: "Maximal 20 Gäste erlaubt"},
                 date: {invalid: "Bitte ein gültiges Datum angeben (heute oder später)"},
+                time: {invalid: "Bitte eine gültige Uhrzeit zwischen 07:00 und 16:00 angeben"},
                 privacy: {
                     required: "Bitte bestätigen Sie die Datenschutzerklärung und Ihre Einwilligung."
                 }

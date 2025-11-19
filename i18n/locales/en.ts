@@ -55,8 +55,7 @@ export default {
             },
             instagram: {
                 title: "Instagram",
-                description:
-                    "See what’s brewing today — from vibrant bowls to creamy oat cappuccinos."
+                description: "See what’s brewing — from vibrant bowls to creamy oat cappuccinos."
             }
         }
     },
@@ -262,7 +261,7 @@ export default {
         cta: {
             title: "Come taste the difference",
             description:
-                "Visit Café Prana today and discover your new favourite spot. We’re open Tuesday to Sunday for coffee, breakfast, brunch and lunch.",
+                "Visit Café Prana and discover your new favourite spot. We’re open Tuesday to Sunday for coffee, breakfast, brunch and lunch.",
             hours: {
                 heading: "Opening Hours",
                 monday: {day: "Monday", time: "Closed"},
@@ -476,6 +475,7 @@ export default {
                 phone: {invalid: "Please provide a valid phone number with country code"},
                 guests: {min: "At least 1 guest is required", max: "Maximum 20 guests allowed"},
                 date: {invalid: "Please provide a valid date (today or later)"},
+                time: {invalid: "Value must be a valid Time between 07:00 and 16:00"},
                 privacy: {
                     required: "Please confirm the privacy policy and consent to be contacted."
                 }

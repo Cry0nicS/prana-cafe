@@ -3,7 +3,7 @@ import type {Reservation, ReservationForm} from "#shared/utils/types/reservation
 import type {DateValue} from "@internationalized/date";
 import {LOCALE_META} from "#shared/utils/constants";
 import {ReservationSchema} from "#shared/utils/schemas";
-import {CalendarDate, getDayOfWeek} from "@internationalized/date";
+import {CalendarDate, getDayOfWeek, Time} from "@internationalized/date";
 import {useValidation} from "~/composables/use-validation";
 
 const {t} = useI18n();
@@ -11,7 +11,8 @@ const localePath = useLocalePath();
 const {translateValidationMessage} = useValidation();
 
 const now = new Date();
-const today = new CalendarDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+const todayDate = new CalendarDate(now.getFullYear(), now.getMonth() + 1, now.getDate());
+const nowTime = new Time(12, 30, 0);
 const inputDateRef = useTemplateRef("inputDateRef");
 
 const isSubmitting = ref(false);
@@ -19,7 +20,8 @@ const toast = useToast();
 const errorMsg = ref("");
 
 const formState = reactive<ReservationForm>({
-    date: today,
+    date: todayDate,
+    time: nowTime,
     email: "",
     firstName: "",
     guests: 2,
@@ -30,7 +32,8 @@ const formState = reactive<ReservationForm>({
 });
 
 const resetFormData = () => {
-    formState.date = today;
+    formState.date = todayDate;
+    formState.time = nowTime;
     formState.email = "";
     formState.firstName = "";
     formState.guests = 2;
@@ -41,12 +44,8 @@ const resetFormData = () => {
 };
 
 const validateForm = (): {success: boolean; data?: Reservation; error?: string} => {
-    const data = {
-        ...formState,
-        date: formState.date.toString()
-    };
+    const result = ReservationSchema.safeParse(formState);
 
-    const result = ReservationSchema.safeParse(data);
     if (!result.success) {
         return {success: false, error: result.error.issues.pop()?.message ?? result.error.message};
     }
@@ -73,6 +72,7 @@ const sendReservation = async () => {
         return;
     }
 
+    return;
     try {
         await $fetch("/api/reservations", {
             method: "POST",
@@ -99,8 +99,10 @@ const sendReservation = async () => {
     }
 };
 
+/**
+ * Check if a date is a Monday.
+ */
 const isDateUnavailable = (date: DateValue) => {
-    // Example: Disable all Mondays.
     return getDayOfWeek(date, LOCALE_META.de.iso, "mon") === 0;
 };
 </script>
@@ -118,6 +120,7 @@ const isDateUnavailable = (date: DateValue) => {
                 <UInput
                     v-model="formState.firstName"
                     type="text"
+                    size="lg"
                     class="w-full"
                     trailing-icon="mdi:account"
                     required />
@@ -130,6 +133,7 @@ const isDateUnavailable = (date: DateValue) => {
                 <UInput
                     v-model="formState.lastName"
                     type="text"
+                    size="lg"
                     class="w-full"
                     trailing-icon="mdi:account"
                     required />
@@ -141,6 +145,7 @@ const isDateUnavailable = (date: DateValue) => {
                 <UInput
                     v-model="formState.email"
                     type="email"
+                    size="lg"
                     class="w-full"
                     trailing-icon="mdi:at"
                     :placeholder="t('reservations.form.fields.email.placeholder')"
@@ -155,42 +160,71 @@ const isDateUnavailable = (date: DateValue) => {
                     autocomplete="tel"
                     type="tel"
                     trailing-icon="mdi:phone"
+                    size="lg"
                     class="w-full" />
             </UFormField>
-            <UFormField
-                name="date"
-                :label="t('reservations.form.fields.date.label')">
-                <UInputDate
-                    ref="inputDateRef"
-                    v-model="formState.date as unknown as DateValue"
-                    :min-value="today"
-                    :is-date-unavailable="isDateUnavailable"
-                    required>
-                    <template #trailing>
-                        <UPopover :reference="inputDateRef?.inputsRef[3]?.$el">
-                            <UButton
-                                color="neutral"
-                                variant="link"
-                                size="sm"
-                                icon="mdi:calendar"
-                                aria-label="Select a date"
-                                class="px-0" />
-
-                            <template #content>
-                                <UCalendar
-                                    v-model="formState.date as unknown as DateValue"
-                                    :is-date-unavailable="isDateUnavailable"
-                                    :is-date-disabled="isDateUnavailable"
+            <div class="flex flex-col justify-between gap-4 lg:flex-row">
+                <UFormField
+                    name="date"
+                    class="w-full lg:max-w-[50%]"
+                    required
+                    :label="t('reservations.form.fields.date.label')">
+                    <UInputDate
+                        ref="inputDateRef"
+                        v-model="formState.date as unknown as DateValue"
+                        class="w-full"
+                        size="lg"
+                        :min-value="todayDate"
+                        :is-date-unavailable="isDateUnavailable"
+                        required
+                        :ui="{
+                            base: 'flex justify-center'
+                        }">
+                        <template #trailing>
+                            <UPopover :reference="inputDateRef?.inputsRef[3]?.$el">
+                                <UButton
+                                    color="neutral"
+                                    variant="link"
                                     size="lg"
-                                    :week-starts-on="1"
-                                    class="p-2" />
-                            </template>
-                        </UPopover>
-                    </template>
-                </UInputDate>
-            </UFormField>
+                                    icon="mdi:calendar"
+                                    aria-label="Select a date"
+                                    class="px-0" />
+
+                                <template #content>
+                                    <UCalendar
+                                        v-model="formState.date as unknown as DateValue"
+                                        :is-date-unavailable="isDateUnavailable"
+                                        :is-date-disabled="isDateUnavailable"
+                                        size="lg"
+                                        :week-starts-on="1"
+                                        class="p-2" />
+                                </template>
+                            </UPopover>
+                        </template>
+                    </UInputDate>
+                </UFormField>
+                <UFormField
+                    label="Time"
+                    class="w-full lg:max-w-[50%]"
+                    required>
+                    <UInputTime
+                        v-model="formState.time as unknown as Time"
+                        class="w-full"
+                        :step="{minute: 15}"
+                        :hour-cycle="24"
+                        size="lg"
+                        :min-value="new Time(7, 0, 0)"
+                        :max-value="new Time(16, 0, 0)"
+                        trailing-icon="mdi-clock"
+                        required
+                        :ui="{
+                            base: 'flex justify-center'
+                        }" />
+                </UFormField>
+            </div>
             <UFormField
                 name="guests"
+                required
                 :label="t('reservations.form.fields.guests.label')">
                 <UInputNumber
                     v-model="formState.guests"
@@ -217,6 +251,7 @@ const isDateUnavailable = (date: DateValue) => {
             <UCheckbox
                 v-model="formState.privacyConsent"
                 name="privacyConsent"
+                size="lg"
                 required
                 :ui="{label: 'text-left text-sm'}">
                 <template #label>

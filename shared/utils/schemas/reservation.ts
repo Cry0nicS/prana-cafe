@@ -1,3 +1,4 @@
+import {CalendarDate, Time} from "@internationalized/date";
 import * as z from "zod";
 
 export const ReservationSchema = z.object({
@@ -21,12 +22,42 @@ export const ReservationSchema = z.object({
         .positive()
         .min(1, "reservations.form.errors.guests.min")
         .max(20, "reservations.form.errors.guests.max"),
-    date: z.string().refine((val) => {
-        const date = new Date(val);
-        const now = new Date();
-        now.setHours(0, 0, 0, 0); // set to start of today
-        return !Number.isNaN(date.getTime()) && date >= now;
-    }, "reservations.form.errors.date.invalid"),
+    date: z
+        .custom<CalendarDate>(
+            (val) => {
+                // Runtime instance/type validation
+                if (!(val instanceof CalendarDate)) return false;
+
+                // Build a comparable 'today' CalendarDate
+                const now = new Date();
+                const today = new CalendarDate(
+                    now.getFullYear(),
+                    now.getMonth() + 1,
+                    now.getDate()
+                );
+
+                // Check that val is today or in the future
+                return val.compare(today) >= 0;
+            },
+            {
+                message: "reservations.form.errors.date.invalid"
+            }
+        )
+        .transform((val) => val.toString()),
+    time: z
+        .custom<Time>(
+            (val) => {
+                // Check instance and properties
+                if (!(val instanceof Time)) return false;
+                if (val.hour < 7) return false;
+                if (val.hour > 16) return false;
+                return !(val.hour === 16 && val.minute > 0);
+            },
+            {
+                message: "reservations.form.errors.time.invalid"
+            }
+        )
+        .transform((val) => val.toString()),
     privacyConsent: z
         .boolean()
         .default(false)
