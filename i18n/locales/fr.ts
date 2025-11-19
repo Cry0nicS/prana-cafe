@@ -33,6 +33,11 @@ export default {
         contact: {
             title: "Contactez-nous",
             description: "Contactez Café Prana pour toute question, réservation ou avis."
+        },
+        reservations: {
+            title: "Réservations",
+            description:
+                "Réservez votre table au Café Prana à Berlin pour une expérience culinaire sans gluten et vegan."
         }
     },
     contact: {
@@ -414,6 +419,83 @@ export default {
                     desc: "Soupe réconfortante avec garnitures.",
                     ingredients: "Légumes de saison, épices et herbes"
                 }
+            }
+        }
+    },
+    reservations: {
+        title: "Planifiez votre visite au Café Prana",
+        description:
+            "Que vous planifiiez un moment spécial, une réunion décontractée ou un rendez-vous tranquille, réserver votre table nous aide à préparer un cadre confortable rien que pour vous.",
+        features: {
+            request: {
+                title: "Demander une table",
+                description:
+                    "Choisissez la date, l'heure et le nombre de personnes pour demander une réservation. Nous essayons de répondre à toutes les demandes."
+            },
+            confirmation: {
+                title: "Confirmation sous 24 heures",
+                description:
+                    "Les réservations sont confirmées sous 24 heures. Merci de prévoir jusqu'à un jour pour la confirmation finale."
+            },
+            email: {
+                title: "Confirmation par e-mail",
+                description:
+                    "Vous recevrez un e-mail pour confirmer la réservation avec tous les détails et éventuelles instructions complémentaires."
+            },
+            special: {
+                title: "Demandes spéciales & allergies",
+                description:
+                    "Utilisez le champ message pour nous informer d'allergies, de besoins d'accessibilité ou d'autres demandes particulières."
+            },
+            changes: {
+                title: "Modifications & annulation",
+                description:
+                    "Besoin de modifier ou d'annuler ? Merci de nous en informer dès que possible afin que nous puissions libérer la table pour d'autres clients."
+            }
+        },
+        form: {
+            fields: {
+                firstName: {label: "Prénom", placeholder: "Prénom"},
+                lastName: {label: "Nom de famille", placeholder: "Nom de famille"},
+                email: {label: "E-mail", placeholder: ""},
+                phone: {
+                    label: "Numéro de téléphone (avec indicatif)",
+                    placeholder: "+49 345 678 9012"
+                },
+                date: {label: "Date de réservation", select: "Sélectionner une date"},
+                guests: {label: "Nombre d'invités"},
+                message: {label: "Message (optionnel)"},
+                privacy: {
+                    linkText: "Politique de confidentialité",
+                    preLink: "J'ai lu et j'accepte la ",
+                    postLink:
+                        " Il est convenu que les données fournies volontairement peuvent être stockées et utilisées pour vous contacter. Le traitement peut être révoqué à tout moment."
+                }
+            },
+            submit: "Envoyer",
+            errors: {
+                firstName: {required: "Le prénom est requis"},
+                lastName: {required: "Le nom de famille est requis"},
+                email: {
+                    required: "L'e-mail est requis",
+                    invalid: "Veuillez fournir une adresse e-mail valide"
+                },
+                phone: {invalid: "Veuillez fournir un numéro de téléphone valide avec l'indicatif"},
+                guests: {min: "Au moins 1 invité est requis", max: "Maximum 20 invités autorisés"},
+                date: {invalid: "Veuillez fournir une date valide (aujourd'hui ou ultérieure)"},
+                time: {invalid: "La valeur doit être une heure valide entre 07:00 et 16:00"},
+                privacy: {
+                    required:
+                        "Veuillez confirmer la politique de confidentialité et consentir à être contacté."
+                }
+            },
+            toasts: {
+                validationTitle: "Erreur de formulaire",
+                successTitle: "Réservation envoyée avec succès",
+                successDescription:
+                    "Nous vous répondrons dès que nous aurons traité votre demande.",
+                sendErrorTitle: "Erreur lors de l'envoi",
+                sendErrorDescription: "Veuillez réessayer plus tard."
             }
         }
     }

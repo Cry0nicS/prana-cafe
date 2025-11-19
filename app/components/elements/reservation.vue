@@ -109,7 +109,8 @@ const isDateUnavailable = (date: DateValue) => {
 <template>
     <UForm
         :state="formState"
-        @submit="sendReservation">
+        :disabled="isSubmitting"
+        @submit.prevent="sendReservation">
         <div class="space-y-4">
             <UFormField
                 :label="t('reservations.form.fields.firstName.label')"
