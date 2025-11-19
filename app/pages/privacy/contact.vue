@@ -13,18 +13,18 @@ const telHref = computed(() => `tel:${company.phone.replace(/\s+/g, "")}`);
 const mailHref = computed(() => `mailto:${company.email}`);
 const instagramUrl = "https://instagram.com/pranacafe";
 
-const features = ref([
+const features = computed(() => [
     {
         title: t("contact.features.email.title"),
         description: t("contact.features.email.description"),
         icon: "mdi-email-outline",
-        to: mailHref
+        to: mailHref.value
     },
     {
         title: t("contact.features.phone.title"),
         description: t("contact.features.phone.description"),
         icon: "mdi-phone-outline",
-        to: telHref
+        to: telHref.value
     },
     {
         title: t("contact.features.instagram.title"),
@@ -40,6 +40,15 @@ const features = ref([
         icon="mdi-email-outline"
         variant="outline"
         :title="t('contact.pageTitle')"
-        :description="t('contact.pageDescription')"
-        :features="features" />
+        :description="t('contact.pageDescription')">
+        <UPageColumns>
+            <UPageFeature
+                v-for="feature in features"
+                :key="feature.title"
+                :description="feature.description"
+                :icon="feature.icon"
+                :title="feature.title"
+                :to="feature.to" />
+        </UPageColumns>
+    </UPageSection>
 </template>
