@@ -132,10 +132,13 @@ const ctaLinks = computed(() => [
             :headline="t('index.hero.headline')"
             orientation="horizontal"
             :links="heroLinks">
-            <img
-                src="https://plus.unsplash.com/premium_photo-1664970900025-1e3099ca757a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
-                alt="Prana Café interior"
-                class="h-full w-full rounded-lg object-cover" />
+            <NuxtImg
+                src="/images/hero.png"
+                :alt="t('index.hero.title')"
+                class="aspect-[2/3] h-full w-full max-w-[5700px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
+                format="webp"
+                sizes="lg:550px md:970px sm:710px 570px"
+                placeholder />
         </UPageHero>
 
         <!-- Values / philosophy section using features -->
