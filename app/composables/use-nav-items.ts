@@ -27,12 +27,7 @@ export const useNavItems = () => {
             {
                 label: t("pages.reservations"),
                 icon: "mdi:calendar-check-outline",
-                disabled: true,
-                badge: {
-                    label: t("global.comingSoon"),
-                    variant: "outline",
-                    color: "neutral"
-                }
+                to: localePath("/reservations")
             }
         ];
     });
@@ -54,12 +49,7 @@ export const useNavItems = () => {
             {
                 label: t("pages.reservations"),
                 icon: "mdi:calendar-check-outline",
-                disabled: true,
-                badge: {
-                    label: t("global.comingSoon"),
-                    variant: "outline",
-                    color: "neutral"
-                }
+                to: localePath("/reservations")
             },
             {
                 label: t("pages.contact"),

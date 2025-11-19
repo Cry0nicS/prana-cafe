@@ -113,12 +113,7 @@ const ctaLinks = computed(() => [
     {
         label: t("index.cta.links.reservations"),
         icon: "mdi:calendar-check-outline",
-        disabled: true,
-        badge: {
-            label: t("global.comingSoon"),
-            variant: "outline",
-            color: "neutral"
-        }
+        to: localePath("/reservations")
     }
 ]);
 </script>

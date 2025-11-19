@@ -59,6 +59,8 @@ export default defineNuxtConfig({
     },
     runtimeConfig: {
         googleApiKey: process.env.NUXT_GOOGLE_API_KEY || "",
+        mailgunBaseUrl: process.env.NUXT_MAILGUN_BASE_URL || "",
+        mailgunKey: process.env.NUXT_MAILGUN_KEY || "",
         pranaPlaceId: process.env.NUXT_PRANA_PLACE_ID || "",
         public: {
             nodeEnv: process.env.NUXT_PUBLIC_NODE_ENV || "development",
@@ -73,7 +75,8 @@ export default defineNuxtConfig({
         url: "https://cafeprana.de"
     },
     supabase: {
-        redirect: false
+        redirect: false,
+        types: "../shared/utils/types/database.ts"
     },
     typescript: {
         strict: true,

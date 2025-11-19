@@ -32,6 +32,11 @@ export default {
         contact: {
             title: "Contact us",
             description: "Get in touch with Café Prana for inquiries, reservations, or feedback."
+        },
+        reservations: {
+            title: "Reservations",
+            description:
+                "Reserve your spot at Café Prana in Berlin for a delightful gluten-free and vegan dining experience."
         }
     },
     contact: {
@@ -50,8 +55,7 @@ export default {
             },
             instagram: {
                 title: "Instagram",
-                description:
-                    "See what’s brewing today — from vibrant bowls to creamy oat cappuccinos."
+                description: "See what’s brewing — from vibrant bowls to creamy oat cappuccinos."
             }
         }
     },
@@ -257,7 +261,7 @@ export default {
         cta: {
             title: "Come taste the difference",
             description:
-                "Visit Café Prana today and discover your new favourite spot. We’re open Tuesday to Sunday for coffee, breakfast, brunch and lunch.",
+                "Visit Café Prana and discover your new favourite spot. We’re open Tuesday to Sunday for coffee, breakfast, brunch and lunch.",
             hours: {
                 heading: "Opening Hours",
                 monday: {day: "Monday", time: "Closed"},
@@ -410,6 +414,89 @@ export default {
                     desc: "Heartwarming soup with toppings.",
                     ingredients: "Our soups are made with seasonal vegetables, spices, and herbs."
                 }
+            }
+        }
+    },
+    reservations: {
+        title: "Plan Your Visit to Cafe Prana",
+        description:
+            "Whether you're planning a special moment, a relaxed gathering, or a quiet date, reserving your table helps us prepare a comfortable setting just for you.",
+        features: {
+            request: {
+                title: "Request a Table",
+                description:
+                    "Choose date, time and party size to request a reservation. We try to accommodate all requests."
+            },
+            confirmation: {
+                title: "Confirmation within 24 hours",
+                description:
+                    "Reservations are confirmed within 24 hours. Please allow up to a day for final confirmation."
+            },
+            email: {
+                title: "Email Confirmation",
+                description:
+                    "You will receive an email to confirm the reservation with all details and any follow-up instructions."
+            },
+            special: {
+                title: "Special Requests & Allergies",
+                description:
+                    "Use the message section to tell us about allergies, accessibility needs, or other special requests."
+            },
+            changes: {
+                title: "Changes & Cancellation",
+                description:
+                    "Need to change or cancel? Please notify us as soon as possible so we can free the table for others."
+            }
+        },
+        form: {
+            fields: {
+                firstName: {label: "First name", placeholder: "First name"},
+                lastName: {label: "Last name", placeholder: "Last name"},
+                email: {label: "Email", placeholder: ""},
+                phone: {label: "Phone Number (with country code)", placeholder: "+49 345 678 9012"},
+                date: {label: "Reservation Date"},
+                time: {label: "Time"},
+                guests: {label: "Number of guests"},
+                message: {label: "Message (optional)"},
+                privacy: {
+                    linkText: "Privacy Policy",
+                    preLink: "I have read and accept the ",
+                    postLink:
+                        " It is agreed that the voluntarily provided data may be stored and used to contact you. Processing can be revoked at any time."
+                }
+            },
+            submit: "Submit",
+            modal: {
+                title: "Reservation request received",
+                body: {
+                    p1: "Thank you! We've received your reservation request.",
+                    p2_pre: "We will check availability and send a confirmation email within 24 hours. If you don't receive a confirmation, please check your spam folder or",
+                    p2_link: "contact us",
+                    p2_post: "."
+                },
+                closeButton: "Okay"
+            },
+            errors: {
+                firstName: {required: "First name is required"},
+                lastName: {required: "Last name is required"},
+                email: {
+                    required: "Email is required",
+                    invalid: "Please provide a valid email address"
+                },
+                phone: {invalid: "Please provide a valid phone number with country code"},
+                guests: {min: "At least 1 guest is required", max: "Maximum 20 guests allowed"},
+                date: {invalid: "Please provide a valid date (today or later)"},
+                time: {invalid: "Value must be a valid Time between 07:00 and 16:00"},
+                privacy: {
+                    required: "Please confirm the privacy policy and consent to be contacted."
+                }
+            },
+            toasts: {
+                validationTitle: "Form error",
+                successTitle: "Reservation sent successfully",
+                successDescription: "We will get back to you as soon as we processed your request.",
+                sendErrorTitle: "Error sending request",
+                sendErrorDescription: "Please try again later."
             }
         }
     }

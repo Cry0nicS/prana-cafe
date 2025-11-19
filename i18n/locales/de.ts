@@ -34,6 +34,11 @@ export default {
             title: "Kontakt",
             description:
                 "Nimm Kontakt mit Café Prana auf für Anfragen, Reservierungen oder Feedback."
+        },
+        reservations: {
+            title: "Reservierungen",
+            description:
+                "Reserviere deinen Tisch im Café Prana online für ein glutenfreies, veganes Erlebnis."
         }
     },
     contact: {
@@ -414,6 +419,99 @@ export default {
                     desc: "Wärmende Suppe mit Toppings.",
                     ingredients: "Zubereitet mit saisonalem Gemüse, Gewürzen und frischen Kräutern."
                 }
+            }
+        }
+    },
+    reservations: {
+        title: "Planen Sie Ihren Besuch im Cafe Prana",
+        description:
+            "Ob besonderer Anlass, entspanntes Treffen oder ein ruhiges Date – mit einer Reservierung können wir Ihren Platz ganz nach Ihren Wünschen vorbereiten.",
+
+        features: {
+            request: {
+                title: "Tisch anfragen",
+                description:
+                    "Wählen Sie Datum, Uhrzeit und Anzahl der Gäste, um eine Reservierung anzufragen. Wir versuchen, allen Wünschen gerecht zu werden."
+            },
+            confirmation: {
+                title: "Bestätigung innerhalb von 24 Stunden",
+                description:
+                    "Reservierungen werden innerhalb von 24 Stunden bestätigt. Bitte geben Sie uns bis zu einem Tag Zeit für die endgültige Rückmeldung."
+            },
+            email: {
+                title: "E-Mail-Bestätigung",
+                description:
+                    "Sie erhalten eine E-Mail mit allen Details zur Reservierung sowie möglichen weiteren Hinweisen."
+            },
+            special: {
+                title: "Besondere Wünsche & Allergien",
+                description:
+                    "Nutzen Sie das Nachrichtenfeld, um uns Allergien, besondere Bedürfnisse oder spezielle Wünsche mitzuteilen."
+            },
+            changes: {
+                title: "Änderungen & Stornierung",
+                description:
+                    "Sie möchten ändern oder stornieren? Bitte informieren Sie uns so früh wie möglich, damit wir den Tisch anderweitig vergeben können."
+            }
+        },
+
+        form: {
+            fields: {
+                firstName: {label: "Vorname", placeholder: "Vorname"},
+                lastName: {label: "Nachname", placeholder: "Nachname"},
+                email: {label: "E-Mail", placeholder: ""},
+                phone: {
+                    label: "Telefonnummer (mit Ländervorwahl)",
+                    placeholder: "+49 345 678 9012"
+                },
+                date: {label: "Reservierungsdatum"},
+                time: {label: "Reservierungszeit"},
+                guests: {label: "Anzahl der Gäste"},
+                message: {label: "Nachricht (optional)"},
+                privacy: {
+                    linkText: "Datenschutzerklärung",
+                    preLink: "Ich habe die gelesen und akzeptiere die ",
+                    postLink:
+                        " Es ist vereinbart, dass die freiwillig angegebenen Daten gespeichert und zur Kontaktaufnahme verwendet werden können. Die Verarbeitung kann jederzeit widerrufen werden."
+                }
+            },
+            submit: "Absenden",
+            modal: {
+                title: "Reservierungsanfrage erhalten",
+                body: {
+                    p1: "Danke! Wir haben deine Reservierungsanfrage erhalten.",
+                    p2_pre: "Wir prüfen die Verfügbarkeit und senden dir innerhalb von 24 Stunden eine Bestätigungs-E-Mail. Falls du keine Bestätigung erhältst, prüfe bitte deinen Spam-Ordner oder",
+                    p2_link: "kontaktiere uns",
+                    p2_post: "."
+                },
+                closeButton: "Okay"
+            },
+            errors: {
+                firstName: {required: "Der Vorname ist erforderlich"},
+                lastName: {required: "Der Nachname ist erforderlich"},
+                email: {
+                    required: "Die E-Mail ist erforderlich",
+                    invalid: "Bitte gib eine gültige E-Mail-Adresse an"
+                },
+                phone: {invalid: "Bitte gib eine gültige Telefonnummer mit Vorwahl an"},
+                guests: {
+                    min: "Mindestens 1 Gast ist erforderlich",
+                    max: "Maximal 20 Gäste erlaubt"
+                },
+                date: {invalid: "Bitte gib ein gültiges Datum an (heute oder später)"},
+                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:00 und 16:00 sein"},
+                privacy: {
+                    required:
+                        "Bitte bestätige die Datenschutzerklärung und stimme der Kontaktaufnahme zu."
+                }
+            },
+            toasts: {
+                validationTitle: "Formularfehler",
+                successTitle: "Reservierung erfolgreich gesendet",
+                successDescription:
+                    "Wir melden uns bei dir, sobald wir deine Anfrage bearbeitet haben.",
+                sendErrorTitle: "Fehler beim Senden",
+                sendErrorDescription: "Bitte versuche es später erneut."
             }
         }
     }
