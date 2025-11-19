@@ -15,11 +15,13 @@ interface LogoProps {
 }
 
 const {size = 50} = defineProps<LogoProps>();
+
+const localePath = useLocalePath();
 </script>
 
 <template>
     <NuxtLink
-        to="/"
+        :to="localePath('/')"
         aria-label="Home">
         <svg
             version="1.0"
