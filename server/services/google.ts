@@ -24,26 +24,21 @@ export async function fetchGoogleReviews(): Promise<ReviewType[] | []> {
 
         if (!rawReviews) return [];
 
-        return rawReviews
-            .map((review) => {
-                const author: string = review.authorAttribution?.displayName ?? "Anonymous  user";
-                const rating: number = typeof review.rating === "number" ? review.rating : 0;
-                const text = review.text?.text ?? "Review cannot be displayed";
-                const publish_time = (review.publishTime?.seconds as number) ?? 0;
-                const relative_time = review.relativePublishTimeDescription || undefined;
+        return rawReviews.map((review) => {
+            const author: string = review.authorAttribution?.displayName ?? "Anonymous  user";
+            const rating: number = typeof review.rating === "number" ? review.rating : 0;
+            const text = review.text?.text ?? "Review cannot be displayed";
+            const publish_time = (review.publishTime?.seconds as number) ?? 0;
+            const relative_time = review.relativePublishTimeDescription || undefined;
 
-                return {
-                    author,
-                    rating,
-                    text,
-                    publish_time,
-                    relative_time
-                } as ReviewType;
-            })
-            .sort((a, b) => {
-                return b.publish_time - a.publish_time;
-            })
-            .slice(0, 3);
+            return {
+                author,
+                rating,
+                text,
+                publish_time,
+                relative_time
+            } as ReviewType;
+        });
     } catch (error) {
         logger.error("Failed to fetch reviews from Google API", {
             error,
