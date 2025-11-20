@@ -15,6 +15,18 @@ export const fetchReviews = async (client: SupabaseClient<Database>): Promise<Re
 };
 
 /**
+ * Fetch random reviews from the database.
+ * Uses the "random_reviews" view to get a random selection.
+ */
+export const fetchRandomReviews = async (
+    client: SupabaseClient<Database>
+): Promise<Review[] | null> => {
+    const {data} = await client.from("random_reviews").select("*").limit(3);
+
+    return data as Review[];
+};
+
+/**
  * Insert reviews into the database while avoiding duplicates.
  *
  * - Queries existing reviews by the incoming `publish_time` timestamps.

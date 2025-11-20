@@ -2,7 +2,7 @@ import type {Database, Tables} from "#shared/utils/types";
 import type {H3Event} from "h3";
 import {fallbackTestimonials} from "#shared/utils/constants";
 import {serverSupabaseClient} from "#supabase/server";
-import {fetchReviews} from "~~/server/repositories/reviews";
+import {fetchRandomReviews} from "~~/server/repositories/reviews";
 
 type ReviewType = Tables<"reviews">;
 
@@ -25,7 +25,7 @@ export default defineEventHandler(async (event: H3Event) => {
 
     // Fetch reviews from the database first.
     const client = await serverSupabaseClient<Database>(event);
-    const reviews = await fetchReviews(client);
+    const reviews = await fetchRandomReviews(client);
 
     if (reviews && reviews.length > 0) {
         // Update cache and timestamp, then return DB results.
