@@ -6,6 +6,7 @@ import {fetchReviews} from "~~/server/repositories/reviews";
 
 type ReviewType = Tables<"reviews">;
 
+const CACHE_DURATION = 24 * 60 * 60 * 1000; // 1 day
 let cachedReviews: ReviewType[] | null = null;
 let lastFetched = 0;
 
@@ -15,7 +16,6 @@ let lastFetched = 0;
  * Otherwise, fetches from the database.
  */
 export default defineEventHandler(async (event: H3Event) => {
-    const CACHE_DURATION = 24 * 60 * 60 * 1000; // 1 day
     const now = Date.now();
 
     // Return cached version if still valid.
@@ -28,13 +28,11 @@ export default defineEventHandler(async (event: H3Event) => {
     const reviews = await fetchReviews(client);
 
     if (reviews && reviews.length > 0) {
-        // Return reviews from database if not stale.
-        if (now - new Date(reviews[0]!.created_at).getTime() < CACHE_DURATION) {
-            cachedReviews = reviews;
-            lastFetched = now;
+        // Update cache and timestamp, then return DB results.
+        cachedReviews = reviews;
+        lastFetched = now;
 
-            return reviews;
-        }
+        return reviews;
     }
 
     // Return database reviews. If none, return fallback testimonials.
