@@ -61,7 +61,7 @@ export default defineNuxtConfig({
         },
         scheduledTasks: {
             // Run task once every week, thursday at 20:00.
-            "0 20 * * 4": ["fetch-google-reviews"]
+            "0 22 * * 4": ["fetch-google-reviews"]
         }
     },
     ogImage: {
