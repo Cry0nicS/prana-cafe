@@ -26,7 +26,7 @@ export async function fetchGoogleReviews(): Promise<ReviewType[] | []> {
 
         return rawReviews
             .map((review) => {
-                const author: string = review.authorAttribution?.displayName ?? "Anonymouse user";
+                const author: string = review.authorAttribution?.displayName ?? "Anonymous  user";
                 const rating: number = typeof review.rating === "number" ? review.rating : 0;
                 const text = review.text?.text ?? "Review cannot be displayed";
                 const publish_time = (review.publishTime?.seconds as number) ?? 0;

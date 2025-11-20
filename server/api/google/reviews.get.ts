@@ -15,7 +15,7 @@ let lastFetched = 0;
  * Otherwise, fetches from the database.
  */
 export default defineEventHandler(async (event: H3Event) => {
-    const CACHE_DURATION = 3 * 24 * 60 * 60 * 1000; // 3 days
+    const CACHE_DURATION = 24 * 60 * 60 * 1000; // 1 day
     const now = Date.now();
 
     // Return cached version if still valid.

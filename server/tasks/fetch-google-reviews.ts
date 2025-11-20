@@ -30,7 +30,7 @@ export default defineTask({
             return {result: "Success"};
         } catch (error) {
             throw createError({
-                statusCode: 400,
+                statusCode: 500,
                 statusMessage: "Error executing fetch-google-reviews task",
                 message: typeof error === "string" ? error : String(error),
                 data: error

@@ -219,7 +219,12 @@ export default {
                 }
             },
             cta: {
-                label: "Explore the full menu"
+                main: {
+                    label: "Explore the full menu"
+                },
+                secondary: {
+                    label: "Book a table"
+                }
             }
         },
         gallery: {
@@ -234,7 +239,10 @@ export default {
         },
         testimonials: {
             title: "What Our Guests Say",
-            description: "Don’t just take our word for it, hear from people who love Café Prana."
+            description: "Don’t just take our word for it, hear from people who love Café Prana.",
+            cta: {
+                label: "Review us on Google"
+            }
         },
         faq: {
             title: "Frequently Asked Questions",

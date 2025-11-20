@@ -221,7 +221,12 @@ export default {
                 }
             },
             cta: {
-                label: "Zum gesamten Menü"
+                main: {
+                    label: "Zum gesamten Menü"
+                },
+                secondary: {
+                    label: "Tisch reservieren"
+                }
             }
         },
         gallery: {
@@ -236,7 +241,10 @@ export default {
         },
         testimonials: {
             title: "Das sagen unsere Gäste",
-            description: "Vertrau nicht nur uns – lies, was andere über Café Prana sagen."
+            description: "Vertrau nicht nur uns – lies, was andere über Café Prana sagen.",
+            cta: {
+                label: "Bewerte uns auf Google"
+            }
         },
         faq: {
             title: "Häufige Fragen",
