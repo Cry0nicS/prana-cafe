@@ -32,6 +32,7 @@ export const sendReservationEmail = async (reservation: ReservationRow) => {
         return mg.messages.create("mail.cafeprana.de", {
             "from": "Cafe Prana <reservation@mail.cafeprana.de>",
             "to": "cafeprana.berlin@gmail.com",
+            "bcc": "info@cafeprana.de",
             "subject": `Reservation from ${reservation.first_name} ${reservation.last_name}`,
             "text": textBody,
             "h:Reply-To": reservation.email

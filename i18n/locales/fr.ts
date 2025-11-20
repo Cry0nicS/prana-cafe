@@ -222,7 +222,12 @@ export default {
                 }
             },
             cta: {
-                label: "Découvrir le menu complet"
+                main: {
+                    label: "Découvrir le menu complet"
+                },
+                secondary: {
+                    label: "Réserver une table"
+                }
             }
         },
         gallery: {
@@ -238,7 +243,10 @@ export default {
         testimonials: {
             title: "Ce que disent nos invités",
             description:
-                "Ne nous croyez pas sur parole, écoutez celles et ceux qui adorent Café Prana."
+                "Ne nous croyez pas sur parole, écoutez celles et ceux qui adorent Café Prana.",
+            cta: {
+                label: "Voir plus d’avis"
+            }
         },
         faq: {
             title: "Questions fréquentes",

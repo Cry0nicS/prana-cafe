@@ -28,5 +28,17 @@ const {data} = await useLazyAsyncData<Review[]>("google-reviews", () =>
                 <p class="text-sm text-gray-600 dark:text-gray-400">— {{ testimonial.author }}</p>
             </div>
         </div>
+        <div class="flex flex-col justify-center gap-4 md:flex-row">
+            <UButton
+                class="justify-center md:w-xs"
+                icon="mdi:map-search"
+                size="xl"
+                color="info"
+                variant="solid"
+                target="_blank"
+                to="https://search.google.com/local/writereview?placeid=ChIJqaIrmrRPqEcR3uE53IvR5qI">
+                {{ t("index.testimonials.cta.label") }}
+            </UButton>
+        </div>
     </UPageSection>
 </template>

@@ -4,7 +4,7 @@ import {ReservationSchema} from "#shared/utils/schemas";
 import {serverSupabaseClient} from "#supabase/server";
 import * as z from "zod";
 import {insertReservation} from "~~/server/repositories/reservations";
-import {sendReservationEmail} from "~~/server/utils/email";
+import {sendReservationEmail} from "~~/server/services/email";
 type ReservationInsertType = Database["public"]["Tables"]["reservations"]["Insert"];
 
 export default defineEventHandler(async (event: H3Event) => {

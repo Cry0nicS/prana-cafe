@@ -174,15 +174,24 @@ const ctaLinks = computed(() => [
                         placeholder />
                 </UPageCard>
             </UPageGrid>
-            <div class="flex justify-center">
+            <div class="flex flex-col justify-center gap-4 md:flex-row">
                 <UButton
-                    class="mx-auto inline-flex w-full items-center justify-center gap-2 sm:w-auto"
+                    class="justify-center"
                     icon="mdi:food-fork-drink"
                     size="xl"
                     color="info"
                     variant="solid"
                     :to="localePath('/menu')">
-                    {{ t("index.menu.cta.label") }}
+                    {{ t("index.menu.cta.main.label") }}
+                </UButton>
+                <UButton
+                    class="justify-center"
+                    icon="mdi:calendar-check-outline"
+                    size="xl"
+                    color="info"
+                    variant="solid"
+                    :to="localePath('/reservations')">
+                    {{ t("index.menu.cta.secondary.label") }}
                 </UButton>
             </div>
         </UPageSection>

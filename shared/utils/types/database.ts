@@ -88,7 +88,36 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      random_reviews: {
+        Row: {
+          author: string | null
+          created_at: string | null
+          id: number | null
+          publish_time: number | null
+          rating: number | null
+          relative_time: string | null
+          text: string | null
+        }
+        Insert: {
+          author?: string | null
+          created_at?: string | null
+          id?: number | null
+          publish_time?: number | null
+          rating?: number | null
+          relative_time?: string | null
+          text?: string | null
+        }
+        Update: {
+          author?: string | null
+          created_at?: string | null
+          id?: number | null
+          publish_time?: number | null
+          rating?: number | null
+          relative_time?: string | null
+          text?: string | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never
