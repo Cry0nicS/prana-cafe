@@ -54,6 +54,16 @@ export default defineNuxtConfig({
         "@nuxtjs/supabase",
         "@nuxtjs/seo"
     ],
+    nitro: {
+        experimental: {
+            asyncContext: true,
+            tasks: true
+        },
+        scheduledTasks: {
+            // Run task once every week, thursday at 20:00.
+            "0 20 * * 4": ["fetch-google-reviews"]
+        }
+    },
     ogImage: {
         enabled: false
     },

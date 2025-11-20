@@ -1,12 +1,10 @@
 import type {Database} from "#shared/utils/types";
-import type {H3Event} from "h3";
-import {serverSupabaseClient} from "#supabase/server";
+import type {SupabaseClient} from "@supabase/supabase-js";
 import {logger} from "~~/server/utils/logger";
+
 type Review = Database["public"]["Tables"]["reviews"]["Row"];
 
-export const fetchReviews = async (event: H3Event): Promise<Review[] | null> => {
-    const client = await serverSupabaseClient<Database>(event);
-
+export const fetchReviews = async (client: SupabaseClient<Database>): Promise<Review[] | null> => {
     const {data} = await client
         .from("reviews")
         .select("*")
@@ -24,11 +22,9 @@ export const fetchReviews = async (event: H3Event): Promise<Review[] | null> => 
  * - Inserts only the reviews that are not already present and logs the result.
  */
 export const insertReviews = async (
-    event: H3Event,
+    client: SupabaseClient<Database>,
     reviews: Omit<Review, "id" | "created_at">[]
 ): Promise<void> => {
-    const client = await serverSupabaseClient<Database>(event);
-
     if (!reviews || reviews.length === 0) {
         logger.info("No reviews provided to insert.");
         return;
