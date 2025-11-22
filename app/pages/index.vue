@@ -116,6 +116,47 @@ const ctaLinks = computed(() => [
         to: localePath("/reservations")
     }
 ]);
+
+const christmasEvent = ref([
+    {
+        title: t("index.event.features.fiveCourse.title"),
+        description: t("index.event.features.fiveCourse.description"),
+        icon: "mdi:silverware-fork-knife"
+    },
+    {
+        title: t("index.event.features.details.title"),
+        description: t("index.event.features.details.description"),
+        icon: "mdi:clock-outline"
+    },
+    {
+        title: t("index.event.features.seasonal.title"),
+        description: t("index.event.features.seasonal.description"),
+        icon: "mdi:leaf"
+    },
+    {
+        title: t("index.event.features.quality.title"),
+        description: t("index.event.features.quality.description"),
+        icon: "mdi:fire"
+    },
+    {
+        title: t("index.event.features.diet.title"),
+        description: t("index.event.features.diet.description"),
+        icon: "mdi:fruit-watermelon"
+    }
+]);
+
+const eventLinks = computed(() => [
+    {
+        label: t("index.event.cta.reservation.label"),
+        icon: "mdi:calendar-check-outline",
+        to: localePath("/reservations")
+    },
+    {
+        label: t("index.event.cta.contact.label"),
+        icon: "mdi:contacts-outline",
+        to: localePath("/privacy/contact")
+    }
+]);
 </script>
 
 <template>
@@ -135,6 +176,24 @@ const ctaLinks = computed(() => [
                 sizes="lg:550px md:970px sm:710px 570px"
                 placeholder />
         </UPageHero>
+
+        <UPageSection
+            :headline="t('index.event.headline')"
+            :title="t('index.event.title')"
+            :description="t('index.event.description')"
+            icon="mdi:party-popper"
+            orientation="horizontal"
+            :features="christmasEvent"
+            :links="eventLinks"
+            reverse>
+            <NuxtImg
+                format="webp"
+                src="images/event.png"
+                :alt="`${t('index.gallery.title')}`"
+                class="h-full w-full overflow-hidden rounded-lg object-cover"
+                sizes="500px"
+                placeholder />
+        </UPageSection>
 
         <!-- Values / philosophy section using features -->
         <UPageSection icon="mdi:food-apple-outline">

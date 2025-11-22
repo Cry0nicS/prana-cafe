@@ -156,6 +156,43 @@ export default {
                 getDirections: "Get Directions"
             }
         },
+        event: {
+            headline: "Christmas Special Event",
+            title: "Winter celebration dinner",
+            description:
+                "A cosy evening with seasonal foods crafted into a five course menu. Enjoy a night of warmth, flavour, and style.",
+            features: {
+                fiveCourse: {
+                    title: "Five course menu",
+                    description:
+                        "A carefully curated sequence of dishes designed for balance and pleasure."
+                },
+                seasonal: {
+                    title: "Seasonal foods",
+                    description: "Fresh organic and regional ingredients prepared at their peak."
+                },
+                quality: {
+                    title: "Taste health and style",
+                    description: "Every plate combines flavour, wellness, and presentation."
+                },
+                diet: {
+                    title: "Dietary friendly",
+                    description: "Everything will be vegan, gluten-free, and organic."
+                },
+                details: {
+                    title: "Event details",
+                    description: "Monday December 8th, starting at 6:30pm"
+                }
+            },
+            cta: {
+                reservation: {
+                    label: "Reserve your seat"
+                },
+                contact: {
+                    label: "Contact us for more info"
+                }
+            }
+        },
         philosophy: {
             title: "Our Philosophy",
             description:
