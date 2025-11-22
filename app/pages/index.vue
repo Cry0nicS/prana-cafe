@@ -117,7 +117,7 @@ const ctaLinks = computed(() => [
     }
 ]);
 
-const christmasEvent = ref([
+const christmasEvent = computed(() => [
     {
         title: t("index.event.features.fiveCourse.title"),
         description: t("index.event.features.fiveCourse.description"),
@@ -189,7 +189,7 @@ const eventLinks = computed(() => [
             <NuxtImg
                 format="webp"
                 src="images/event.png"
-                :alt="`${t('index.gallery.title')}`"
+                :alt="`${t('index.event.title')}`"
                 class="h-full w-full overflow-hidden rounded-lg object-cover"
                 sizes="500px"
                 placeholder />
