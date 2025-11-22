@@ -159,6 +159,45 @@ export default {
                 getDirections: "Route anzeigen"
             }
         },
+        event: {
+            headline: "Weihnachtliches Spezialevent",
+            title: "Winterliches Festdinner",
+            description:
+                "Ein gemütlicher Abend mit saisonalen Lebensmitteln, kunstvoll zu einem fünfgängigen Menü verarbeitet. Genieße Wärme, Geschmack und Stil.",
+            features: {
+                fiveCourse: {
+                    title: "Fünf-Gänge-Menü",
+                    description:
+                        "Eine sorgfältig zusammengestellte Abfolge von Gerichten für Harmonie und Genuss."
+                },
+                seasonal: {
+                    title: "Saisonale Zutaten",
+                    description:
+                        "Frische, regionale und biologische Produkte, zubereitet auf ihrem Höhepunkt."
+                },
+                quality: {
+                    title: "Geschmack, Gesundheit und Stil",
+                    description:
+                        "Jedes Gericht vereint Aroma, Wohlbefinden und ansprechende Präsentation."
+                },
+                diet: {
+                    title: "Für alle Ernährungsformen geeignet",
+                    description: "Alles ist vegan, glutenfrei und biologisch."
+                },
+                details: {
+                    title: "Veranstaltungsdetails",
+                    description: "Montag, 8. Dezember, Beginn um 18:30 Uhr"
+                }
+            },
+            cta: {
+                reservation: {
+                    label: "Jetzt Platz reservieren"
+                },
+                contact: {
+                    label: "Kontakt für weitere Infos"
+                }
+            }
+        },
         philosophy: {
             title: "Unsere Philosophie",
             description:

@@ -159,6 +159,44 @@ export default {
                 getDirections: "Itinéraire"
             }
         },
+        event: {
+            headline: "Événement spécial de Noël",
+            title: "Dîner festif d’hiver",
+            description:
+                "Une soirée chaleureuse avec des produits de saison, travaillés dans un menu cinq services. Profitez de saveurs, de confort et d’élégance.",
+            features: {
+                fiveCourse: {
+                    title: "Menu cinq services",
+                    description:
+                        "Une succession de plats soigneusement élaborés pour l’équilibre et le plaisir."
+                },
+                seasonal: {
+                    title: "Ingrédients de saison",
+                    description:
+                        "Des produits frais, biologiques et régionaux, préparés à leur meilleur moment."
+                },
+                quality: {
+                    title: "Saveur, santé et style",
+                    description: "Chaque assiette allie goût, bien-être et présentation élégante."
+                },
+                diet: {
+                    title: "Adapté aux régimes alimentaires",
+                    description: "Tout sera vegan, sans gluten et biologique."
+                },
+                details: {
+                    title: "Détails de l’événement",
+                    description: "Lundi 8 décembre, à partir de 18h30"
+                }
+            },
+            cta: {
+                reservation: {
+                    label: "Réserver votre place"
+                },
+                contact: {
+                    label: "Contactez-nous pour plus d’informations"
+                }
+            }
+        },
         philosophy: {
             title: "Notre philosophie",
             description:
