@@ -62,12 +62,18 @@ export default defineNuxtConfig({
         scheduledTasks: {
             // Run task once every week, thursday at 20:00.
             "0 22 * * 4": ["fetch-google-reviews"]
+        },
+        vercel: {
+            config: {
+                crons: [{path: "/api/vercel/tasks", schedule: "0 20 * * *"}]
+            }
         }
     },
     ogImage: {
         enabled: false
     },
     runtimeConfig: {
+        cronSecret: process.env.NUXT_CRON_SECRET || "",
         googleApiKey: process.env.NUXT_GOOGLE_API_KEY || "",
         mailgunBaseUrl: process.env.NUXT_MAILGUN_BASE_URL || "",
         mailgunKey: process.env.NUXT_MAILGUN_KEY || "",
