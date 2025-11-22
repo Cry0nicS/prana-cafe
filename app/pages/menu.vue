@@ -114,7 +114,7 @@ const categories = [
             {
                 name: "waffle",
                 image: "/images/menu/waffle.png",
-                price: "15€"
+                price: "9-15€"
             },
             {
                 name: "brunch",
