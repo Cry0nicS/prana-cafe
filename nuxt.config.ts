@@ -86,18 +86,11 @@ export default defineNuxtConfig({
                 process.env.NUXT_PUBLIC_ROLLBAR_ENABLED?.trim().toLowerCase() === "true",
             scripts: {
                 cloudflareWebAnalytics: {
-                    // .env
-                    // NUXT_PUBLIC_SCRIPTS_CLOUDFLARE_WEB_ANALYTICS_TOKEN=<your-token>
                     token: process.env.NUXT_PUBLIC_SCRIPTS_CLOUDFLARE_WEB_ANALYTICS_TOKEN || ""
                 }
             }
         },
         rollbarServerToken: process.env.NUXT_ROLLBAR_SERVER_TOKEN || ""
-    },
-    scripts: {
-        registry: {
-            cloudflareWebAnalytics: true
-        }
     },
     site: {
         description: "Welcome to Café Prana, your gluten-free and vegan haven in Berlin.",
