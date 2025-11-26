@@ -20,6 +20,13 @@ useHead({
         lang
     }
 });
+
+useScriptCloudflareWebAnalytics({
+    token: useRuntimeConfig().public.scripts.cloudflareWebAnalytics.token,
+    scriptOptions: {
+        trigger: "onNuxtReady"
+    }
+});
 </script>
 
 <template>
