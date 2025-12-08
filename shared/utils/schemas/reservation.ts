@@ -10,10 +10,7 @@ export const ReservationSchema = z.object({
         .min(5, "reservations.form.errors.email.required"),
     phone: z
         .string()
-        .regex(
-            /^(?:\+\d{1,2}\s*)?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{4}$/,
-            "reservations.form.errors.phone.invalid"
-        )
+        .regex(/^(?=.*\d)\+?\d(?: ?\d)*$/, "reservations.form.errors.phone.invalid")
         .or(z.literal(""))
         .transform((val) => (val === "" ? null : val))
         .nullable(),
