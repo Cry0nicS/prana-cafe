@@ -157,31 +157,25 @@ export default {
             }
         },
         event: {
-            headline: "Christmas Special Event",
-            title: "Winter celebration dinner",
+            headline: "Christmas Events",
+            title: "Prana community celebration",
             description:
-                "A cosy evening with seasonal foods crafted into a five course menu. Enjoy a night of warmth, flavour, and style.",
+                "Our annual festive gathering to celebrate the season with nourishing food and great company.",
             features: {
-                fiveCourse: {
-                    title: "Five course menu",
+                xmasDinner: {
+                    title: "Family Xmas Dinner",
                     description:
-                        "A carefully curated sequence of dishes designed for balance and pleasure."
+                        "Starting at 6:00pm on the 24th, enjoy a communal feast with 3 courses for 30€. Advance booking required."
                 },
-                seasonal: {
-                    title: "Seasonal foods",
-                    description: "Fresh organic and regional ingredients prepared at their peak."
+                christmas: {
+                    title: "Xmas Brunch Buffet",
+                    description:
+                        "On the 25th, from 11:00am to 1:00pm, indulge in a festive buffet for 25€. Reservations recommended."
                 },
-                quality: {
-                    title: "Taste health and style",
-                    description: "Every plate combines flavour, wellness, and presentation."
-                },
-                diet: {
-                    title: "Dietary friendly",
-                    description: "Everything will be vegan, gluten-free, and organic."
-                },
-                details: {
-                    title: "Event details",
-                    description: "Monday December 8th, starting at 6:30pm"
+                community: {
+                    title: "Community Buffet",
+                    description:
+                        "On the 28th, from 09:30am to 11:30pm, enjoy our community buffet for 18€. "
                 }
             },
             cta: {
