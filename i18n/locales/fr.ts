@@ -160,32 +160,25 @@ export default {
             }
         },
         event: {
-            headline: "Événement spécial de Noël",
-            title: "Dîner festif d’hiver",
+            headline: "Événements de Noël",
+            title: "Célébration de la communauté Prana",
             description:
-                "Une soirée chaleureuse avec des produits de saison, travaillés dans un menu cinq services. Profitez de saveurs, de confort et d’élégance.",
+                "Notre rassemblement annuel pour célébrer la saison avec des plats réconfortants et une excellente compagnie.",
             features: {
-                fiveCourse: {
-                    title: "Menu cinq services",
+                xmasDinner: {
+                    title: "Dîner de Noël en famille",
                     description:
-                        "Une succession de plats soigneusement élaborés pour l’équilibre et le plaisir."
+                        "Le 24 à partir de 18h00, profitez d’un festin communautaire en 3 services pour 30€. Réservation obligatoire."
                 },
-                seasonal: {
-                    title: "Ingrédients de saison",
+                christmas: {
+                    title: "Brunch buffet de Noël",
                     description:
-                        "Des produits frais, biologiques et régionaux, préparés à leur meilleur moment."
+                        "Le 25, de 11h00 à 13h00, savourez un buffet festif pour 25€. Réservation recommandée."
                 },
-                quality: {
-                    title: "Saveur, santé et style",
-                    description: "Chaque assiette allie goût, bien-être et présentation élégante."
-                },
-                diet: {
-                    title: "Adapté aux régimes alimentaires",
-                    description: "Tout sera vegan, sans gluten et biologique."
-                },
-                details: {
-                    title: "Détails de l’événement",
-                    description: "Lundi 8 décembre, à partir de 18h30"
+                community: {
+                    title: "Buffet communautaire",
+                    description:
+                        "Le 28, de 09h30 à 23h30, profitez de notre buffet communautaire pour 18€."
                 }
             },
             cta: {

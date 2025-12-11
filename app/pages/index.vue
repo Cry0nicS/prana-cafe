@@ -119,29 +119,19 @@ const ctaLinks = computed(() => [
 
 const christmasEvent = computed(() => [
     {
-        title: t("index.event.features.fiveCourse.title"),
-        description: t("index.event.features.fiveCourse.description"),
+        title: t("index.event.features.xmasDinner.title"),
+        description: t("index.event.features.xmasDinner.description"),
         icon: "mdi:silverware-fork-knife"
     },
     {
-        title: t("index.event.features.details.title"),
-        description: t("index.event.features.details.description"),
-        icon: "mdi:clock-outline"
+        title: t("index.event.features.christmas.title"),
+        description: t("index.event.features.christmas.description"),
+        icon: "mdi:party-popper"
     },
     {
-        title: t("index.event.features.seasonal.title"),
-        description: t("index.event.features.seasonal.description"),
+        title: t("index.event.features.community.title"),
+        description: t("index.event.features.community.description"),
         icon: "mdi:leaf"
-    },
-    {
-        title: t("index.event.features.quality.title"),
-        description: t("index.event.features.quality.description"),
-        icon: "mdi:fire"
-    },
-    {
-        title: t("index.event.features.diet.title"),
-        description: t("index.event.features.diet.description"),
-        icon: "mdi:fruit-watermelon"
     }
 ]);
 
@@ -188,10 +178,9 @@ const eventLinks = computed(() => [
             reverse>
             <NuxtImg
                 format="webp"
-                src="images/event.png"
+                src="images/event.gif"
                 :alt="`${t('index.event.title')}`"
-                class="h-full w-full overflow-hidden rounded-lg object-cover"
-                sizes="500px"
+                class="w-full overflow-hidden rounded-lg object-cover"
                 placeholder />
         </UPageSection>
 

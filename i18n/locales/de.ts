@@ -160,33 +160,25 @@ export default {
             }
         },
         event: {
-            headline: "Weihnachtliches Spezialevent",
-            title: "Winterliches Festdinner",
+            headline: "Weihnachtsveranstaltungen",
+            title: "Prana Gemeinschaftsfeier",
             description:
-                "Ein gemütlicher Abend mit saisonalen Lebensmitteln, kunstvoll zu einem fünfgängigen Menü verarbeitet. Genieße Wärme, Geschmack und Stil.",
+                "Unser jährliches Fest, um die Saison mit wohltuendem Essen und guter Gesellschaft zu feiern.",
             features: {
-                fiveCourse: {
-                    title: "Fünf-Gänge-Menü",
+                xmasDinner: {
+                    title: "Familien Weihnachtsdinner",
                     description:
-                        "Eine sorgfältig zusammengestellte Abfolge von Gerichten für Harmonie und Genuss."
+                        "Am 24. ab 18:00 Uhr erwartet dich ein gemeinsames Festmahl mit 3 Gängen für 30€. Eine Reservierung im Voraus ist erforderlich."
                 },
-                seasonal: {
-                    title: "Saisonale Zutaten",
+                christmas: {
+                    title: "Weihnachtsbrunch Buffet",
                     description:
-                        "Frische, regionale und biologische Produkte, zubereitet auf ihrem Höhepunkt."
+                        "Am 25., von 11:00 bis 13:00 Uhr, kannst du ein festliches Buffet für 25€ genießen. Eine Reservierung wird empfohlen."
                 },
-                quality: {
-                    title: "Geschmack, Gesundheit und Stil",
+                community: {
+                    title: "Community Buffet",
                     description:
-                        "Jedes Gericht vereint Aroma, Wohlbefinden und ansprechende Präsentation."
-                },
-                diet: {
-                    title: "Für alle Ernährungsformen geeignet",
-                    description: "Alles ist vegan, glutenfrei und biologisch."
-                },
-                details: {
-                    title: "Veranstaltungsdetails",
-                    description: "Montag, 8. Dezember, Beginn um 18:30 Uhr"
+                        "Am 28., von 09:30 bis 23:30 Uhr, kannst du unser Community Buffet für 18€ genießen."
                 }
             },
             cta: {
