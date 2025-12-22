@@ -20,14 +20,19 @@ export const useNavItems = () => {
                 icon: "mdi:food-fork-drink"
             },
             {
-                label: t("pages.contact"),
-                to: localePath("/privacy/contact"),
-                icon: "mdi:email-outline"
+                label: t("pages.events"),
+                to: localePath("/events"),
+                icon: "mdi:party-popper"
             },
             {
                 label: t("pages.reservations"),
                 icon: "mdi:calendar-check-outline",
                 to: localePath("/reservations")
+            },
+            {
+                label: t("pages.contact"),
+                to: localePath("/privacy/contact"),
+                icon: "mdi:email-outline"
             }
         ];
     });
@@ -65,6 +70,11 @@ export const useNavItems = () => {
                 label: t("pages.privacy"),
                 to: localePath("/privacy"),
                 icon: "mdi:shield-account-outline"
+            },
+            {
+                label: t("pages.events"),
+                to: localePath("/events"),
+                icon: "mdi:party-popper"
             }
         ];
     });
@@ -87,6 +97,11 @@ export const useNavItems = () => {
                 label: t("pages.privacy"),
                 to: localePath("/privacy"),
                 icon: "mdi:shield-account-outline"
+            },
+            {
+                label: t("pages.events"),
+                to: localePath("/events"),
+                icon: "mdi:party-popper"
             }
         ];
     });

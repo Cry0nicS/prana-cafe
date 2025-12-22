@@ -137,14 +137,14 @@ const christmasEvent = computed(() => [
 
 const eventLinks = computed(() => [
     {
+        label: t("index.event.cta.events.label"),
+        icon: "mdi:party-popper",
+        to: localePath("/events")
+    },
+    {
         label: t("index.event.cta.reservation.label"),
         icon: "mdi:calendar-check-outline",
         to: localePath("/reservations")
-    },
-    {
-        label: t("index.event.cta.contact.label"),
-        icon: "mdi:contacts-outline",
-        to: localePath("/privacy/contact")
     }
 ]);
 </script>
@@ -161,7 +161,7 @@ const eventLinks = computed(() => [
             <NuxtImg
                 src="/images/hero.png"
                 :alt="t('index.hero.title')"
-                class="aspect-[2/3] h-full w-full max-w-[570px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
+                class="aspect-[16/9] h-full w-full max-w-[570px] overflow-hidden rounded-lg object-cover sm:max-w-[710px] md:max-w-[970px] lg:max-w-[550px]"
                 format="webp"
                 sizes="lg:550px md:970px sm:710px 570px"
                 placeholder />
@@ -178,7 +178,7 @@ const eventLinks = computed(() => [
             reverse>
             <NuxtImg
                 format="webp"
-                src="images/event.gif"
+                src="/images/events/index.png"
                 :alt="`${t('index.event.title')}`"
                 class="w-full overflow-hidden rounded-lg object-cover"
                 placeholder />
