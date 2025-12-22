@@ -3,6 +3,7 @@ export default {
         home: "Startseite",
         menu: "Menü",
         reservations: "Reservierungen",
+        events: "Events",
         privacy: "Datenschutz",
         imprint: "Impressum",
         contact: "Kontakt"
@@ -39,6 +40,12 @@ export default {
             title: "Reservierungen",
             description:
                 "Reserviere deinen Tisch im Café Prana online für ein glutenfreies, veganes Erlebnis."
+        },
+        events: {
+            index: {
+                title: "Events",
+                description: "Entdecke kommende Treffen, Dinner und Feiern im Café Prana."
+            }
         }
     },
     contact: {
@@ -166,17 +173,17 @@ export default {
                 "Unser jährliches Fest, um die Saison mit wohltuendem Essen und guter Gesellschaft zu feiern.",
             features: {
                 xmasDinner: {
-                    title: "Familien Weihnachtsdinner",
+                    title: "Community Weihnachtsdinner",
                     description:
                         "Am 24. ab 18:00 Uhr erwartet dich ein gemeinsames Festmahl mit 3 Gängen für 30€. Eine Reservierung im Voraus ist erforderlich."
                 },
                 christmas: {
-                    title: "Weihnachtsbrunch Buffet",
+                    title: "Weihnachtsbrunch",
                     description:
                         "Am 25., von 11:00 bis 13:00 Uhr, kannst du ein festliches Buffet für 25€ genießen. Eine Reservierung wird empfohlen."
                 },
                 community: {
-                    title: "Community Buffet",
+                    title: "Community breakfast",
                     description:
                         "Am 28., von 09:30 bis 23:30 Uhr, kannst du unser Community Buffet für 18€ genießen."
                 }
@@ -185,8 +192,8 @@ export default {
                 reservation: {
                     label: "Jetzt Platz reservieren"
                 },
-                contact: {
-                    label: "Kontakt für weitere Infos"
+                events: {
+                    label: "Alle Veranstaltungen ansehen"
                 }
             }
         },
@@ -458,6 +465,109 @@ export default {
                     desc: "Wärmende Suppe mit Toppings.",
                     ingredients: "Zubereitet mit saisonalem Gemüse, Gewürzen und frischen Kräutern."
                 }
+            }
+        }
+    },
+    events: {
+        headline: "Aktuelle Events",
+        title: "Events im Café Prana",
+        description: "Saisonale Dinner, Community-Feiern und achtsame Zusammenkünfte.",
+        labels: {
+            date: "Datum",
+            time: "Uhrzeit",
+            location: "Ort",
+            price: "Preis"
+        },
+        sections: {
+            details: "Event-Details",
+            concept: "Konzept",
+            expectations: "Was dich erwartet",
+            reservation: "Reservierung",
+            forWho: "Für wen",
+            closing: "Schlusssatz",
+            upcoming: "Bevorstehende Events",
+            past: "Vergangene Events"
+        },
+        items: {
+            "community-xmas-dinner": {
+                title: "Community Weihnachtsdinner",
+                badge: "Weihnachtswoche",
+                intro: "Feiere Heiligabend mit unserem Community Weihnachtsdinner im Café Prana. Ein warmer Abend mit nährendem Essen, gemeinsamen Tafeln und festlicher Stimmung, um als Community zusammenzukommen.",
+                date: "24. Dezember",
+                time: "18:00",
+                location: "Café Prana, Berlin",
+                price: "30 € pro Person",
+                concept:
+                    "Ein gemütliches pflanzliches Drei Gänge Dinner, um Weihnachten achtsam und herzlich zu feiern, mit Fokus auf saisonale Aromen und gemeinsames Erleben.",
+                menuNote:
+                    "Das Menü ist komplett pflanzlich und glutenfrei, zubereitet mit biologischen und saisonalen Zutaten.",
+                expectations:
+                    "Drei Gänge Weihnachtsdinner · 100 % pflanzlich und glutenfrei · Warme Community Atmosphäre · Saisonale Bio Zutaten",
+                reservation:
+                    "Reservierung empfohlen. Bitte buche über www.cafeprana.de oder komm direkt im Café vorbei.",
+                forWho: "Perfekt für Freundinnen, Familien und alle, die Heiligabend entspannt und achtsam verbringen möchten."
+            },
+
+            "christmas-brunch-buffet": {
+                title: "Weihnachts Brunch Buffet",
+                badge: "Weihnachtswoche",
+                intro: "Genieße den ersten Weihnachtstag mit unserem festlichen Weihnachts Brunch Buffet im Café Prana. Ein entspannter Vormittag mit nährenden Speisen, warmen Getränken und gemütlicher Feiertagsstimmung.",
+                date: "25. Dezember",
+                time: "11:00–13:00",
+                location: "Café Prana, Berlin",
+                price: "25 € pro Person",
+                concept:
+                    "Ein reichhaltiges pflanzliches Brunch Buffet mit saisonalen und festlichen Gerichten, das dich einlädt, ganz in deinem Tempo zu genießen.",
+                menuNote:
+                    "Das Buffet ist komplett pflanzlich und glutenfrei, mit einer Auswahl an süßen und herzhaften saisonalen Speisen.",
+                expectations:
+                    "Pflanzliches Brunch Buffet · Glutenfreie Optionen · Entspannte Feiertagsatmosphäre · Saisonale Bio Zutaten",
+                reservation:
+                    "Reservierung empfohlen, da die Plätze begrenzt sind. Bitte reserviere über www.cafeprana.de.",
+                forWho: "Ideal für alle, die den ersten Weihnachtstag mit einem nährenden und stressfreien Brunch genießen möchten."
+            },
+
+            "community-breakfast": {
+                title: "Community Frühstück",
+                badge: "Special Guests",
+                intro: "Starte den Tag mit unserem Community Frühstück im Café Prana. Ein entspanntes Morgentreffen mit nährendem Essen, warmen Getränken und einer offenen Community Atmosphäre.",
+                date: "28. Dezember",
+                time: "09:30–11:30",
+                location: "Café Prana, Berlin",
+                price: "18 € pro Person",
+                concept:
+                    "Ein Frühstück im Buffet Stil mit saisonalen pflanzlichen Gerichten, gestaltet für Verbindung, Austausch und einen ruhigen Start in den Tag.",
+                menuNote:
+                    "Alle Speisen sind pflanzlich und glutenfrei und werden mit biologischen Zutaten zubereitet.",
+                expectations:
+                    "Pflanzliches Frühstücksbuffet · Glutenfreie Optionen · Gemütliche Morgenatmosphäre · Begrenzte Plätze",
+                reservation:
+                    "Reservierung erforderlich. Dieses Event ist exklusiv für unsere Special Guests. Bitte reserviere über www.cafeprana.de.",
+                forWho: "Für eingeladene Gäste, die ein langsames und nährendes Community Frühstück genießen möchten."
+            },
+
+            "winter-celebration-dinner": {
+                title: "Winter Celebration Dinner",
+                badge: "Prana Best of",
+                intro: "Lass uns das neue Jahr mit unserem Winter Celebration Dinner feiern. Pranas jährliches Fünf Gänge Dinner vereint saisonale Highlights und beliebte Klassiker zu einem besonderen Abend.",
+                date: "5. Januar",
+                time: "18:30",
+                location: "Café Prana, Berlin",
+                price: "45 € pro Person",
+                concept:
+                    "Ein Fünf Gänge Prana Best of Dinner, inspiriert von winterlichen Aromen und saisonalen Zutaten, gestaltet als ruhiges und intimes Dinner Erlebnis.",
+                menuNote:
+                    "Zwischen Lebkuchen, Kürbis Pastete, veganer Bratensauce und Maronen Mousse erwartet dich ein sorgfältig zusammengestelltes Menü, das pflanzliche Küche in ihrer ganzen Vielfalt feiert.",
+                expectations: [
+                    "Fünf Gänge saisonales Dinner",
+                    "100 % pflanzlich und glutenfrei",
+                    "Saisonale und sorgfältig ausgewählte Zutaten",
+                    "Festliche und intime Atmosphäre",
+                    "Willkommens Getränk inklusive"
+                ],
+                reservation:
+                    "Reservierung erforderlich, da die Plätze begrenzt sind. Bitte buche über www.cafeprana.de oder direkt im Café.",
+                forWho: "Perfekt für alle, die saisonale Küche, pflanzliches Kochen und einen bewussten Start ins neue Jahr lieben."
             }
         }
     },

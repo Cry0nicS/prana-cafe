@@ -7,6 +7,7 @@
  */
 
 export * from "./database";
+export * from "./events";
 export * from "./google";
 export * from "./i18n";
 export * from "./logger";

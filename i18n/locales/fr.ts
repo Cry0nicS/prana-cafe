@@ -3,6 +3,7 @@ export default {
         home: "Accueil",
         menu: "Menu",
         reservations: "Réservations",
+        events: "Événements",
         privacy: "Confidentialité",
         imprint: "Mentions légales",
         contact: "Contact"
@@ -38,6 +39,13 @@ export default {
             title: "Réservations",
             description:
                 "Réservez votre table au Café Prana à Berlin pour une expérience culinaire sans gluten et vegan."
+        },
+        events: {
+            index: {
+                title: "Événements",
+                description:
+                    "Découvrez les prochains dîners, rencontres et célébrations au Café Prana."
+            }
         }
     },
     contact: {
@@ -166,17 +174,17 @@ export default {
                 "Notre rassemblement annuel pour célébrer la saison avec des plats réconfortants et une excellente compagnie.",
             features: {
                 xmasDinner: {
-                    title: "Dîner de Noël en famille",
+                    title: "Community Xmas Dinner",
                     description:
                         "Le 24 à partir de 18h00, profitez d’un festin communautaire en 3 services pour 30€. Réservation obligatoire."
                 },
                 christmas: {
-                    title: "Brunch buffet de Noël",
+                    title: "Christmas Brunch Buffet",
                     description:
                         "Le 25, de 11h00 à 13h00, savourez un buffet festif pour 25€. Réservation recommandée."
                 },
                 community: {
-                    title: "Buffet communautaire",
+                    title: "Community breakfast",
                     description:
                         "Le 28, de 09h30 à 23h30, profitez de notre buffet communautaire pour 18€."
                 }
@@ -185,8 +193,8 @@ export default {
                 reservation: {
                     label: "Réserver votre place"
                 },
-                contact: {
-                    label: "Contactez-nous pour plus d’informations"
+                events: {
+                    label: "Voir tous les événements"
                 }
             }
         },
@@ -546,6 +554,109 @@ export default {
                     "Nous vous répondrons dès que nous aurons traité votre demande.",
                 sendErrorTitle: "Erreur lors de l'envoi",
                 sendErrorDescription: "Veuillez réessayer plus tard."
+            }
+        }
+    },
+    events: {
+        headline: "Événements récents",
+        title: "Événements au Café Prana",
+        description: "Dîners saisonniers, célébrations communautaires et rencontres conviviales.",
+        labels: {
+            date: "Date",
+            time: "Heure",
+            location: "Lieu",
+            price: "Prix"
+        },
+        sections: {
+            details: "Détails de l'événement",
+            concept: "Concept",
+            expectations: "À quoi s'attendre",
+            reservation: "Réservation",
+            forWho: "Pour qui",
+            closing: "Mot de fin",
+            upcoming: "Événements à venir",
+            past: "Événements passés"
+        },
+        items: {
+            "community-xmas-dinner": {
+                title: "Dîner de Noël communautaire",
+                badge: "Semaine de Noël",
+                intro: "Célèbre le réveillon de Noël avec notre dîner communautaire de Noël au Café Prana. Une soirée chaleureuse avec une cuisine nourrissante, de grandes tables partagées et une ambiance festive pour se retrouver ensemble.",
+                date: "24 décembre",
+                time: "18:00",
+                location: "Café Prana, Berlin",
+                price: "30 € par personne",
+                concept:
+                    "Un dîner convivial en trois plats, entièrement végétal, pour célébrer Noël de manière consciente et accueillante, avec des saveurs de saison et l’esprit du partage.",
+                menuNote:
+                    "Le menu est entièrement végétal et sans gluten, préparé avec des ingrédients biologiques et de saison.",
+                expectations:
+                    "Dîner de Noël en trois plats · 100 % végétal et sans gluten · Ambiance chaleureuse et communautaire · Ingrédients bio et de saison",
+                reservation:
+                    "Réservation recommandée. Merci de réserver via www.cafeprana.de ou directement au café.",
+                forWho: "Parfait pour les ami·e·s, les familles et toutes celles et ceux qui souhaitent passer le réveillon de Noël dans une atmosphère détendue et consciente."
+            },
+
+            "christmas-brunch-buffet": {
+                title: "Brunch de Noël Buffet",
+                badge: "Semaine de Noël",
+                intro: "Profite du jour de Noël avec notre brunch buffet festif au Café Prana. Une fin de matinée détendue, remplie de plats nourrissants, de boissons chaudes et d’une ambiance de fête.",
+                date: "25 décembre",
+                time: "11:00–13:00",
+                location: "Café Prana, Berlin",
+                price: "25 € par personne",
+                concept:
+                    "Un brunch buffet généreux et végétal, composé de plats festifs et de saison, à savourer à ton rythme dans une atmosphère cosy.",
+                menuNote:
+                    "Le buffet est entièrement végétal et sans gluten, avec une sélection de plats sucrés et salés de saison.",
+                expectations:
+                    "Brunch buffet végétal · Options sans gluten · Ambiance détendue de Noël · Ingrédients bio et de saison",
+                reservation:
+                    "Réservation recommandée en raison du nombre de places limité. Merci de réserver via www.cafeprana.de.",
+                forWho: "Idéal pour toutes celles et ceux qui souhaitent profiter du jour de Noël avec un brunch nourrissant et sans stress."
+            },
+
+            "community-breakfast": {
+                title: "Petit déjeuner communautaire",
+                badge: "Invités spéciaux",
+                intro: "Commence la journée avec notre petit déjeuner communautaire au Café Prana. Un moment matinal détendu avec une cuisine nourrissante, des boissons chaudes et une ambiance conviviale.",
+                date: "28 décembre",
+                time: "09:30–11:30",
+                location: "Café Prana, Berlin",
+                price: "18 € par personne",
+                concept:
+                    "Un petit déjeuner sous forme de buffet avec des plats végétaux et de saison, pensé pour l’échange, la connexion et un début de journée en douceur.",
+                menuNote:
+                    "Tous les plats sont végétaux et sans gluten, préparés avec des ingrédients biologiques.",
+                expectations:
+                    "Petit déjeuner buffet végétal · Options sans gluten · Ambiance matinale chaleureuse · Places limitées",
+                reservation:
+                    "Réservation obligatoire. Cet événement est exclusivement réservé à nos invités spéciaux. Merci de réserver via www.cafeprana.de.",
+                forWho: "Pour les invités conviés qui souhaitent profiter d’un petit déjeuner communautaire lent et nourrissant."
+            },
+
+            "winter-celebration-dinner": {
+                title: "Dîner de célébration d’hiver",
+                badge: "Prana Best of",
+                intro: "Célébrons la nouvelle année avec notre dîner de célébration d’hiver. Le dîner annuel en cinq plats de Prana réunit des classiques appréciés et des créations de saison pour une soirée unique.",
+                date: "5 janvier",
+                time: "18:30",
+                location: "Café Prana, Berlin",
+                price: "45 € par personne",
+                concept:
+                    "Un dîner Prana Best of en cinq plats, inspiré des saveurs hivernales et des produits de saison, conçu comme une expérience culinaire lente et intime.",
+                menuNote:
+                    "Entre pain d’épices, pâté de courge, sauce vegan et mousse de châtaigne, découvre un menu soigneusement élaboré qui célèbre la cuisine végétale dans toute sa richesse.",
+                expectations: [
+                    "Dîner saisonnier en cinq plats",
+                    "100 % végétal et sans gluten",
+                    "Ingrédients de saison sélectionnés avec soin",
+                    "Ambiance festive et intime",
+                    "Boisson de bienvenue incluse"
+                ],
+                reservation:
+                    "Réservation obligatoire, les places étant limitées. Merci de réserver via www.cafeprana.de ou directement au café.",
+                forWho: "Parfait pour toutes celles et ceux qui aiment la cuisine de saison, la cuisine végétale et souhaitent accueillir la nouvelle année avec intention."
             }
         }
     }

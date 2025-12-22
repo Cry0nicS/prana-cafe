@@ -102,6 +102,9 @@ const sendReservation = async () => {
  * Check if a date is a Monday.
  */
 const isDateUnavailable = (date: DateValue) => {
+    // Allow Monday, 2026-01-05 for special event
+    if (date.year === 2026 && date.month === 1 && date.day === 5) return false;
+
     return getDayOfWeek(date, LOCALE_META.de.iso, "mon") === 0;
 };
 </script>
