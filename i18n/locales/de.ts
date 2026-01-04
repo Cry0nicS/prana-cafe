@@ -167,25 +167,25 @@ export default {
             }
         },
         event: {
-            headline: "Weihnachtsveranstaltungen",
-            title: "Prana Gemeinschaftsfeier",
+            headline: "Feiern und Veranstaltungen",
+            title: "Prana Gemeinschaftstreffen",
             description:
-                "Unser jährliches Fest, um die Saison mit wohltuendem Essen und guter Gesellschaft zu feiern.",
+                "Bei Prana bringen wir Menschen rund um nährendes Essen, gemeinsame Tische und achtsame Momente zusammen. Von regelmäßigen Gemeinschaftsmahlzeiten bis hin zu besonderen Anlässen ist unser Raum für Verbindung, Feiern und Leichtigkeit geschaffen.",
             features: {
-                xmasDinner: {
-                    title: "Community Weihnachtsdinner",
-                    description:
-                        "Am 24. ab 18:00 Uhr erwartet dich ein gemeinsames Festmahl mit 3 Gängen für 30€. Eine Reservierung im Voraus ist erforderlich."
-                },
-                christmas: {
-                    title: "Weihnachtsbrunch",
-                    description:
-                        "Am 25., von 11:00 bis 13:00 Uhr, kannst du ein festliches Buffet für 25€ genießen. Eine Reservierung wird empfohlen."
-                },
                 community: {
-                    title: "Community breakfast",
+                    title: "Regelmäßige Gemeinschaftsevents",
                     description:
-                        "Am 28., von 09:30 bis 23:30 Uhr, kannst du unser Community Buffet für 18€ genießen."
+                        "Regelmäßige Treffen wie Frühstück, Brunch und Abendessen, um gemeinsam nährendes Essen und entspannte Momente zu genießen."
+                },
+                specials: {
+                    title: "Besondere Events und Feiern",
+                    description:
+                        "Saisonale Dinner, thematische Abende und besondere Gemeinschaftstreffen, die das ganze Jahr über besondere Momente feiern."
+                },
+                private: {
+                    title: "Private Buchungen und individuelle Events",
+                    description:
+                        "Buche unseren Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus unserer pflanzlichen Küche."
                 }
             },
             cta: {
@@ -327,35 +327,6 @@ export default {
         }
     },
     menu: {
-        deals: {
-            title: "Prana-Angebote",
-            options: "Glück ist echt, wenn man es teilt!",
-            items: {
-                coworking: {
-                    title: "Co-Working-Tage",
-                    desc: "Dienstag bis Freitag bis 12 Uhr – 3 Stunden pro Tisch, inklusive Kaffee & Tee.",
-                    ingredients: "Enthalten: WLAN, Kaffee, Tee, Steckdose"
-                },
-                businessBreak: {
-                    title: "Business Break",
-                    desc: "Suchst du einen gemütlichen Ort fürs 1:1? Genieß 2 Kaffees, 2 Datteln & WLAN. (Laptop-Nutzung: 1 Stunde außerhalb der Lunchzeiten)",
-                    ingredients:
-                        "Enthalten: 2 Kaffees (Espresso, Americano, Cappuccino usw.), 2 Dattel-Pralinen"
-                },
-                businessLunch: {
-                    title: "Business Lunch",
-                    desc: "2 alkoholfreie Weine, gesunde Lunches und Espressi für den Produktivitätsschub.",
-                    ingredients:
-                        "Fingerfood, 2x Wein des Tages, 2 Lunches, 2 Espressi, 2 Minze-Shots (nur unter der Woche)"
-                },
-                tastyDate: {
-                    title: "Tasty Date",
-                    desc: "Genieß ein gemütliches Date mit heißen Drinks und süßen Kleinigkeiten.",
-                    ingredients:
-                        "Enthalten: 2 Drinks, 2 Dattel-Pralinen, Bananenbrot mit Toppings zum Teilen"
-                }
-            }
-        },
         drinksCoffee: {
             title: "Kaffeespezialitäten",
             options:

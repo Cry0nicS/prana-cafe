@@ -117,21 +117,21 @@ const ctaLinks = computed(() => [
     }
 ]);
 
-const christmasEvent = computed(() => [
-    {
-        title: t("index.event.features.xmasDinner.title"),
-        description: t("index.event.features.xmasDinner.description"),
-        icon: "mdi:silverware-fork-knife"
-    },
-    {
-        title: t("index.event.features.christmas.title"),
-        description: t("index.event.features.christmas.description"),
-        icon: "mdi:party-popper"
-    },
+const events = computed(() => [
     {
         title: t("index.event.features.community.title"),
         description: t("index.event.features.community.description"),
-        icon: "mdi:leaf"
+        icon: "mdi:silverware-fork-knife"
+    },
+    {
+        title: t("index.event.features.specials.title"),
+        description: t("index.event.features.specials.description"),
+        icon: "mdi:calendar-star"
+    },
+    {
+        title: t("index.event.features.private.title"),
+        description: t("index.event.features.private.description"),
+        icon: "mdi:party-popper"
     }
 ]);
 
@@ -166,23 +166,6 @@ const eventLinks = computed(() => [
                 sizes="lg:550px md:970px sm:710px 570px"
                 placeholder />
         </UPageHero>
-
-        <UPageSection
-            :headline="t('index.event.headline')"
-            :title="t('index.event.title')"
-            :description="t('index.event.description')"
-            icon="mdi:party-popper"
-            orientation="horizontal"
-            :features="christmasEvent"
-            :links="eventLinks"
-            reverse>
-            <NuxtImg
-                format="webp"
-                src="/images/events/index.png"
-                :alt="`${t('index.event.title')}`"
-                class="w-full overflow-hidden rounded-lg object-cover"
-                placeholder />
-        </UPageSection>
 
         <!-- Values / philosophy section using features -->
         <UPageSection icon="mdi:food-apple-outline">
@@ -242,6 +225,23 @@ const eventLinks = computed(() => [
                     {{ t("index.menu.cta.secondary.label") }}
                 </UButton>
             </div>
+        </UPageSection>
+
+        <!-- Events -->
+        <UPageSection
+            :headline="t('index.event.headline')"
+            :title="t('index.event.title')"
+            :description="t('index.event.description')"
+            icon="mdi:party-popper"
+            orientation="horizontal"
+            :features="events"
+            :links="eventLinks">
+            <NuxtImg
+                format="webp"
+                src="/images/events/index.png"
+                :alt="`${t('index.event.title')}`"
+                class="w-full overflow-hidden rounded-lg object-cover"
+                placeholder />
         </UPageSection>
 
         <!-- Visual gallery carousel -->

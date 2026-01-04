@@ -168,25 +168,25 @@ export default {
             }
         },
         event: {
-            headline: "Événements de Noël",
-            title: "Célébration de la communauté Prana",
+            headline: "Événements et célébrations",
+            title: "Rencontres de la communauté Prana",
             description:
-                "Notre rassemblement annuel pour célébrer la saison avec des plats réconfortants et une excellente compagnie.",
+                "Chez Prana, nous rassemblons les personnes autour d’une cuisine nourrissante, de tables partagées et de moments en pleine conscience. Des repas communautaires réguliers aux occasions spéciales, notre espace est pensé pour la connexion, la célébration et la simplicité.",
             features: {
-                xmasDinner: {
-                    title: "Community Xmas Dinner",
-                    description:
-                        "Le 24 à partir de 18h00, profitez d’un festin communautaire en 3 services pour 30€. Réservation obligatoire."
-                },
-                christmas: {
-                    title: "Christmas Brunch Buffet",
-                    description:
-                        "Le 25, de 11h00 à 13h00, savourez un buffet festif pour 25€. Réservation recommandée."
-                },
                 community: {
-                    title: "Community breakfast",
+                    title: "Événements communautaires réguliers",
                     description:
-                        "Le 28, de 09h30 à 23h30, profitez de notre buffet communautaire pour 18€."
+                        "Des rendez vous réguliers comme le petit déjeuner, le brunch et le dîner, pour partager une cuisine nourrissante dans une atmosphère détendue."
+                },
+                specials: {
+                    title: "Événements spéciaux et célébrations",
+                    description:
+                        "Dîners saisonniers, soirées à thème et rencontres communautaires uniques pour marquer des moments particuliers tout au long de l’année."
+                },
+                private: {
+                    title: "Réservations privées et événements sur mesure",
+                    description:
+                        "Réservez notre espace pour votre propre célébration, atelier ou rencontre, avec la possibilité d’un service de restauration issu de notre cuisine végétale."
                 }
             },
             cta: {
@@ -330,34 +330,6 @@ export default {
         }
     },
     menu: {
-        deals: {
-            title: "Offres Prana",
-            options: "Le bonheur n’est réel que lorsqu’il est partagé!",
-            items: {
-                coworking: {
-                    title: "Jours de co-working",
-                    desc: "Du mardi au vendredi jusqu’à 12h – 3 heures par table, café et thé offerts.",
-                    ingredients: "Comprend: Wi-Fi, café, thé, prise électrique"
-                },
-                businessBreak: {
-                    title: "Business Break",
-                    desc: "Besoin d’un lieu chaleureux pour un tête-à-tête? Profitez de 2 cafés, 2 dattes et du WI-FI.",
-                    ingredients:
-                        "Comprend: 2 cafés (espresso, americano, cappuccino, etc), 2 pralines de dattes"
-                },
-                businessLunch: {
-                    title: "Business Lunch",
-                    desc: "2 boissons pétillantes sans alcool, des déjeuners sains et des expressos pour booster votre productivité.",
-                    ingredients: "Comprend: entrées, 2 déjeuners, 2 expressos et 2 shots de menthe"
-                },
-                tastyDate: {
-                    title: "Tasty Date",
-                    desc: "Profitez d’un moment à deux avec des boissons chaudes et de petites douceurs.",
-                    ingredients:
-                        "Comprend: 2 boissons, 2 pralines de dattes et une tranche de banana bread avec garnitures"
-                }
-            }
-        },
         drinksCoffee: {
             title: "Cafés spéciaux",
             options:

@@ -9,31 +9,6 @@ useSeoMeta({
 
 const categories = [
     {
-        id: "deals",
-        items: [
-            {
-                name: "coworking",
-                image: "/images/menu/cup.png",
-                price: "10€ p.p. / h"
-            },
-            {
-                name: "businessBreak",
-                image: "/images/menu/business-break.png",
-                price: "10€ p.p."
-            },
-            {
-                name: "businessLunch",
-                image: "/images/menu/business-lunch.png",
-                price: "40€ for 2"
-            },
-            {
-                name: "tastyDate",
-                image: "/images/menu/tasty-date.png",
-                price: "24€ for 2"
-            }
-        ]
-    },
-    {
         id: "drinksCoffee",
         items: [
             {
