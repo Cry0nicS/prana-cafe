@@ -326,34 +326,6 @@ export default {
         }
     },
     menu: {
-        deals: {
-            title: "Prana Deals",
-            options: "Happiness only true when shared!",
-            items: {
-                coworking: {
-                    title: "Co-working Days",
-                    desc: "Tuesday to Friday until 12PM – 3 hours per table, includes free coffee & tea.",
-                    ingredients: "Includes: Wi-Fi access, coffee, tea, power outlet"
-                },
-                businessBreak: {
-                    title: "Business Break",
-                    desc: "Looking for a cozy place for your  1:1? Enjoy 2 coffees, 2 dates & WI-FI.",
-                    ingredients:
-                        "Includes: 2 coffees (espresso, americano, cappuccino, etc), 2 date pralines"
-                },
-                businessLunch: {
-                    title: "Business Lunch",
-                    desc: "2 sober bubbles, healthy lunches, and espressi to boost your productivity.",
-                    ingredients: "Includes: appetizers, 2 lunches, 2 espressi, and 2 mint shots."
-                },
-                tastyDate: {
-                    title: "Tasty Date",
-                    desc: "Enjoy a cozy date with hotties, and treats for two.",
-                    ingredients:
-                        "Includes: 2 drinks, 2 date pralines, and banana bread slice with toppings"
-                }
-            }
-        },
         drinksCoffee: {
             title: "Coffee Specials",
             options:

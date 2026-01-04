@@ -327,35 +327,6 @@ export default {
         }
     },
     menu: {
-        deals: {
-            title: "Prana-Angebote",
-            options: "Glück ist echt, wenn man es teilt!",
-            items: {
-                coworking: {
-                    title: "Co-Working-Tage",
-                    desc: "Dienstag bis Freitag bis 12 Uhr – 3 Stunden pro Tisch, inklusive Kaffee & Tee.",
-                    ingredients: "Enthalten: WLAN, Kaffee, Tee, Steckdose"
-                },
-                businessBreak: {
-                    title: "Business Break",
-                    desc: "Suchst du einen gemütlichen Ort fürs 1:1? Genieß 2 Kaffees, 2 Datteln & WLAN. (Laptop-Nutzung: 1 Stunde außerhalb der Lunchzeiten)",
-                    ingredients:
-                        "Enthalten: 2 Kaffees (Espresso, Americano, Cappuccino usw.), 2 Dattel-Pralinen"
-                },
-                businessLunch: {
-                    title: "Business Lunch",
-                    desc: "2 alkoholfreie Weine, gesunde Lunches und Espressi für den Produktivitätsschub.",
-                    ingredients:
-                        "Fingerfood, 2x Wein des Tages, 2 Lunches, 2 Espressi, 2 Minze-Shots (nur unter der Woche)"
-                },
-                tastyDate: {
-                    title: "Tasty Date",
-                    desc: "Genieß ein gemütliches Date mit heißen Drinks und süßen Kleinigkeiten.",
-                    ingredients:
-                        "Enthalten: 2 Drinks, 2 Dattel-Pralinen, Bananenbrot mit Toppings zum Teilen"
-                }
-            }
-        },
         drinksCoffee: {
             title: "Kaffeespezialitäten",
             options:

@@ -330,34 +330,6 @@ export default {
         }
     },
     menu: {
-        deals: {
-            title: "Offres Prana",
-            options: "Le bonheur n’est réel que lorsqu’il est partagé!",
-            items: {
-                coworking: {
-                    title: "Jours de co-working",
-                    desc: "Du mardi au vendredi jusqu’à 12h – 3 heures par table, café et thé offerts.",
-                    ingredients: "Comprend: Wi-Fi, café, thé, prise électrique"
-                },
-                businessBreak: {
-                    title: "Business Break",
-                    desc: "Besoin d’un lieu chaleureux pour un tête-à-tête? Profitez de 2 cafés, 2 dattes et du WI-FI.",
-                    ingredients:
-                        "Comprend: 2 cafés (espresso, americano, cappuccino, etc), 2 pralines de dattes"
-                },
-                businessLunch: {
-                    title: "Business Lunch",
-                    desc: "2 boissons pétillantes sans alcool, des déjeuners sains et des expressos pour booster votre productivité.",
-                    ingredients: "Comprend: entrées, 2 déjeuners, 2 expressos et 2 shots de menthe"
-                },
-                tastyDate: {
-                    title: "Tasty Date",
-                    desc: "Profitez d’un moment à deux avec des boissons chaudes et de petites douceurs.",
-                    ingredients:
-                        "Comprend: 2 boissons, 2 pralines de dattes et une tranche de banana bread avec garnitures"
-                }
-            }
-        },
         drinksCoffee: {
             title: "Cafés spéciaux",
             options:
