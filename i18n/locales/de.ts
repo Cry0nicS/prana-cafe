@@ -167,25 +167,25 @@ export default {
             }
         },
         event: {
-            headline: "Weihnachtsveranstaltungen",
-            title: "Prana Gemeinschaftsfeier",
+            headline: "Feiern und Veranstaltungen",
+            title: "Prana Gemeinschaftstreffen",
             description:
-                "Unser jährliches Fest, um die Saison mit wohltuendem Essen und guter Gesellschaft zu feiern.",
+                "Bei Prana bringen wir Menschen rund um nährendes Essen, gemeinsame Tische und achtsame Momente zusammen. Von regelmäßigen Gemeinschaftsmahlzeiten bis hin zu besonderen Anlässen ist unser Raum für Verbindung, Feiern und Leichtigkeit geschaffen.",
             features: {
-                xmasDinner: {
-                    title: "Community Weihnachtsdinner",
-                    description:
-                        "Am 24. ab 18:00 Uhr erwartet dich ein gemeinsames Festmahl mit 3 Gängen für 30€. Eine Reservierung im Voraus ist erforderlich."
-                },
-                christmas: {
-                    title: "Weihnachtsbrunch",
-                    description:
-                        "Am 25., von 11:00 bis 13:00 Uhr, kannst du ein festliches Buffet für 25€ genießen. Eine Reservierung wird empfohlen."
-                },
                 community: {
-                    title: "Community breakfast",
+                    title: "Regelmäßige Gemeinschaftsevents",
                     description:
-                        "Am 28., von 09:30 bis 23:30 Uhr, kannst du unser Community Buffet für 18€ genießen."
+                        "Regelmäßige Treffen wie Frühstück, Brunch und Abendessen, um gemeinsam nährendes Essen und entspannte Momente zu genießen."
+                },
+                specials: {
+                    title: "Besondere Events und Feiern",
+                    description:
+                        "Saisonale Dinner, thematische Abende und besondere Gemeinschaftstreffen, die das ganze Jahr über besondere Momente feiern."
+                },
+                private: {
+                    title: "Private Buchungen und individuelle Events",
+                    description:
+                        "Buche unseren Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus unserer pflanzlichen Küche."
                 }
             },
             cta: {

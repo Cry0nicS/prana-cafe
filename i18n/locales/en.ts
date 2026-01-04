@@ -165,25 +165,25 @@ export default {
             }
         },
         event: {
-            headline: "Christmas Events",
-            title: "Prana community celebration",
+            headline: "Celebratory Events",
+            title: "Community gatherings",
             description:
-                "Our annual festive gathering to celebrate the season with nourishing food and great company.",
+                "At Prana, we bring people together around nourishing food, shared tables, and mindful moments. From regular community meals to special occasions, our space is designed for connection, celebration, and ease.",
             features: {
-                xmasDinner: {
-                    title: "Community Xmas Dinner",
-                    description:
-                        "Starting at 6:00pm on the 24th, enjoy a communal feast with 3 courses for 30€. Advance booking required."
-                },
-                christmas: {
-                    title: "Christmas Brunch Buffet",
-                    description:
-                        "On the 25th, from 11:00am to 1:00pm, indulge in a festive buffet for 25€. Reservations recommended."
-                },
                 community: {
-                    title: "Community breakfast",
+                    title: "Regular community events",
                     description:
-                        "On the 28th, from 09:30am to 11:30pm, enjoy our community buffet for 18€. "
+                        "Regular gatherings like breakfast, brunch, and dinner, created to enjoy nourishing food and relaxed moments together."
+                },
+                specials: {
+                    title: "Special events and celebrations",
+                    description:
+                        "Seasonal dinners, themed evenings, and unique community gatherings that mark special moments throughout the year"
+                },
+                private: {
+                    title: "Private bookings and custom events",
+                    description:
+                        "Book our space for your own celebration, workshop, or gathering, with optional catering from our plant based kitchen."
                 }
             },
             cta: {
