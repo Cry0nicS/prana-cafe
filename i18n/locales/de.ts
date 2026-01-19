@@ -51,16 +51,16 @@ export default {
     contact: {
         pageTitle: "Frisch, Lokal, und Freundlich",
         pageDescription:
-            "Unser veganes Café basiert auf Liebe zu Pflanzen, Nachhaltigkeit und Gemeinschaft. Schreib uns — wir freuen uns auf deine Nachricht.",
+            "Mein veganes Café basiert auf Liebe zu Pflanzen, Nachhaltigkeit und Gemeinschaft. Schreib mir — ich freue mich auf deine Nachricht.",
         features: {
             email: {
                 title: "E-Mail",
                 description:
-                    "Feedback, Eventanfragen oder Kooperationsideen? Schreib uns — wir hören gerne von dir."
+                    "Feedback, Eventanfragen oder Kooperationsideen? Schreib mir — ich höre gerne von dir."
             },
             phone: {
                 title: "Telefon",
-                description: "Fragen oder Tischreservierung? Ruf uns kurz an."
+                description: "Fragen oder Tischreservierung? Ruf mich kurz an."
             },
             instagram: {
                 title: "Instagram",
@@ -96,26 +96,26 @@ export default {
             },
             liability: {
                 title: "Haftung für Inhalte",
-                content: `Als Dienstanbieter sind wir nach §7 Abs.1 TMG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§8–10 TMG sind wir jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu suchen, die auf eine rechtswidrige Tätigkeit hinweisen.\n\nVerpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben davon unberührt. Eine Haftung ist jedoch erst ab dem Zeitpunkt möglich, an dem wir von einer konkreten Rechtsverletzung Kenntnis erlangen. Sobald wir von solchen Verstößen erfahren, entfernen wir die Inhalte umgehend.`
+                content: `Als Dienstanbieter bin ich nach §7 Abs.1 TMG für eigene Inhalte auf diesen Seiten verantwortlich. Nach §§8–10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu suchen, die auf eine rechtswidrige Tätigkeit hinweisen.\n\nVerpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben davon unberührt. Eine Haftung ist jedoch erst ab dem Zeitpunkt möglich, an dem ich von einer konkreten Rechtsverletzung Kenntnis erlange. Sobald ich von solchen Verstößen erfahre, entferne ich die Inhalte umgehend.`
             },
             links: {
                 title: "Haftung für Links",
-                content: `Unsere Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entfernen wir diese Links umgehend.`
+                content: `Meine Webseite enthält Links zu externen Webseiten Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb übernehme ich keine Gewähr für diese fremden Inhalte. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich.\n\nDie verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht erkennbar. Eine permanente Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Hinweise auf eine Rechtsverletzung nicht zumutbar. Bei Bekanntwerden solcher Verstöße entferne ich diese Links umgehend.`
             },
             copyright: {
                 title: "Urheberrecht",
-                content: `Die von den Betreibern erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors oder Erstellers.\n\nDownloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch erlaubt. Soweit Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und entsprechend gekennzeichnet.\n\nSolltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, gib uns bitte Bescheid. Bei Bekanntwerden solcher Verstöße entfernen wir die betreffenden Inhalte sofort.`
+                content: `Die von den Betreibern erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors oder Erstellers.\n\nDownloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch erlaubt. Soweit Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet und entsprechend gekennzeichnet.\n\nSolltest du trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, informiere mich bitte. Bei Bekanntwerden solcher Verstöße entferne ich die betreffenden Inhalte sofort.`
             },
             dispute: {
                 title: "EU-Streitschlichtung / Verbraucherschlichtung",
-                content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr\n\nUnsere E-Mail-Adresse findest du oben im Impressum.\n\nWir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
+                content: `Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr\n\nMeine E-Mail-Adresse findest du oben im Impressum.\n\nIch bin weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.`
             }
         }
     },
     privacy: {
         title: "Datenschutz & Privatsphäre",
         description:
-            "Uns ist dein Datenschutz wichtig. Hier erfährst du, welche Daten wir erheben, warum und welche Rechte du hast.",
+            "Mir ist dein Datenschutz wichtig. Hier erfährst du, welche Daten ich erhebe, warum und welche Rechte du hast.",
         lastUpdated: "Zuletzt aktualisiert: {date}",
         section: {
             controller: {
@@ -123,32 +123,32 @@ export default {
                 content: `{name}\n{street}\n{postalCodeCity}\n{country}\n\nWenn du Fragen zur Datenverarbeitung hast, melde dich unter: {email}`
             },
             dataCollected: {
-                title: "Welche Daten wir erfassen",
-                content: `Wir erfassen eventuell personenbezogene Daten, die du uns direkt gibst (z. B. bei Kontaktaufnahme), technische Daten (Geräte- und Browserinformationen) sowie Nutzungsdaten (besuchte Seiten, Interaktionen). Das hilft uns, die Webseite zu betreiben und zu verbessern.`
+                title: "Welche Daten ich erfasse",
+                content: `Ich erfasse eventuell personenbezogene Daten, die du mir direkt gibst (z. B. bei Kontaktaufnahme), technische Daten (Geräte- und Browserinformationen) sowie Nutzungsdaten (besuchte Seiten, Interaktionen). Das hilft mir, die Webseite zu betreiben und zu verbessern.`
             },
             legalBasis: {
                 title: "Rechtsgrundlage der Verarbeitung",
-                content: `Wir verarbeiten personenbezogene Daten, wenn das nötig ist, um unsere Dienste bereitzustellen, rechtliche Pflichten zu erfüllen, berechtigte Interessen zu schützen (z. B. Sicherheit, Betrugsprävention) oder – falls erforderlich – mit deiner Einwilligung (z. B. für Cookies und Analysezwecke).`
+                content: `Ich verarbeite personenbezogene Daten, wenn das nötig ist, um meine Dienste bereitzustellen, rechtliche Pflichten zu erfüllen, berechtigte Interessen zu schützen (z. B. Sicherheit, Betrugsprävention) oder – falls erforderlich – mit deiner Einwilligung (z. B. für Cookies und Analysezwecke).`
             },
             cookies: {
                 title: "Cookies",
-                content: `Wir verwenden Cookies und ähnliche Technologien nur, um die grundlegende Funktion der Webseite sicherzustellen. Essenzielle Cookies sind notwendig, damit die Seite richtig funktioniert.`
+                content: `Ich verwende Cookies und ähnliche Technologien nur, um die grundlegende Funktion der Webseite sicherzustellen. Essenzielle Cookies sind notwendig, damit die Seite richtig funktioniert.`
             },
             retention: {
                 title: "Speicherdauer",
-                content: `Wir speichern personenbezogene Daten nur so lange, wie es für die beschriebenen Zwecke notwendig ist oder gesetzliche Vorschriften es verlangen. Wenn Daten nicht mehr gebraucht werden, löschen oder anonymisieren wir sie.`
+                content: `Ich speichere personenbezogene Daten nur so lange, wie es für die beschriebenen Zwecke notwendig ist oder gesetzliche Vorschriften es verlangen. Wenn Daten nicht mehr gebraucht werden, lösche oder anonymisiere ich sie.`
             },
             security: {
                 title: "Sicherheit",
-                content: `Wir setzen angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten vor Verlust, Zerstörung, Veränderung, unbefugtem Zugriff oder Offenlegung zu schützen.`
+                content: `Ich setze angemessene technische und organisatorische Maßnahmen ein, um personenbezogene Daten vor Verlust, Zerstörung, Veränderung, unbefugtem Zugriff oder Offenlegung zu schützen.`
             },
             rights: {
                 title: "Deine Rechte",
-                content: `Nach der DSGVO hast du Rechte wie Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Um diese Rechte auszuüben, schreib uns an {email}.`
+                content: `Nach der DSGVO hast du Rechte wie Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Um diese Rechte auszuüben, schreib mir an {email}.`
             },
             contact: {
                 title: "Kontakt",
-                content: `Bei Fragen zum Datenschutz erreichst du uns unter: {email}\nDu kannst auch die Kontaktdaten aus dem Impressum verwenden.`
+                content: `Bei Fragen zum Datenschutz erreichst du mich unter: {email}\nDu kannst auch die Kontaktdaten aus dem Impressum verwenden.`
             },
             dispute: {
                 title: "EU-Streitbeilegung",
@@ -167,10 +167,10 @@ export default {
             }
         },
         event: {
-            headline: "Feiern und Veranstaltungen",
+            headline: "Veranstaltungen",
             title: "Prana Gemeinschaftstreffen",
             description:
-                "Bei Prana bringen wir Menschen rund um nährendes Essen, gemeinsame Tische und achtsame Momente zusammen. Von regelmäßigen Gemeinschaftsmahlzeiten bis hin zu besonderen Anlässen ist unser Raum für Verbindung, Feiern und Leichtigkeit geschaffen.",
+                "Bei Prana bringe ich Menschen rund um nährendes Essen, gemeinsame Tische und achtsame Momente zusammen. Von regelmäßigen Gemeinschaftsmahlzeiten bis hin zu besonderen Anlässen ist mein Raum für Verbindung, Feiern und Leichtigkeit geschaffen.",
             features: {
                 community: {
                     title: "Regelmäßige Gemeinschaftsevents",
@@ -198,25 +198,25 @@ export default {
             }
         },
         philosophy: {
-            title: "Unsere Philosophie",
+            title: "Meine Philosophie",
             description:
-                "Wir glauben an leckeres, nährstoffreiches Essen, das deinen Körper stärkt und deine Sinne begeistert. Das macht Café Prana besonders:"
+                "Ich glaube an leckeres, nährstoffreiches Essen, das deinen Körper stärkt und deine Sinne begeistert. Das macht Café Prana besonders:"
         },
         features: {
             glutenFree: {
                 title: "100 % Glutenfrei",
                 description:
-                    "Alles auf unserer Karte ist glutenfrei – sicher für Zöliakie-Betroffene und Menschen mit Unverträglichkeiten."
+                    "Alles auf meiner Karte ist glutenfrei – sicher für Zöliakie-Betroffene und Menschen mit Unverträglichkeiten."
             },
             plantBased: {
                 title: "Pflanzlich & Bio",
                 description:
-                    "Wir verwenden ausschließlich pflanzliche, biologische Zutaten – so regional wie möglich."
+                    "Ich verwende ausschließlich pflanzliche, biologische Zutaten – so regional wie möglich."
             },
             bowls: {
                 title: "Nährstoffreiches Lunch & Brunch",
                 description:
-                    "Unsere hausgemachten Gerichte geben dir Energie mit vielen wichtigen Makro- und Mikronährstoffen."
+                    "Meine hausgemachten Gerichte geben dir Energie mit vielen wichtigen Makro- und Mikronährstoffen."
             },
             community: {
                 title: "Gemütlicher Treffpunkt",
@@ -237,7 +237,7 @@ export default {
         menu: {
             title: "Menü-Highlights",
             description:
-                "Hier findest du einige unserer beliebtesten Gerichte und Getränke, die du jeden Tag genießen kannst.",
+                "Hier findest du einige meiner Lieblingsgerichte und Getränke, die du jeden Tag genießen kannst.",
             items: {
                 waffle: {
                     title: "Herzhafte Waffel",
@@ -255,7 +255,7 @@ export default {
                 cacao: {
                     title: "Zeremonieller Kakao",
                     description:
-                        "Wir glauben an Achtsamkeit – und an die Kraft von purem, rohem Kakao, der Körper und Seele stärkt."
+                        "Ich glaube an Achtsamkeit – und an die Kraft von purem, rohem Kakao, der Körper und Seele stärkt."
                 }
             },
             cta: {
@@ -278,10 +278,10 @@ export default {
                 "Gegründet von einer Yogini, Ernährungsberaterin, Genießerin, Naturliebhaberin, Fitnesstrainerin, Gesundheitsköchin und Barista, die alle Aspekte von Energie und Gesundheit unter einem Dach vereinen wollte. Café Prana ist eine One-Woman-Show die sich einer herzlichen Atmosphäre und mit hochwertigen Zutaten abspielt. Regionale, saisonale Produkte treffen auf nährstoffreiche Superfoods. Ob du dir einen Kaffee to go holst oder gemütlich brunchen willst – hier wartet ein offener, sicherer Raum auf dich. Langfristig möchte Prana noch nachhaltiger werden und echte Gemeinschaft fördern."
         },
         testimonials: {
-            title: "Das sagen unsere Gäste",
-            description: "Vertrau nicht nur uns – lies, was andere über Café Prana sagen.",
+            title: "Das sagen meine Gäste",
+            description: "Vertrau nicht nur mir – lies, was andere über Café Prana sagen.",
             cta: {
-                label: "Bewerte uns auf Google"
+                label: "Bewerte mich auf Google"
             }
         },
         faq: {
@@ -290,11 +290,11 @@ export default {
             items: {
                 glutenFree: {
                     question: "Ist wirklich alles glutenfrei?",
-                    answer: "Ja! Wir sind komplett glutenfrei. Alle Gerichte werden ohne Gluten zubereitet – du kannst also unbesorgt genießen."
+                    answer: "Ja! Ich bin komplett glutenfrei. Alle Gerichte werden ohne Gluten zubereitet – du kannst also unbesorgt genießen."
                 },
                 reservations: {
                     question: "Kann man reservieren?",
-                    answer: "Im Moment nehmen wir Reservierungen nur über Instagram oder E-Mail entgegen. Du kannst aber gern einfach vorbeikommen – meist ist ein Platz frei!"
+                    answer: "Im Moment nehme ich Reservierungen nur über Instagram oder E-Mail entgegen. Du kannst aber gern einfach vorbeikommen – meist ist ein Platz frei!"
                 },
                 pets: {
                     question: "Sind Haustiere erlaubt?",
@@ -302,7 +302,7 @@ export default {
                 },
                 takeaway: {
                     question: "Gibt’s Take-away?",
-                    answer: "Ja, du kannst die meisten unserer Gerichte auch mitnehmen. Frag einfach unser Team vor Ort."
+                    answer: "Ja, du kannst die meisten meiner Gerichte auch mitnehmen. Frag mich vor Ort."
                 }
             }
         },
@@ -313,10 +313,10 @@ export default {
             hours: {
                 heading: "Öffnungszeiten",
                 monday: {day: "Montag", time: "Geschlossen"},
-                tuesday: {day: "Dienstag", time: "07:00 - 15:00"},
-                wednesday: {day: "Mittwoch", time: "07:00 - 15:00"},
-                thursday: {day: "Donnerstag", time: "07:00 - 15:00"},
-                friday: {day: "Freitag", time: "07:00 - 15:00"},
+                tuesday: {day: "Dienstag", time: "07:30 - 15:00"},
+                wednesday: {day: "Mittwoch", time: "07:30 - 15:00"},
+                thursday: {day: "Donnerstag", time: "07:30 - 15:00"},
+                friday: {day: "Freitag", time: "07:30 - 15:00"},
                 saturday: {day: "Samstag", time: "09:00 - 17:00"},
                 sunday: {day: "Sonntag", time: "09:00 - 17:00"}
             },
@@ -393,14 +393,14 @@ export default {
                 },
                 cacao: {
                     title: "Zeremonieller Kakao",
-                    desc: "Wir glauben an Achtsamkeit und die Kraft von purem Kakao, der dein Herz öffnet.",
+                    desc: "Ich glaube an Achtsamkeit und die Kraft von purem Kakao, der dein Herz öffnet.",
                     ingredients: "Rohkakao, heißes Wasser oder Mylk"
                 }
             }
         },
         food: {
             title: "Essen & Brunch",
-            options: "Unsere Toppings werden täglich frisch und harmonisch abgestimmt.",
+            options: "Meine Toppings werden täglich frisch und harmonisch abgestimmt.",
             items: {
                 porridge: {
                     title: "Porridge",
@@ -427,9 +427,9 @@ export default {
                 },
                 lunch: {
                     title: "Pranas Lunch",
-                    desc: "Ausgewogener, nährender Lunch für einen energievollen Nachmittag.",
+                    desc: "Ausgewogener und nährender Lunch, um deinen Nachmittag zu stärken.",
                     ingredients:
-                        "Unsere Lunchgerichte variieren je nach Saison und Verfügbarkeit frischer Zutaten."
+                        "Meine Lunchgerichte variieren je nach Saison und Verfügbarkeit frischer Zutaten."
                 },
                 soup: {
                     title: "Tagessuppe",
@@ -463,7 +463,7 @@ export default {
             "community-xmas-dinner": {
                 title: "Community Weihnachtsdinner",
                 badge: "Weihnachtswoche",
-                intro: "Feiere Heiligabend mit unserem Community Weihnachtsdinner im Café Prana. Ein warmer Abend mit nährendem Essen, gemeinsamen Tafeln und festlicher Stimmung, um als Community zusammenzukommen.",
+                intro: "Feiere Heiligabend mit meinem Community Weihnachtsdinner im Café Prana. Ein warmer Abend mit nährendem Essen, gemeinsamen Tafeln und festlicher Stimmung, um zusammenzukommen.",
                 date: "24. Dezember",
                 time: "18:00",
                 location: "Café Prana, Berlin",
@@ -475,14 +475,14 @@ export default {
                 expectations:
                     "Drei Gänge Weihnachtsdinner · 100 % pflanzlich und glutenfrei · Warme Community Atmosphäre · Saisonale Bio Zutaten",
                 reservation:
-                    "Reservierung empfohlen. Bitte buche über www.cafeprana.de oder komm direkt im Café vorbei.",
+                    "Reservierung empfohlen. Bitte buche via www.cafeprana.de oder reserviere direkt im Café.",
                 forWho: "Perfekt für Freundinnen, Familien und alle, die Heiligabend entspannt und achtsam verbringen möchten."
             },
 
             "christmas-brunch-buffet": {
                 title: "Weihnachts Brunch Buffet",
                 badge: "Weihnachtswoche",
-                intro: "Genieße den ersten Weihnachtstag mit unserem festlichen Weihnachts Brunch Buffet im Café Prana. Ein entspannter Vormittag mit nährenden Speisen, warmen Getränken und gemütlicher Feiertagsstimmung.",
+                intro: "Genieße den ersten Weihnachtstag mit meinem festlichen Weihnachts Brunch Buffet im Café Prana. Ein entspannter Vormittag mit nährenden Speisen, warmen Getränken und gemütlicher Feiertagsstimmung.",
                 date: "25. Dezember",
                 time: "11:00–13:00",
                 location: "Café Prana, Berlin",
@@ -494,14 +494,14 @@ export default {
                 expectations:
                     "Pflanzliches Brunch Buffet · Glutenfreie Optionen · Entspannte Feiertagsatmosphäre · Saisonale Bio Zutaten",
                 reservation:
-                    "Reservierung empfohlen, da die Plätze begrenzt sind. Bitte reserviere über www.cafeprana.de.",
+                    "Reservierung empfohlen, da die Plätze begrenzt sind. Bitte reserviere via www.cafeprana.de.",
                 forWho: "Ideal für alle, die den ersten Weihnachtstag mit einem nährenden und stressfreien Brunch genießen möchten."
             },
 
             "community-breakfast": {
                 title: "Community Frühstück",
                 badge: "Special Guests",
-                intro: "Starte den Tag mit unserem Community Frühstück im Café Prana. Ein entspanntes Morgentreffen mit nährendem Essen, warmen Getränken und einer offenen Community Atmosphäre.",
+                intro: "Starte den Tag mit meinem Community Frühstück im Café Prana. Ein entspanntes Morgentreffen mit nährendem Essen, warmen Getränken und einer offenen Community Atmosphäre.",
                 date: "28. Dezember",
                 time: "09:30–11:30",
                 location: "Café Prana, Berlin",
@@ -513,14 +513,14 @@ export default {
                 expectations:
                     "Pflanzliches Frühstücksbuffet · Glutenfreie Optionen · Gemütliche Morgenatmosphäre · Begrenzte Plätze",
                 reservation:
-                    "Reservierung erforderlich. Dieses Event ist exklusiv für unsere Special Guests. Bitte reserviere über www.cafeprana.de.",
+                    "Reservierung erforderlich. Dieses Event ist exklusiv für meine Special Guests. Bitte reserviere via www.cafeprana.de.",
                 forWho: "Für eingeladene Gäste, die ein langsames und nährendes Community Frühstück genießen möchten."
             },
 
             "winter-celebration-dinner": {
                 title: "Winter Celebration Dinner",
                 badge: "Prana Best of",
-                intro: "Lass uns das neue Jahr mit unserem Winter Celebration Dinner feiern. Pranas jährliches Fünf Gänge Dinner vereint saisonale Highlights und beliebte Klassiker zu einem besonderen Abend.",
+                intro: "Lass mich das neue Jahr mit meinem Winter Celebration Dinner feiern. Pranas jährliches Fünf Gänge Dinner vereint saisonale Highlights und beliebte Klassiker zu einem besonderen Abend.",
                 date: "5. Januar",
                 time: "18:30",
                 location: "Café Prana, Berlin",
@@ -537,7 +537,7 @@ export default {
                     "Willkommens Getränk inklusive"
                 ],
                 reservation:
-                    "Reservierung erforderlich, da die Plätze begrenzt sind. Bitte buche über www.cafeprana.de oder direkt im Café.",
+                    "Reservierung erforderlich, da die Plätze begrenzt sind. Bitte buche via www.cafeprana.de oder direkt im Café.",
                 forWho: "Perfekt für alle, die saisonale Küche, pflanzliches Kochen und einen bewussten Start ins neue Jahr lieben."
             }
         }
@@ -545,13 +545,13 @@ export default {
     reservations: {
         title: "Planen Sie Ihren Besuch im Cafe Prana",
         description:
-            "Ob besonderer Anlass, entspanntes Treffen oder ein ruhiges Date – mit einer Reservierung können wir Ihren Platz ganz nach Ihren Wünschen vorbereiten.",
+            "Ob besonderer Anlass, entspanntes Treffen oder ein ruhiges Date – mit einer Reservierung kann ich Ihren Platz ganz nach Ihren Wünschen vorbereiten.",
 
         features: {
             request: {
                 title: "Tisch anfragen",
                 description:
-                    "Wählen Sie Datum, Uhrzeit und Anzahl der Gäste, um eine Reservierung anzufragen. Wir versuchen, allen Wünschen gerecht zu werden."
+                    "Wählen Sie Datum, Uhrzeit und Anzahl der Gäste, um eine Reservierung anzufragen. Ich versuche, allen Wünschen gerecht zu werden."
             },
             confirmation: {
                 title: "Bestätigung innerhalb von 24 Stunden",
@@ -566,12 +566,12 @@ export default {
             special: {
                 title: "Besondere Wünsche & Allergien",
                 description:
-                    "Nutzen Sie das Nachrichtenfeld, um uns Allergien, besondere Bedürfnisse oder spezielle Wünsche mitzuteilen."
+                    "Nutzen Sie das Nachrichtenfeld, um mir Allergien, besondere Bedürfnisse oder spezielle Wünsche mitzuteilen."
             },
             changes: {
                 title: "Änderungen & Stornierung",
                 description:
-                    "Sie möchten ändern oder stornieren? Bitte informieren Sie uns so früh wie möglich, damit wir den Tisch anderweitig vergeben können."
+                    "Sie möchten ändern oder stornieren? Bitte informieren Sie mich so früh wie möglich, damit ich den Tisch anderweitig vergeben kann."
             }
         },
 
@@ -599,9 +599,9 @@ export default {
             modal: {
                 title: "Reservierungsanfrage erhalten",
                 body: {
-                    p1: "Danke! Wir haben deine Reservierungsanfrage erhalten.",
-                    p2_pre: "Wir prüfen die Verfügbarkeit und senden dir innerhalb von 24 Stunden eine Bestätigungs-E-Mail. Falls du keine Bestätigung erhältst, prüfe bitte deinen Spam-Ordner oder",
-                    p2_link: "kontaktiere uns",
+                    p1: "Danke! Ich habe deine Reservierungsanfrage erhalten.",
+                    p2_pre: "Ich prüfe die Verfügbarkeit und sende dir innerhalb von 24 Stunden eine Bestätigungs-E-Mail. Falls du keine Bestätigung erhältst, prüfe bitte deinen Spam-Ordner oder",
+                    p2_link: "kontaktiere mich",
                     p2_post: "."
                 },
                 closeButton: "Okay"
@@ -619,7 +619,7 @@ export default {
                     max: "Maximal 20 Gäste erlaubt"
                 },
                 date: {invalid: "Bitte gib ein gültiges Datum an (heute oder später)"},
-                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:00 und 16:00 sein"},
+                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:30 und 16:00 sein"},
                 privacy: {
                     required:
                         "Bitte bestätige die Datenschutzerklärung und stimme der Kontaktaufnahme zu."
@@ -629,7 +629,7 @@ export default {
                 validationTitle: "Formularfehler",
                 successTitle: "Reservierung erfolgreich gesendet",
                 successDescription:
-                    "Wir melden uns bei dir, sobald wir deine Anfrage bearbeitet haben.",
+                    "Ich melde mich bei dir, sobald ich deine Anfrage bearbeitet habe.",
                 sendErrorTitle: "Fehler beim Senden",
                 sendErrorDescription: "Bitte versuche es später erneut."
             }
