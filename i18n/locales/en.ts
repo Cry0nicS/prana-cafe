@@ -312,10 +312,10 @@ export default {
             hours: {
                 heading: "Opening Hours",
                 monday: {day: "Monday", time: "Closed"},
-                tuesday: {day: "Tuesday", time: "07:00 - 15:00"},
-                wednesday: {day: "Wednesday", time: "07:00 - 15:00"},
-                thursday: {day: "Thursday", time: "07:00 - 15:00"},
-                friday: {day: "Friday", time: "07:00 - 15:00"},
+                tuesday: {day: "Tuesday", time: "07:30 - 15:00"},
+                wednesday: {day: "Wednesday", time: "07:30 - 15:00"},
+                thursday: {day: "Thursday", time: "07:30 - 15:00"},
+                friday: {day: "Friday", time: "07:30 - 15:00"},
                 saturday: {day: "Saturday", time: "09:00 - 17:00"},
                 sunday: {day: "Sunday", time: "09:00 - 17:00"}
             },
@@ -505,7 +505,7 @@ export default {
                 phone: {invalid: "Please provide a valid phone number with country code"},
                 guests: {min: "At least 1 guest is required", max: "Maximum 20 guests allowed"},
                 date: {invalid: "Please provide a valid date (today or later)"},
-                time: {invalid: "Value must be a valid Time between 07:00 and 16:00"},
+                time: {invalid: "Value must be a valid Time between 07:30 and 16:00"},
                 privacy: {
                     required: "Please confirm the privacy policy and consent to be contacted."
                 }

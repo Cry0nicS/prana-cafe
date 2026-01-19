@@ -316,10 +316,10 @@ export default {
             hours: {
                 heading: "Horaires d’ouverture",
                 monday: {day: "Lundi", time: "Fermé"},
-                tuesday: {day: "Mardi", time: "07:00 - 15:00"},
-                wednesday: {day: "Mercredi", time: "07:00 - 15:00"},
-                thursday: {day: "Jeudi", time: "07:00 - 15:00"},
-                friday: {day: "Vendredi", time: "07:00 - 15:00"},
+                tuesday: {day: "Mardi", time: "07:30 - 15:00"},
+                wednesday: {day: "Mercredi", time: "07:30 - 15:00"},
+                thursday: {day: "Jeudi", time: "07:30 - 15:00"},
+                friday: {day: "Vendredi", time: "07:30 - 15:00"},
                 saturday: {day: "Samedi", time: "09:00 - 17:00"},
                 sunday: {day: "Dimanche", time: "09:00 - 17:00"}
             },
@@ -513,7 +513,7 @@ export default {
                 phone: {invalid: "Veuillez fournir un numéro de téléphone valide avec l'indicatif"},
                 guests: {min: "Au moins 1 invité est requis", max: "Maximum 20 invités autorisés"},
                 date: {invalid: "Veuillez fournir une date valide (aujourd'hui ou ultérieure)"},
-                time: {invalid: "La valeur doit être une heure valide entre 07:00 et 16:00"},
+                time: {invalid: "La valeur doit être une heure valide entre 07:30 et 16:00"},
                 privacy: {
                     required:
                         "Veuillez confirmer la politique de confidentialité et consentir à être contacté."

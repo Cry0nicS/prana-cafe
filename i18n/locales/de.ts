@@ -167,14 +167,33 @@ export default {
             }
         },
         event: {
+            headline: "Veranstaltungen",
             title: "Prana Gemeinschaftstreffen",
             description:
                 "Bei Prana bringe ich Menschen rund um nährendes Essen, gemeinsame Tische und achtsame Momente zusammen. Von regelmäßigen Gemeinschaftsmahlzeiten bis hin zu besonderen Anlässen ist mein Raum für Verbindung, Feiern und Leichtigkeit geschaffen.",
             features: {
+                community: {
+                    title: "Regelmäßige Gemeinschaftsevents",
+                    description:
+                        "Regelmäßige Treffen wie Frühstück, Brunch und Abendessen, um gemeinsam nährendes Essen und entspannte Momente zu genießen."
+                },
+                specials: {
+                    title: "Besondere Events und Feiern",
+                    description:
+                        "Saisonale Dinner, thematische Abende und besondere Gemeinschaftstreffen, die das ganze Jahr über besondere Momente feiern."
+                },
                 private: {
                     title: "Private Buchungen und individuelle Events",
                     description:
-                        "Buche meinen Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus meiner pflanzlichen Küche."
+                        "Buche unseren Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus unserer pflanzlichen Küche."
+                }
+            },
+            cta: {
+                reservation: {
+                    label: "Jetzt Platz reservieren"
+                },
+                events: {
+                    label: "Alle Veranstaltungen ansehen"
                 }
             }
         },
@@ -285,6 +304,25 @@ export default {
                     question: "Gibt’s Take-away?",
                     answer: "Ja, du kannst die meisten meiner Gerichte auch mitnehmen. Frag mich vor Ort."
                 }
+            }
+        },
+        cta: {
+            title: "Komm vorbei und schmeck den Unterschied",
+            description:
+                "Besuch das Café Prana und entdecke deinen neuen Lieblingsort. Wir haben Dienstag bis Sonntag geöffnet – für Kaffee, Frühstück, Brunch und Mittagessen.",
+            hours: {
+                heading: "Öffnungszeiten",
+                monday: {day: "Montag", time: "Geschlossen"},
+                tuesday: {day: "Dienstag", time: "07:30 - 15:00"},
+                wednesday: {day: "Mittwoch", time: "07:30 - 15:00"},
+                thursday: {day: "Donnerstag", time: "07:30 - 15:00"},
+                friday: {day: "Freitag", time: "07:30 - 15:00"},
+                saturday: {day: "Samstag", time: "09:00 - 17:00"},
+                sunday: {day: "Sonntag", time: "09:00 - 17:00"}
+            },
+            links: {
+                getDirections: "Route anzeigen",
+                reservations: "Reservieren"
             }
         }
     },
@@ -518,7 +556,12 @@ export default {
             confirmation: {
                 title: "Bestätigung innerhalb von 24 Stunden",
                 description:
-                    "Reservierungen werden innerhalb von 24 Stunden bestätigt. Bitte geben Sie mir bis zu einem Tag Zeit für die endgültige Rückmeldung."
+                    "Reservierungen werden innerhalb von 24 Stunden bestätigt. Bitte geben Sie uns bis zu einem Tag Zeit für die endgültige Rückmeldung."
+            },
+            email: {
+                title: "E-Mail-Bestätigung",
+                description:
+                    "Sie erhalten eine E-Mail mit allen Details zur Reservierung sowie möglichen weiteren Hinweisen."
             },
             special: {
                 title: "Besondere Wünsche & Allergien",
@@ -576,7 +619,7 @@ export default {
                     max: "Maximal 20 Gäste erlaubt"
                 },
                 date: {invalid: "Bitte gib ein gültiges Datum an (heute oder später)"},
-                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:00 und 16:00 sein"},
+                time: {invalid: "Der Wert muss eine gültige Uhrzeit zwischen 07:30 und 16:00 sein"},
                 privacy: {
                     required:
                         "Bitte bestätige die Datenschutzerklärung und stimme der Kontaktaufnahme zu."
