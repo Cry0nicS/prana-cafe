@@ -185,7 +185,7 @@ export default {
                 private: {
                     title: "Private Buchungen und individuelle Events",
                     description:
-                        "Buche unseren Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus unserer pflanzlichen Küche."
+                        "Buche den Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus pflanzlichen Küche."
                 }
             },
             cta: {
@@ -332,12 +332,6 @@ export default {
             options:
                 "Wähl deine Lieblingsmilch: Hafer-Mandel, Hafer-Kokos, hausgemachte Cashew-Kokos-Mylk, Soja oder Mandel",
             items: {
-                haselnussLatte: {
-                    title: "Haselnuss-Latte",
-                    desc: "Nussig, reichhaltig und wärmend.",
-                    ingredients:
-                        "Doppelter Espresso, geröstetes Haselnussöl, gedämpfte Mylk nach Wahl"
-                },
                 dirtyEarl: {
                     title: "Dirty Earl",
                     desc: "Feine Mischung aus Schwarztee und Kaffee.",

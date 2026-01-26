@@ -331,11 +331,6 @@ export default {
             options:
                 "Choose your favorite: oat-almond blend, oat-coconut blend, homemade cashew-coconut mylk, soy, almond",
             items: {
-                haselnussLatte: {
-                    title: "Hazelnut Latte",
-                    desc: "Nutty, rich, and warming.",
-                    ingredients: "Double espresso, roasted hazelnut oil, steamed mylk of choice"
-                },
                 dirtyEarl: {
                     title: "Dirty Earl",
                     desc: "Finest blend of black tea and coffee.",

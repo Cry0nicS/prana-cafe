@@ -335,12 +335,6 @@ export default {
             options:
                 "Choisissez votre lait préféré: mélange avoine-amande, avoine-coco, lait de cajou-coco maison, soja, amande",
             items: {
-                haselnussLatte: {
-                    title: "Latte noisette",
-                    desc: "Gourmand, riche et réconfortant.",
-                    ingredients:
-                        "Double espresso, huile de noisette torréfiée, lait végétal au choix"
-                },
                 dirtyEarl: {
                     title: "Dirty Earl",
                     desc: "Un mélange sophistiqué de thé noir et de café.",

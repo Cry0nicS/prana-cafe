@@ -12,11 +12,6 @@ const categories = [
         id: "drinksCoffee",
         items: [
             {
-                name: "haselnussLatte",
-                image: "/images/menu/haselnuss-latte.png",
-                price: "5,8€"
-            },
-            {
                 name: "dirtyEarl",
                 image: "/images/menu/dirty-earl.png",
                 price: "5.2€"
