@@ -185,7 +185,7 @@ export default {
                 private: {
                     title: "Private Buchungen und individuelle Events",
                     description:
-                        "Buche den Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus pflanzlichen Küche."
+                        "Buche den Raum für deine eigene Feier, einen Workshop oder ein Treffen, optional mit Catering aus der pflanzlichen Küche."
                 }
             },
             cta: {
