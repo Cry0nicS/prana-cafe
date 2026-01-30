@@ -624,5 +624,10 @@ export default {
                 forWho: "Parfait pour toutes celles et ceux qui aiment la cuisine de saison, la cuisine végétale et souhaitent accueillir la nouvelle année avec intention."
             }
         }
+    },
+    cookieBanner: {
+        title: "Avis sur les cookies",
+        description:
+            "Nous utilisons des cookies essentiels nécessaires au fonctionnement de ce site web. En outre, nous utilisons des cookies fonctionnels ainsi que des outils d’analyse anonymisés. Nous ne collectons aucune donnée personnelle."
     }
 };
