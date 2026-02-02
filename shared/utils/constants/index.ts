@@ -8,3 +8,5 @@
 export * from "./company";
 export * from "./google";
 export * from "./i18n";
+
+export const INFO_BANNER_VERSION = "2026-02-break";

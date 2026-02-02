@@ -3,7 +3,7 @@ const {headerDesktop, headerMobile} = useNavItems();
 </script>
 <template>
     <UHeader
-        class="h-[70px]"
+        class="h-17.5"
         mode="modal"
         :menu="{transition: true}"
         :ui="{
