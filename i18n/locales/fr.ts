@@ -632,7 +632,7 @@ export default {
     },
     infoBanner: {
         description:
-            "Je fais une courte pause du 3 au 5 février. Le café sera fermé pendant cette période. Au plaisir de vous retrouver le samedi 6 février !",
+            "Je fais une courte pause du 3 au 6 février. Le café sera fermé pendant cette période. Au plaisir de vous retrouver le samedi 7 février!",
         actionLabel: "C'est noté !"
     }
 };

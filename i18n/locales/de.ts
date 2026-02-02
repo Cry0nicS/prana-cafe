@@ -636,7 +636,7 @@ export default {
     },
     infoBanner: {
         description:
-            "Ich nehme mir vom 3. bis 5. Februar eine kurze Pause. Das Café ist in dieser Zeit geschlossen. Ich freue mich darauf, Sie am Samstag, den 6. Februar wieder begrüßen zu dürfen!",
+            "Ich nehme mir vom 3. bis 6. Februar eine kurze Pause. Das Café ist in dieser Zeit geschlossen. Ich freue mich darauf, Sie am Samstag, den 7. Februar wieder begrüßen zu dürfen!",
         actionLabel: "Alles klar!"
     }
 };

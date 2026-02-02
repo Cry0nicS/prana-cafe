@@ -624,7 +624,7 @@ export default {
     },
     infoBanner: {
         description:
-            "I'm taking a short break from 3rd to 5th of February. The café will be closed during this time. Looking forward to welcoming you back Saturday, 6th of February!",
+            "I'm taking a short break from 3rd to 6th of February. The café will be closed during this time. Looking forward to welcoming you back Saturday, 7th of February!",
         actionLabel: "Alrighty!"
     }
 };
