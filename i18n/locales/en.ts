@@ -621,5 +621,10 @@ export default {
         title: "Cookie Notice",
         description:
             "We use essential cookies required for this website to function. We also use functional cookies and anonymized analytics to improve the site. We do not collect personal data."
+    },
+    infoBanner: {
+        description:
+            "I'm taking a short break from 3rd to 5th of February. The café will be closed during this time. Looking forward to welcoming you back Saturday, 6th of February!",
+        actionLabel: "Altighty!"
     }
 };

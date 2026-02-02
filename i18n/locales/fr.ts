@@ -629,5 +629,10 @@ export default {
         title: "Avis sur les cookies",
         description:
             "Nous utilisons des cookies essentiels nécessaires au fonctionnement de ce site web. En outre, nous utilisons des cookies fonctionnels ainsi que des outils d’analyse anonymisés. Nous ne collectons aucune donnée personnelle."
+    },
+    infoBanner: {
+        description:
+            "Je fais une courte pause du 3 au 5 février. Le café sera fermé pendant cette période. Au plaisir de vous retrouver le samedi 6 février !",
+        actionLabel: "C'est noté !"
     }
 };
