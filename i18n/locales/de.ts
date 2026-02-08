@@ -533,6 +533,25 @@ export default {
                 reservation:
                     "Reservierung erforderlich, da die Plätze begrenzt sind. Bitte buche via www.cafeprana.de oder direkt im Café.",
                 forWho: "Perfekt für alle, die saisonale Küche, pflanzliches Kochen und einen bewussten Start ins neue Jahr lieben."
+            },
+
+            "cacao-journey-series": {
+                title: "Die Kakao-Reise im Café Prana",
+                badge: "Workshopreihe",
+                intro: "Eine herzöffnende Workshopreihe im Café Prana in Prenzlauer Berg, begleitet von zeremoniellem Kakao. Gemeinsam tauchen wir ein in Rituale, Körperbewusstsein, Bewegung, Stille und echten Austausch.",
+                date: "Start: 22. Februar 2026 · Wöchentliche Termine donnerstags · Abschlusszeremonie: 29. März 2026",
+                time: "Donnerstags um 17:00 Uhr (Auftakt-Workshop am 22. Februar; Abschlusszeremonie am 29. März)",
+                location: "Café Prana, Pasteurstr. 2, Berlin",
+                price: "Wird noch bekannt gegeben",
+                concept:
+                    "Die Reihe beginnt mit einem Ritual-Kakao-Workshop mit Lea von Nature Soul am 22. Februar, bei dem du die Pflanze und ihre Wirkung kennenlernst, gemeinsam Kakao zubereitest und einen ersten achtsamen Zugang zur rituellen Anwendung bekommst. Es folgen fünf wöchentliche Termine mit intuitiver Bewegung, Sharing Circles und innerer Arbeit. Am 29. März schließt die Reihe mit einer Kakaozeremonie zur Integration und Öffnung für den Frühling ab.",
+                menuNote:
+                    "Es wird zeremonieller Kakao serviert – rein pflanzlich, alkoholfrei und achtsam zubereitet. (Bitte informiere uns über eventuelle Unverträglichkeiten.)",
+                expectations:
+                    "Ritualkakao · Intuitive Bewegung · Sharing Circles & innere Arbeit · Momente der Stille · Sanfte Begleitung · Gemeinschaftliche Verbundenheit",
+                reservation:
+                    "Eine Reservierung wird empfohlen. Buchung über www.cafeprana.de oder direkt vor Ort im Café.",
+                forWho: "Für alle, die neugierig sind, sich mit Herz, Körper und Seele zu verbinden – getragen von einer Pflanze, die nicht nur lecker schmeckt, sondern tief verbindet."
             }
         }
     },

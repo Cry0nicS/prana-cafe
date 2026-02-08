@@ -26,8 +26,14 @@ export const useEvents = () => {
         {
             slug: "winter-celebration-dinner",
             image: "/images/events/posts/winter-celebration-dinner.png",
-            tag: t("events.items.winter-celebration-best-of.badge"),
+            tag: t("events.items.winter-celebration-dinner.badge"),
             dateIso: "2026-01-05"
+        },
+        {
+            slug: "cacao-journey-series",
+            image: "/images/events/posts/cacao-journey-series.png",
+            tag: t("events.items.cacao-journey-series.badge"),
+            dateIso: "2026-02-22"
         }
     ];
 

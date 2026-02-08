@@ -614,6 +614,25 @@ export default {
                 reservation:
                     "Reservation required as seats are limited. Please book via www.cafeprana.de or directly at the café.",
                 forWho: "Perfect for anyone who loves seasonal cuisine, plant based cooking, and welcoming the New Year with intention."
+            },
+
+            "cacao-journey-series": {
+                title: "The Cacao Journey at Café Prana",
+                badge: "Workshop Series",
+                intro: "A heartfelt workshop series at Café Prana in Prenzlauer Berg, guided by ceremonial cacao. We’ll gently explore ritual, body awareness, movement, stillness, and authentic sharing.",
+                date: "Start: 22 February 2026 · Weekly sessions on Thursdays · Closing Ceremony: 29 March 2026",
+                time: "Thursdays at 17:00 (kick-off workshop on 22 Feb; closing ceremony on 29 Mar)",
+                location: "Café Prana, Pasteurstr. 2, Berlin",
+                price: "To be announced",
+                concept:
+                    "The series begins with a Ritual Cacao Workshop with Lea from Nature Soul on 22 February to meet the plant, learn about its effects, prepare cacao together, and receive an introduction to mindful ritual use. Then follow five weekly sessions with intuitive movement, sharing circles, and inner work. The journey concludes on 29 March with a cacao ceremony to integrate and open into spring.",
+                menuNote:
+                    "Ceremonial cacao will be served—plant-based, non-alcoholic, and prepared with care. (Please inform us of any sensitivities.)",
+                expectations:
+                    "Ritual cacao · Intuitive movement · Sharing circles & inner work · Moments of stillness · Gentle guidance · Community connection",
+                reservation:
+                    "Reservation recommended. Book via www.cafeprana.de or reserve your spot in person at the café.",
+                forWho: "For anyone curious to connect with heart, body, and soul—supported by a plant that tastes delicious and fosters deep connection."
             }
         }
     },
