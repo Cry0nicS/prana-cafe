@@ -594,7 +594,7 @@ export default {
 
             "winter-celebration-dinner": {
                 title: "Winter Celebration Dinner",
-                badge: "Prana Best of",
+                badge: "Christmas week",
                 intro: "Let me celebrate the New Year with my Winter Celebration Dinner. Prana’s annual five course dinner brings together seasonal highlights and beloved classics in one special evening.",
                 date: "5 January",
                 time: "18:30",

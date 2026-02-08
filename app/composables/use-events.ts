@@ -8,7 +8,7 @@ export const useEvents = () => {
         {
             slug: "community-xmas-dinner",
             image: "/images/events/posts/community-xmas-dinner.png",
-            tag: t("events.items.christmas-events.badge"),
+            tag: t("events.items.community-xmas-dinner.badge"),
             dateIso: "2025-12-24"
         },
         {
@@ -20,7 +20,7 @@ export const useEvents = () => {
         {
             slug: "community-breakfast",
             image: "/images/events/posts/community-breakfast.png",
-            tag: t("events.items.community-buffet.badge"),
+            tag: t("events.items.community-breakfast.badge"),
             dateIso: "2025-12-28"
         },
         {
