@@ -622,6 +622,25 @@ export default {
                 reservation:
                     "Réservation obligatoire, les places étant limitées. Merci de réserver via www.cafeprana.de ou directement au café.",
                 forWho: "Parfait pour toutes celles et ceux qui aiment la cuisine de saison, la cuisine végétale et souhaitent accueillir la nouvelle année avec intention."
+            },
+
+            "cacao-journey-series": {
+                title: "Le Voyage du Cacao au Café Prana",
+                badge: "Série d’ateliers",
+                intro: "Une série d’ateliers cœur-ouvert au Café Prana à Prenzlauer Berg, guidée par le cacao cérémoniel. Ensemble, nous explorons les rituels, la conscience du corps, le mouvement, le silence et un partage authentique.",
+                date: "Début : 22 février 2026 · Séances hebdomadaires le jeudi · Cérémonie de clôture : 29 mars 2026",
+                time: "Chaque jeudi à 17h00 (atelier d’ouverture le 22 février ; cérémonie de clôture le 29 mars)",
+                location: "Café Prana, Pasteurstr. 2, Berlin",
+                price: "À annoncer",
+                concept:
+                    "La série commence avec un atelier de cacao rituel animé par Lea de Nature Soul le 22 février, où vous découvrirez la plante et ses effets, préparerez du cacao ensemble et recevrez une première introduction consciente à son usage rituel. Suivent cinq séances hebdomadaires avec mouvement intuitif, cercles de partage et travail intérieur. Le 29 mars, une cérémonie de cacao clôture le voyage pour intégrer et s’ouvrir au printemps.",
+                menuNote:
+                    "Du cacao cérémoniel sera servi – 100% végétal, sans alcool et préparé avec soin. (Veuillez nous informer de toute sensibilité.)",
+                expectations:
+                    "Cacao rituel · Mouvement intuitif · Cercles de partage & travail intérieur · Moments de silence · Accompagnement doux · Connexion au sein du groupe",
+                reservation:
+                    "Réservation recommandée. Réservez via www.cafeprana.de ou directement au café.",
+                forWho: "Pour toute personne curieuse de se connecter au cœur, au corps et à l’âme – guidée par une plante délicieuse et profondément rassembleuse."
             }
         }
     },
