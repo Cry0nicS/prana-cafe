@@ -110,13 +110,7 @@ export default defineNuxtConfig({
     },
     vite: {
         optimizeDeps: {
-            include: [
-                "@vue/devtools-core",
-                "@vue/devtools-kit",
-                "rollbar",
-                "@internationalized/date",
-                "zod"
-            ]
+            include: ["rollbar", "@internationalized/date", "zod"]
         }
     }
 });
