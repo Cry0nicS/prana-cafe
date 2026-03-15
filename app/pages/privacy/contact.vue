@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {company} from "#shared/utils/constants";
 
+const WHITESPACE_REGEX = /\s+/g;
+
 const {t} = useI18n();
 
 useSeoMeta({
@@ -9,7 +11,7 @@ useSeoMeta({
     ogImage: "/images/hero.png"
 });
 
-const telHref = computed(() => `tel:${company.phone.replace(/\s+/g, "")}`);
+const telHref = computed(() => `tel:${company.phone.replace(WHITESPACE_REGEX, "")}`);
 const mailHref = computed(() => `mailto:${company.email}`);
 const instagramUrl = "https://instagram.com/pranacafe";
 
