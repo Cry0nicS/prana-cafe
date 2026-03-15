@@ -107,5 +107,16 @@ export default defineNuxtConfig({
     },
     ui: {
         colorMode: true
+    },
+    vite: {
+        optimizeDeps: {
+            include: [
+                "@vue/devtools-core",
+                "@vue/devtools-kit",
+                "rollbar",
+                "@internationalized/date",
+                "zod"
+            ]
+        }
     }
 });

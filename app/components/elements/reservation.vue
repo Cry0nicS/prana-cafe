@@ -43,6 +43,13 @@ const resetFormData = () => {
     formState.privacyConsent = false;
 };
 
+const phone = computed({
+    get: () => formState.phone ?? undefined,
+    set: (value: string | undefined) => {
+        formState.phone = value ?? null;
+    }
+});
+
 const validateForm = (): {success: boolean; data?: Reservation; error?: string} => {
     const result = ReservationSchema.safeParse(formState);
 
@@ -158,7 +165,7 @@ const isDateUnavailable = (date: DateValue) => {
                 name="phone"
                 :label="t('reservations.form.fields.phone.label')">
                 <UInput
-                    v-model="formState.phone"
+                    v-model="phone"
                     :placeholder="t('reservations.form.fields.phone.placeholder')"
                     autocomplete="tel"
                     type="tel"
