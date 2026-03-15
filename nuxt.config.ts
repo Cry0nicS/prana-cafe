@@ -107,5 +107,10 @@ export default defineNuxtConfig({
     },
     ui: {
         colorMode: true
+    },
+    vite: {
+        optimizeDeps: {
+            include: ["rollbar", "@internationalized/date", "zod"]
+        }
     }
 });

@@ -43,7 +43,7 @@ export const insertReviews = async (
     }
 
     // Build a unique list of published_at values to query existing reviews
-    const publishedDates = Array.from(new Set(reviews.map((review) => review.publish_time)));
+    const publishedDates = [...new Set(reviews.map((review) => review.publish_time))];
 
     // Fetch existing reviews that match those published_at timestamps
     const {data: existing, error} = await client

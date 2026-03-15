@@ -29,7 +29,7 @@ export function useValidation() {
         }
 
         const translated = issues.map((i) => translateOne(i.message));
-        const unique = Array.from(new Set(translated.filter(Boolean)));
+        const unique = [...new Set(translated.filter(Boolean))];
         return unique.join(" - ");
     }
 
