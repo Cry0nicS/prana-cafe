@@ -22,7 +22,7 @@
         "@nuxt/scripts": "^0.13.2",
         "@nuxt/ui": "^4.5.1",
         "@nuxtjs/i18n": "^10.2.3",
-        "@nuxtjs/seo": "^3.4.0",
+        "@nuxtjs/seo": "^4.0.0",
         "@nuxtjs/supabase": "^2.0.4",
         "@unhead/vue": "^2.1.12",
         "mailgun.js": "^12.7.1",
