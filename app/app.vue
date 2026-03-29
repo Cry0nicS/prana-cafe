@@ -37,5 +37,6 @@ useScriptCloudflareWebAnalytics({
             <NuxtPage />
         </NuxtLayout>
         <GenericCookieBanner />
+        <GenericInfoBanner />
     </UApp>
 </template>

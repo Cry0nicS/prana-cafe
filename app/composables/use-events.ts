@@ -34,6 +34,12 @@ export const useEvents = () => {
             image: "/images/events/posts/cacao-journey-series.png",
             tag: t("events.items.cacao-journey-series.badge"),
             dateIso: "2026-02-22"
+        },
+        {
+            slug: "easter-brunch-buffet",
+            image: "/images/events/posts/easter-brunch-buffet.png",
+            tag: t("events.items.easter-brunch-buffet.badge"),
+            dateIso: "2026-04-04"
         }
     ];
 

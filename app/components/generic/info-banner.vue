@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import {INFO_BANNER_VERSION} from "#shared/utils/constants";
+import {INFO_BANNER_DISPLAY_UNTIL, INFO_BANNER_VERSION} from "#shared/utils/constants";
+
 const showInfoBanner = ref(false);
 
 onMounted(() => {
-    const dismissed = localStorage.getItem(`info-banner-dismissed-${INFO_BANNER_VERSION}`);
+    const dismissed = localStorage.getItem(`info-banner-dismissed-april-${INFO_BANNER_VERSION}`);
 
-    if (!dismissed) {
+    if (!dismissed && new Date() < INFO_BANNER_DISPLAY_UNTIL) {
         showInfoBanner.value = true;
     }
 });

@@ -3,7 +3,8 @@ export type EventSlug =
     | "christmas-brunch-buffet"
     | "community-breakfast"
     | "winter-celebration-dinner"
-    | "cacao-journey-series";
+    | "cacao-journey-series"
+    | "easter-brunch-buffet";
 
 export type EventMeta = {
     slug: EventSlug;

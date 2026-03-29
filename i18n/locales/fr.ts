@@ -641,6 +641,25 @@ export default {
                 reservation:
                     "Réservation recommandée. Réservez via www.cafeprana.de ou directement au café.",
                 forWho: "Pour toute personne curieuse de se connecter au cœur, au corps et à l’âme – guidée par une plante délicieuse et profondément rassembleuse."
+            },
+
+            "easter-brunch-buffet": {
+                title: "Brunch de Pâques Buffet",
+                badge: "Week-end de Pâques",
+                intro: "Profite du week-end de Pâques avec mon brunch buffet festif au Café Prana. Une fin de matinée détendue, remplie de plats nourrissants, de boissons chaudes et d’une ambiance printanière.",
+                date: "4 avril",
+                time: "11:00–13:00",
+                location: "Café Prana, Berlin",
+                price: "20 € par personne",
+                concept:
+                    "Un brunch buffet généreux et végétal, composé de plats festifs et de saison, à savourer à ton rythme dans une atmosphère cosy.",
+                menuNote:
+                    "Le buffet est entièrement végétal et sans gluten, avec une sélection de plats sucrés et salés de saison.",
+                expectations:
+                    "Brunch buffet végétal · Options sans gluten · Ambiance détendue printanière · Ingrédients bio et de saison",
+                reservation:
+                    "Réservation obligatoire en raison du nombre de places limité. Merci de réserver via www.cafeprana.de.",
+                forWho: "Idéal pour toutes celles et ceux qui souhaitent profiter de Pâques avec un brunch nourrissant et sans stress."
             }
         }
     },
@@ -651,7 +670,7 @@ export default {
     },
     infoBanner: {
         description:
-            "Je fais une courte pause du 3 au 6 février. Le café sera fermé pendant cette période. Au plaisir de vous retrouver le samedi 7 février!",
+            "Je fais une courte pause du 30.03 au 04.04. Le café sera fermé pendant cette période.",
         actionLabel: "C'est noté !"
     }
 };

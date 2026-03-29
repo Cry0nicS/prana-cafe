@@ -567,7 +567,7 @@ export default {
                 menuNote:
                     "The buffet is fully plant based and gluten free, with a variety of sweet and savory seasonal options.",
                 expectations:
-                    "Plant based brunch buffet · Gluten free options · Relaxed holiday atmosphere · Seasonal and organic ingredients",
+                    "Plant based brunch buffet · Gluten free · Vegan  · Relaxed holiday atmosphere · Seasonal and organic ingredients",
                 reservation:
                     "Reservation recommended due to limited availability. Please reserve via www.cafeprana.de.",
                 forWho: "Ideal for anyone who wants to enjoy Christmas Day with a nourishing and stress free brunch experience."
@@ -633,6 +633,25 @@ export default {
                 reservation:
                     "Reservation recommended. Book via www.cafeprana.de or reserve your spot in person at the café.",
                 forWho: "For anyone curious to connect with heart, body, and soul—supported by a plant that tastes delicious and fosters deep connection."
+            },
+
+            "easter-brunch-buffet": {
+                title: "Easter Brunch Buffet",
+                badge: "Easter Weekend",
+                intro: "Enjoy the Easter weekend with a festive Easter Brunch Buffet at Café Prana. A relaxed late morning filled with nourishing dishes, warm drinks, and spring comfort.",
+                date: "4 April",
+                time: "11:00–13:00",
+                location: "Café Prana, Berlin",
+                price: "20 € per person",
+                concept:
+                    "A generous plant based brunch buffet featuring seasonal and festive dishes, inviting you to enjoy at your own pace in a cozy atmosphere.",
+                menuNote:
+                    "The buffet is fully plant based and gluten free, with a variety of sweet and savory seasonal options.",
+                expectations:
+                    "Plant based brunch buffet · Gluten free · Vegan · Relaxed spring atmosphere · Seasonal and organic ingredients",
+                reservation:
+                    "Reservation required due to limited availability. Please reserve via www.cafeprana.de.",
+                forWho: "Ideal for anyone who wants to enjoy Easter with a nourishing and stress free brunch experience."
             }
         }
     },
@@ -643,7 +662,7 @@ export default {
     },
     infoBanner: {
         description:
-            "I'm taking a short break from 3rd to 6th of February. The café will be closed during this time. Looking forward to welcoming you back Saturday, 7th of February!",
+            "I'm taking a short break from 30th of March to 4th of April. The café will be closed during this time. Looking forward to welcoming you back afterwards!",
         actionLabel: "Alrighty!"
     }
 };

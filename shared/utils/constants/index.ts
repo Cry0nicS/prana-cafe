@@ -10,3 +10,7 @@ export * from "./google";
 export * from "./i18n";
 
 export const INFO_BANNER_VERSION = "2026-02-break";
+
+// Set the date until which the banner should be visible.
+// Format: YYYY-MM-DD or ISO string. Example: "2027-05-01T00:00:00"
+export const INFO_BANNER_DISPLAY_UNTIL = new Date("2027-05-01T00:00:00");

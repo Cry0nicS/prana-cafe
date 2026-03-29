@@ -552,6 +552,24 @@ export default {
                 reservation:
                     "Eine Reservierung wird empfohlen. Buchung über www.cafeprana.de oder direkt vor Ort im Café.",
                 forWho: "Für alle, die neugierig sind, sich mit Herz, Körper und Seele zu verbinden – getragen von einer Pflanze, die nicht nur lecker schmeckt, sondern tief verbindet."
+            },
+
+            "easter-brunch-buffet": {
+                title: "Oster Brunch Buffet",
+                badge: "Ostern",
+                intro: "Genieße das Osterwochenende mit meinem festlichen Oster Brunch Buffet im Café Prana. Ein entspannter Vormittag mit nährenden Speisen, warmen Getränken und gemütlicher Frühlingsstimmung.",
+                date: "4. April",
+                time: "11:00–13:00",
+                location: "Café Prana, Berlin",
+                price: "20 € pro Person",
+                concept:
+                    "Ein reichhaltiges pflanzliches Brunch Buffet mit saisonalen und festlichen Gerichten, das dich einlädt, ganz in deinem Tempo zu genießen.",
+                menuNote:
+                    "Das Buffet ist komplett pflanzlich und glutenfrei, mit einer Auswahl an süßen und herzhaften saisonalen Speisen.",
+                expectations:
+                    "Pflanzliches Brunch Buffet · Glutenfreie Optionen · Entspannte Frühlingsatmosphäre · Saisonale Bio Zutaten",
+                reservation: "Reservierung erforderlich. Bitte reserviere via www.cafeprana.de.",
+                forWho: "Ideal für alle, die Ostern mit einem nährenden und stressfreien Brunch genießen möchten."
             }
         }
     },
@@ -655,7 +673,7 @@ export default {
     },
     infoBanner: {
         description:
-            "Ich nehme mir vom 3. bis 6. Februar eine kurze Pause. Das Café ist in dieser Zeit geschlossen. Ich freue mich darauf, Sie am Samstag, den 7. Februar wieder begrüßen zu dürfen!",
+            "Ich nehme mir vom 30.03 bis 04.04 eine kurze Pause. Das Café ist in dieser Zeit geschlossen. Ich freue mich darauf, Sie danach wieder begrüßen zu dürfen!",
         actionLabel: "Alles klar!"
     }
 };
